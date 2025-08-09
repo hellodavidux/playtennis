@@ -182,6 +182,26 @@
             }
         }
 
+        .scroll-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-indicators.show {
+            opacity: 1;
+        }
+
+        .scroll-indicator {
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 500;
+            pointer-events: none;
+        }
+
         .timeline-table {
             width: auto;
             border-collapse: collapse;
@@ -666,10 +686,15 @@
 
                     
                     
-                    <div class="table-container">
+                    <div class="table-container" id="tableContainer">
                         <table class="timeline-table" id="timelineTable">
                             <!-- Timeline will be generated here -->
                         </table>
+                    </div>
+                    
+                    <div class="scroll-indicators" id="scrollIndicators">
+                        <div class="scroll-indicator" id="scrollLeft">← Scroll</div>
+                        <div class="scroll-indicator" id="scrollRight">Scroll →</div>
                     </div>
                 </div>
 
@@ -1111,6 +1136,62 @@
 
                 html += '</tbody>';
                 table.innerHTML = html;
+                
+                // Setup scroll indicators
+                this.setupScrollIndicators();
+            }
+
+            setupScrollIndicators() {
+                const container = document.getElementById('tableContainer');
+                const scrollIndicators = document.getElementById('scrollIndicators');
+                const leftIndicator = document.getElementById('scrollLeft');
+                const rightIndicator = document.getElementById('scrollRight');
+                
+                if (!container || !scrollIndicators || !leftIndicator || !rightIndicator) return;
+                
+                const updateScrollIndicators = () => {
+                    const scrollLeft = container.scrollLeft;
+                    const scrollWidth = container.scrollWidth;
+                    const clientWidth = container.clientWidth;
+                    
+                    // Check if scrolling is needed at all
+                    const needsScrolling = scrollWidth > clientWidth;
+                    
+                    if (!needsScrolling) {
+                        scrollIndicators.classList.remove('show');
+                        return;
+                    }
+                    
+                    // Show indicators container
+                    scrollIndicators.classList.add('show');
+                    
+                    // Show/hide individual indicators based on scroll position
+                    if (scrollLeft > 10) {
+                        leftIndicator.style.display = 'block';
+                    } else {
+                        leftIndicator.style.display = 'none';
+                    }
+                    
+                    if (scrollLeft < scrollWidth - clientWidth - 10) {
+                        rightIndicator.style.display = 'block';
+                    } else {
+                        rightIndicator.style.display = 'none';
+                    }
+                    
+                    // If neither indicator should show, hide the container
+                    if (leftIndicator.style.display === 'none' && rightIndicator.style.display === 'none') {
+                        scrollIndicators.classList.remove('show');
+                    }
+                };
+                
+                // Initial check
+                setTimeout(updateScrollIndicators, 100);
+                
+                // Update on scroll
+                container.addEventListener('scroll', updateScrollIndicators);
+                
+                // Update on resize
+                window.addEventListener('resize', updateScrollIndicators);
             }
 
             formatResult(result) {
