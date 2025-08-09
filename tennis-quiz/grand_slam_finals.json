@@ -1,0 +1,3674 @@
+{
+  "finals": [
+    {
+      "id": "2000_australian_open",
+      "year": 2000,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20000117,
+      "winner": {
+        "name": "Andre Agassi",
+        "country": "USA",
+        "seed": 1.0,
+        "age": 29.7
+      },
+      "loser": {
+        "name": "Yevgeny Kafelnikov",
+        "country": "RUS",
+        "seed": 2.0,
+        "age": 25.9
+      },
+      "score_raw": "3-6 6-3 6-2 6-4",
+      "sets": [
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 139.0,
+      "best_of": 5
+    },
+    {
+      "id": "2000_roland_garros",
+      "year": 2000,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20000529,
+      "winner": {
+        "name": "Gustavo Kuerten",
+        "country": "BRA",
+        "seed": 5.0,
+        "age": 23.7
+      },
+      "loser": {
+        "name": "Magnus Norman",
+        "country": "SWE",
+        "seed": 3.0,
+        "age": 23.9
+      },
+      "score_raw": "6-2 6-3 2-6 7-6(6)",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 224.0,
+      "best_of": 5
+    },
+    {
+      "id": "2000_wimbledon",
+      "year": 2000,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20000626,
+      "winner": {
+        "name": "Pete Sampras",
+        "country": "USA",
+        "seed": 1.0,
+        "age": 28.8
+      },
+      "loser": {
+        "name": "Patrick Rafter",
+        "country": "AUS",
+        "seed": 12.0,
+        "age": 27.4
+      },
+      "score_raw": "6-7(10) 7-6(5) 6-4 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 178.0,
+      "best_of": 5
+    },
+    {
+      "id": "2000_us_open",
+      "year": 2000,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20000828,
+      "winner": {
+        "name": "Marat Safin",
+        "country": "RUS",
+        "seed": 6.0,
+        "age": 20.5
+      },
+      "loser": {
+        "name": "Pete Sampras",
+        "country": "USA",
+        "seed": 4.0,
+        "age": 29.0
+      },
+      "score_raw": "6-4 6-3 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 98.0,
+      "best_of": 5
+    },
+    {
+      "id": "2001_australian_open",
+      "year": 2001,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20010115,
+      "winner": {
+        "name": "Andre Agassi",
+        "country": "USA",
+        "seed": 6.0,
+        "age": 30.7
+      },
+      "loser": {
+        "name": "Arnaud Clement",
+        "country": "FRA",
+        "seed": 15.0,
+        "age": 23.0
+      },
+      "score_raw": "6-4 6-2 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 106.0,
+      "best_of": 5
+    },
+    {
+      "id": "2001_roland_garros",
+      "year": 2001,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20010528,
+      "winner": {
+        "name": "Gustavo Kuerten",
+        "country": "BRA",
+        "seed": 1.0,
+        "age": 24.7
+      },
+      "loser": {
+        "name": "Alex Corretja",
+        "country": "ESP",
+        "seed": 13.0,
+        "age": 27.1
+      },
+      "score_raw": "6-7(3) 7-5 6-2 6-0",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 0
+        }
+      ],
+      "duration_minutes": 192.0,
+      "best_of": 5
+    },
+    {
+      "id": "2001_us_open",
+      "year": 2001,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20010827,
+      "winner": {
+        "name": "Lleyton Hewitt",
+        "country": "AUS",
+        "seed": 4.0,
+        "age": 20.5
+      },
+      "loser": {
+        "name": "Pete Sampras",
+        "country": "USA",
+        "seed": 10.0,
+        "age": 30.0
+      },
+      "score_raw": "7-6(4) 6-1 6-1",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 114.0,
+      "best_of": 5
+    },
+    {
+      "id": "2002_australian_open",
+      "year": 2002,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20020114,
+      "winner": {
+        "name": "Thomas Johansson",
+        "country": "SWE",
+        "seed": 16.0,
+        "age": 26.8
+      },
+      "loser": {
+        "name": "Marat Safin",
+        "country": "RUS",
+        "seed": 9.0,
+        "age": 21.9
+      },
+      "score_raw": "3-6 6-4 6-4 7-6(4)",
+      "sets": [
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 173.0,
+      "best_of": 5
+    },
+    {
+      "id": "2002_roland_garros",
+      "year": 2002,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20020527,
+      "winner": {
+        "name": "Albert Costa",
+        "country": "ESP",
+        "seed": 20.0,
+        "age": 26.9
+      },
+      "loser": {
+        "name": "Juan Carlos Ferrero",
+        "country": "ESP",
+        "seed": 11.0,
+        "age": 22.2
+      },
+      "score_raw": "6-1 6-0 4-6 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 0
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 150.0,
+      "best_of": 5
+    },
+    {
+      "id": "2002_wimbledon",
+      "year": 2002,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20020624,
+      "winner": {
+        "name": "Lleyton Hewitt",
+        "country": "AUS",
+        "seed": 1.0,
+        "age": 21.3
+      },
+      "loser": {
+        "name": "David Nalbandian",
+        "country": "ARG",
+        "seed": 28.0,
+        "age": 20.4
+      },
+      "score_raw": "6-1 6-3 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 116.0,
+      "best_of": 5
+    },
+    {
+      "id": "2002_us_open",
+      "year": 2002,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20020826,
+      "winner": {
+        "name": "Pete Sampras",
+        "country": "USA",
+        "seed": 17.0,
+        "age": 31.0
+      },
+      "loser": {
+        "name": "Andre Agassi",
+        "country": "USA",
+        "seed": 6.0,
+        "age": 32.3
+      },
+      "score_raw": "6-3 6-4 5-7 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 172.0,
+      "best_of": 5
+    },
+    {
+      "id": "2003_australian_open",
+      "year": 2003,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20030113,
+      "winner": {
+        "name": "Andre Agassi",
+        "country": "USA",
+        "seed": 2.0,
+        "age": 32.7
+      },
+      "loser": {
+        "name": "Rainer Schuettler",
+        "country": "GER",
+        "seed": 31.0,
+        "age": 26.7
+      },
+      "score_raw": "6-2 6-2 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 76.0,
+      "best_of": 5
+    },
+    {
+      "id": "2003_roland_garros",
+      "year": 2003,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20030526,
+      "winner": {
+        "name": "Juan Carlos Ferrero",
+        "country": "ESP",
+        "seed": 3.0,
+        "age": 23.2
+      },
+      "loser": {
+        "name": "Martin Verkerk",
+        "country": "NED",
+        "seed": null,
+        "age": 24.5
+      },
+      "score_raw": "6-1 6-3 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 129.0,
+      "best_of": 5
+    },
+    {
+      "id": "2003_wimbledon",
+      "year": 2003,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20030623,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 4.0,
+        "age": 21.8
+      },
+      "loser": {
+        "name": "Mark Philippoussis",
+        "country": "AUS",
+        "seed": null,
+        "age": 26.6
+      },
+      "score_raw": "7-6(5) 6-2 7-6(3)",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 116.0,
+      "best_of": 5
+    },
+    {
+      "id": "2003_us_open",
+      "year": 2003,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20030825,
+      "winner": {
+        "name": "Andy Roddick",
+        "country": "USA",
+        "seed": 4.0,
+        "age": 20.9
+      },
+      "loser": {
+        "name": "Juan Carlos Ferrero",
+        "country": "ESP",
+        "seed": 3.0,
+        "age": 23.5
+      },
+      "score_raw": "6-3 7-6(2) 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 101.0,
+      "best_of": 5
+    },
+    {
+      "id": "2004_australian_open",
+      "year": 2004,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20040119,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 2.0,
+        "age": 22.4
+      },
+      "loser": {
+        "name": "Marat Safin",
+        "country": "RUS",
+        "seed": null,
+        "age": 23.9
+      },
+      "score_raw": "7-6(3) 6-4 6-2",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 135.0,
+      "best_of": 5
+    },
+    {
+      "id": "2004_wimbledon",
+      "year": 2004,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20040621,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 22.8
+      },
+      "loser": {
+        "name": "Andy Roddick",
+        "country": "USA",
+        "seed": 2.0,
+        "age": 21.8
+      },
+      "score_raw": "4-6 7-5 7-6(3) 6-4",
+      "sets": [
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 151.0,
+      "best_of": 5
+    },
+    {
+      "id": "2004_us_open",
+      "year": 2004,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20040830,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 23.0
+      },
+      "loser": {
+        "name": "Lleyton Hewitt",
+        "country": "AUS",
+        "seed": 4.0,
+        "age": 23.5
+      },
+      "score_raw": "6-0 7-6(3) 6-0",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 0
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 0
+        }
+      ],
+      "duration_minutes": 109.0,
+      "best_of": 5
+    },
+    {
+      "id": "2005_australian_open",
+      "year": 2005,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20050117,
+      "winner": {
+        "name": "Marat Safin",
+        "country": "RUS",
+        "seed": 4.0,
+        "age": 24.9
+      },
+      "loser": {
+        "name": "Lleyton Hewitt",
+        "country": "AUS",
+        "seed": 3.0,
+        "age": 23.8
+      },
+      "score_raw": "1-6 6-3 6-4 6-4",
+      "sets": [
+        {
+          "winner": 1,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 165.0,
+      "best_of": 5
+    },
+    {
+      "id": "2005_roland_garros",
+      "year": 2005,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20050523,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 4.0,
+        "age": 18.9
+      },
+      "loser": {
+        "name": "Mariano Puerta",
+        "country": "ARG",
+        "seed": null,
+        "age": 26.6
+      },
+      "score_raw": "6-7(6) 6-3 6-1 7-5",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        }
+      ],
+      "duration_minutes": 204.0,
+      "best_of": 5
+    },
+    {
+      "id": "2005_wimbledon",
+      "year": 2005,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20050620,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 23.8
+      },
+      "loser": {
+        "name": "Andy Roddick",
+        "country": "USA",
+        "seed": 2.0,
+        "age": 22.8
+      },
+      "score_raw": "6-2 7-6(2) 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 101.0,
+      "best_of": 5
+    },
+    {
+      "id": "2005_us_open",
+      "year": 2005,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20050829,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 24.0
+      },
+      "loser": {
+        "name": "Andre Agassi",
+        "country": "USA",
+        "seed": 7.0,
+        "age": 35.3
+      },
+      "score_raw": "6-3 2-6 7-6(1) 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 139.0,
+      "best_of": 5
+    },
+    {
+      "id": "2006_australian_open",
+      "year": 2006,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20060116,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 24.4
+      },
+      "loser": {
+        "name": "Marcos Baghdatis",
+        "country": "CYP",
+        "seed": null,
+        "age": 20.5
+      },
+      "score_raw": "5-7 7-5 6-0 6-2",
+      "sets": [
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 0
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 166.0,
+      "best_of": 5
+    },
+    {
+      "id": "2006_roland_garros",
+      "year": 2006,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20060529,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 19.9
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 24.8
+      },
+      "score_raw": "1-6 6-1 6-4 7-6(4)",
+      "sets": [
+        {
+          "winner": 1,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 182.0,
+      "best_of": 5
+    },
+    {
+      "id": "2006_wimbledon",
+      "year": 2006,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20060626,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 24.8
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 20.0
+      },
+      "score_raw": "6-0 7-6(5) 6-7(2) 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 0
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 178.0,
+      "best_of": 5
+    },
+    {
+      "id": "2006_us_open",
+      "year": 2006,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20060828,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 25.0
+      },
+      "loser": {
+        "name": "Andy Roddick",
+        "country": "USA",
+        "seed": 9.0,
+        "age": 23.9
+      },
+      "score_raw": "6-2 4-6 7-5 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 145.0,
+      "best_of": 5
+    },
+    {
+      "id": "2007_australian_open",
+      "year": 2007,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20070115,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 25.4
+      },
+      "loser": {
+        "name": "Fernando Gonzalez",
+        "country": "CHI",
+        "seed": 10.0,
+        "age": 26.4
+      },
+      "score_raw": "7-6(2) 6-4 6-4",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 140.0,
+      "best_of": 5
+    },
+    {
+      "id": "2007_roland_garros",
+      "year": 2007,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20070528,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 20.9
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 25.8
+      },
+      "score_raw": "6-3 4-6 6-3 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 190.0,
+      "best_of": 5
+    },
+    {
+      "id": "2007_wimbledon",
+      "year": 2007,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20070625,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 25.8
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 21.0
+      },
+      "score_raw": "7-6(7) 4-6 7-6(3) 2-6 6-2",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 225.0,
+      "best_of": 5
+    },
+    {
+      "id": "2007_us_open",
+      "year": 2007,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20070827,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 26.0
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 3.0,
+        "age": 20.2
+      },
+      "score_raw": "7-6(4) 7-6(2) 6-4",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 144.0,
+      "best_of": 5
+    },
+    {
+      "id": "2008_australian_open",
+      "year": 2008,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20080114,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 3.0,
+        "age": 20.6
+      },
+      "loser": {
+        "name": "Jo-Wilfried Tsonga",
+        "country": "FRA",
+        "seed": null,
+        "age": 22.7
+      },
+      "score_raw": "4-6 6-4 6-3 7-6(2)",
+      "sets": [
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 185.0,
+      "best_of": 5
+    },
+    {
+      "id": "2008_roland_garros",
+      "year": 2008,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20080525,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 21.9
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 26.7
+      },
+      "score_raw": "6-1 6-3 6-0",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 0
+        }
+      ],
+      "duration_minutes": 108.0,
+      "best_of": 5
+    },
+    {
+      "id": "2008_us_open",
+      "year": 2008,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20080825,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 2.0,
+        "age": 27.0
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 6.0,
+        "age": 21.2
+      },
+      "score_raw": "6-2 7-5 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 111.0,
+      "best_of": 5
+    },
+    {
+      "id": "2009_australian_open",
+      "year": 2009,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20090119,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 22.6
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 2.0,
+        "age": 27.4
+      },
+      "score_raw": "7-5 3-6 7-6(3) 3-6 6-2",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 259.0,
+      "best_of": 5
+    },
+    {
+      "id": "2009_roland_garros",
+      "year": 2009,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20090525,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 2.0,
+        "age": 27.7
+      },
+      "loser": {
+        "name": "Robin Soderling",
+        "country": "SWE",
+        "seed": 23.0,
+        "age": 24.7
+      },
+      "score_raw": "6-1 7-6(1) 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 115.0,
+      "best_of": 5
+    },
+    {
+      "id": "2009_us_open",
+      "year": 2009,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20090831,
+      "winner": {
+        "name": "Juan Martin del Potro",
+        "country": "ARG",
+        "seed": 6.0,
+        "age": 20.9
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 28.0
+      },
+      "score_raw": "3-6 7-6(5) 4-6 7-6(4) 6-2",
+      "sets": [
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 246.0,
+      "best_of": 5
+    },
+    {
+      "id": "2010_australian_open",
+      "year": 2010,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20100118,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 1.0,
+        "age": 28.4
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 5.0,
+        "age": 22.6
+      },
+      "score_raw": "6-3 6-4 7-6(11)",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 161.0,
+      "best_of": 5
+    },
+    {
+      "id": "2010_roland_garros",
+      "year": 2010,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20100524,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 23.9
+      },
+      "loser": {
+        "name": "Robin Soderling",
+        "country": "SWE",
+        "seed": 5.0,
+        "age": 25.7
+      },
+      "score_raw": "6-4 6-2 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 138.0,
+      "best_of": 5
+    },
+    {
+      "id": "2010_wimbledon",
+      "year": 2010,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20100621,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 24.0
+      },
+      "loser": {
+        "name": "Tomas Berdych",
+        "country": "CZE",
+        "seed": 12.0,
+        "age": 24.7
+      },
+      "score_raw": "6-3 7-5 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 133.0,
+      "best_of": 5
+    },
+    {
+      "id": "2010_us_open",
+      "year": 2010,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20100830,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 24.2
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 3.0,
+        "age": 23.2
+      },
+      "score_raw": "6-4 5-7 6-4 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 223.0,
+      "best_of": 5
+    },
+    {
+      "id": "2011_australian_open",
+      "year": 2011,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20110117,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 3.0,
+        "age": 23.6
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 5.0,
+        "age": 23.6
+      },
+      "score_raw": "6-4 6-2 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 159.0,
+      "best_of": 5
+    },
+    {
+      "id": "2011_roland_garros",
+      "year": 2011,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20110522,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 24.9
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 3.0,
+        "age": 29.7
+      },
+      "score_raw": "7-5 7-6(3) 5-7 6-1",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 220.0,
+      "best_of": 5
+    },
+    {
+      "id": "2011_wimbledon",
+      "year": 2011,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20110620,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 24.0
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 25.0
+      },
+      "score_raw": "6-4 6-1 1-6 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 1,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 148.0,
+      "best_of": 5
+    },
+    {
+      "id": "2011_us_open",
+      "year": 2011,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20110829,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 24.2
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 25.2
+      },
+      "score_raw": "6-2 6-4 6-7(3) 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 250.0,
+      "best_of": 5
+    },
+    {
+      "id": "2012_australian_open",
+      "year": 2012,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20120116,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 24.6
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 25.6
+      },
+      "score_raw": "5-7 6-4 6-2 6-7(5) 7-5",
+      "sets": [
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        }
+      ],
+      "duration_minutes": 353.0,
+      "best_of": 5
+    },
+    {
+      "id": "2012_roland_garros",
+      "year": 2012,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20120527,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 25.9
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 25.0
+      },
+      "score_raw": "6-4 6-3 2-6 7-5",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        }
+      ],
+      "duration_minutes": 229.0,
+      "best_of": 5
+    },
+    {
+      "id": "2012_wimbledon",
+      "year": 2012,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20120625,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 3.0,
+        "age": 30.8
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 4.0,
+        "age": 25.1
+      },
+      "score_raw": "4-6 7-5 6-3 6-4",
+      "sets": [
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 204.0,
+      "best_of": 5
+    },
+    {
+      "id": "2012_us_open",
+      "year": 2012,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20120827,
+      "winner": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 3.0,
+        "age": 25.2
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 25.2
+      },
+      "score_raw": "7-6(10) 7-5 2-6 3-6 6-2",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 294.0,
+      "best_of": 5
+    },
+    {
+      "id": "2013_australian_open",
+      "year": 2013,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20130114,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 25.6
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 3.0,
+        "age": 25.6
+      },
+      "score_raw": "6-7(2) 7-6(3) 6-3 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 220.0,
+      "best_of": 5
+    },
+    {
+      "id": "2013_roland_garros",
+      "year": 2013,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20130527,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 3.0,
+        "age": 26.9
+      },
+      "loser": {
+        "name": "David Ferrer",
+        "country": "ESP",
+        "seed": 4.0,
+        "age": 31.1
+      },
+      "score_raw": "6-3 6-2 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 136.0,
+      "best_of": 5
+    },
+    {
+      "id": "2013_wimbledon",
+      "year": 2013,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20130624,
+      "winner": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 2.0,
+        "age": 26.1
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 26.0
+      },
+      "score_raw": "6-4 7-5 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 189.0,
+      "best_of": 5
+    },
+    {
+      "id": "2013_us_open",
+      "year": 2013,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20130826,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 27.2
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 26.2
+      },
+      "score_raw": "6-2 3-6 6-4 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 201.0,
+      "best_of": 5
+    },
+    {
+      "id": "2014_australian_open",
+      "year": 2014,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20140113,
+      "winner": {
+        "name": "Stan Wawrinka",
+        "country": "SUI",
+        "seed": 8.0,
+        "age": 28.7
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 27.6
+      },
+      "score_raw": "6-3 6-2 3-6 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 141.0,
+      "best_of": 5
+    },
+    {
+      "id": "2014_roland_garros",
+      "year": 2014,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20140526,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 27.9
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 27.0
+      },
+      "score_raw": "3-6 7-5 6-2 6-4",
+      "sets": [
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 211.0,
+      "best_of": 5
+    },
+    {
+      "id": "2014_wimbledon",
+      "year": 2014,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20140623,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 27.0
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 4.0,
+        "age": 32.8
+      },
+      "score_raw": "6-7(7) 6-4 7-6(4) 5-7 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 236.0,
+      "best_of": 5
+    },
+    {
+      "id": "2014_us_open",
+      "year": 2014,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20140825,
+      "winner": {
+        "name": "Marin Cilic",
+        "country": "CRO",
+        "seed": 14.0,
+        "age": 25.9
+      },
+      "loser": {
+        "name": "Kei Nishikori",
+        "country": "JPN",
+        "seed": 10.0,
+        "age": 24.6
+      },
+      "score_raw": "6-3 6-3 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 114.0,
+      "best_of": 5
+    },
+    {
+      "id": "2015_australian_open",
+      "year": 2015,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20150119,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 27.6
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 6.0,
+        "age": 27.6
+      },
+      "score_raw": "7-6(5) 6-7(4) 6-3 6-0",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 0
+        }
+      ],
+      "duration_minutes": 219.0,
+      "best_of": 5
+    },
+    {
+      "id": "2015_roland_garros",
+      "year": 2015,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20150524,
+      "winner": {
+        "name": "Stan Wawrinka",
+        "country": "SUI",
+        "seed": 8.0,
+        "age": 30.1
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 28.0
+      },
+      "score_raw": "4-6 6-4 6-3 6-4",
+      "sets": [
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 192.0,
+      "best_of": 5
+    },
+    {
+      "id": "2015_wimbledon",
+      "year": 2015,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20150629,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 28.1
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 2.0,
+        "age": 33.8
+      },
+      "score_raw": "7-6(1) 6-7(10) 6-4 6-3",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 176.0,
+      "best_of": 5
+    },
+    {
+      "id": "2015_us_open",
+      "year": 2015,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20150831,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 28.2
+      },
+      "loser": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 2.0,
+        "age": 34.0
+      },
+      "score_raw": "6-4 5-7 6-4 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 200.0,
+      "best_of": 5
+    },
+    {
+      "id": "2016_australian_open",
+      "year": 2016,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20160118,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 28.6
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 2.0,
+        "age": 28.6
+      },
+      "score_raw": "6-1 7-5 7-6(3)",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 173.0,
+      "best_of": 5
+    },
+    {
+      "id": "2016_roland_garros",
+      "year": 2016,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20160523,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 29.0
+      },
+      "loser": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 2.0,
+        "age": 29.0
+      },
+      "score_raw": "3-6 6-1 6-2 6-4",
+      "sets": [
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 183.0,
+      "best_of": 5
+    },
+    {
+      "id": "2016_wimbledon",
+      "year": 2016,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20160627,
+      "winner": {
+        "name": "Andy Murray",
+        "country": "GBR",
+        "seed": 2.0,
+        "age": 29.1
+      },
+      "loser": {
+        "name": "Milos Raonic",
+        "country": "CAN",
+        "seed": 6.0,
+        "age": 25.5
+      },
+      "score_raw": "6-4 7-6(3) 7-6(2)",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 168.0,
+      "best_of": 5
+    },
+    {
+      "id": "2016_us_open",
+      "year": 2016,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20160829,
+      "winner": {
+        "name": "Stan Wawrinka",
+        "country": "SUI",
+        "seed": 3.0,
+        "age": 31.4
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 29.2
+      },
+      "score_raw": "6-7(1) 6-4 7-5 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 234.0,
+      "best_of": 5
+    },
+    {
+      "id": "2017_australian_open",
+      "year": 2017,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20170116,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 17.0,
+        "age": 35.4
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 9.0,
+        "age": 30.6
+      },
+      "score_raw": "6-4 3-6 6-1 3-6 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 217.0,
+      "best_of": 5
+    },
+    {
+      "id": "2017_roland_garros",
+      "year": 2017,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20170529,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 4.0,
+        "age": 30.9
+      },
+      "loser": {
+        "name": "Stan Wawrinka",
+        "country": "SUI",
+        "seed": 3.0,
+        "age": 32.1
+      },
+      "score_raw": "6-2 6-3 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 125.0,
+      "best_of": 5
+    },
+    {
+      "id": "2017_wimbledon",
+      "year": 2017,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20170703,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 3.0,
+        "age": 35.9
+      },
+      "loser": {
+        "name": "Marin Cilic",
+        "country": "CRO",
+        "seed": 7.0,
+        "age": 28.7
+      },
+      "score_raw": "6-3 6-1 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 101.0,
+      "best_of": 5
+    },
+    {
+      "id": "2017_us_open",
+      "year": 2017,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20170828,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 31.2
+      },
+      "loser": {
+        "name": "Kevin Anderson",
+        "country": "RSA",
+        "seed": 28.0,
+        "age": 31.2
+      },
+      "score_raw": "6-3 6-3 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 147.0,
+      "best_of": 5
+    },
+    {
+      "id": "2018_australian_open",
+      "year": 2018,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20180115,
+      "winner": {
+        "name": "Roger Federer",
+        "country": "SUI",
+        "seed": 2.0,
+        "age": 36.4
+      },
+      "loser": {
+        "name": "Marin Cilic",
+        "country": "CRO",
+        "seed": 6.0,
+        "age": 29.2
+      },
+      "score_raw": "6-2 6-7(5) 6-3 3-6 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 183.0,
+      "best_of": 5
+    },
+    {
+      "id": "2018_roland_garros",
+      "year": 2018,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20180528,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 31.9
+      },
+      "loser": {
+        "name": "Dominic Thiem",
+        "country": "AUT",
+        "seed": 7.0,
+        "age": 24.7
+      },
+      "score_raw": "6-4 6-3 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 162.0,
+      "best_of": 5
+    },
+    {
+      "id": "2018_wimbledon",
+      "year": 2018,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20180702,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 12.0,
+        "age": 31.1
+      },
+      "loser": {
+        "name": "Kevin Anderson",
+        "country": "RSA",
+        "seed": 8.0,
+        "age": 32.1
+      },
+      "score_raw": "6-2 6-2 7-6(3)",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 139.0,
+      "best_of": 5
+    },
+    {
+      "id": "2018_us_open",
+      "year": 2018,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20180827,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 6.0,
+        "age": 31.2
+      },
+      "loser": {
+        "name": "Juan Martin del Potro",
+        "country": "ARG",
+        "seed": 3.0,
+        "age": 29.9
+      },
+      "score_raw": "6-3 7-6(4) 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 196.0,
+      "best_of": 5
+    },
+    {
+      "id": "2019_australian_open",
+      "year": 2019,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20190114,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 31.6
+      },
+      "loser": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 32.6
+      },
+      "score_raw": "6-3 6-2 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 124.0,
+      "best_of": 5
+    },
+    {
+      "id": "2019_roland_garros",
+      "year": 2019,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20190527,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 32.9
+      },
+      "loser": {
+        "name": "Dominic Thiem",
+        "country": "AUT",
+        "seed": 4.0,
+        "age": 25.7
+      },
+      "score_raw": "6-3 5-7 6-1 6-1",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        }
+      ],
+      "duration_minutes": 181.0,
+      "best_of": 5
+    },
+    {
+      "id": "2019_us_open",
+      "year": 2019,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20190826,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 2.0,
+        "age": 33.2
+      },
+      "loser": {
+        "name": "Daniil Medvedev",
+        "country": "RUS",
+        "seed": 5.0,
+        "age": 23.5
+      },
+      "score_raw": "7-5 6-3 5-7 4-6 6-4",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 290.0,
+      "best_of": 5
+    },
+    {
+      "id": "2020_australian_open",
+      "year": 2020,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20200120,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 32.6
+      },
+      "loser": {
+        "name": "Dominic Thiem",
+        "country": "AUT",
+        "seed": 5.0,
+        "age": 26.3
+      },
+      "score_raw": "6-4 4-6 2-6 6-3 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 239.0,
+      "best_of": 5
+    },
+    {
+      "id": "2020_roland_garros",
+      "year": 2020,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20200928,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 34.3
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 33.3
+      },
+      "score_raw": "6-0 6-2 7-5",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 0
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        }
+      ],
+      "duration_minutes": 161.0,
+      "best_of": 5
+    },
+    {
+      "id": "2020_us_open",
+      "year": 2020,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20200831,
+      "winner": {
+        "name": "Dominic Thiem",
+        "country": "AUT",
+        "seed": 2.0,
+        "age": 26.9
+      },
+      "loser": {
+        "name": "Alexander Zverev",
+        "country": "GER",
+        "seed": 5.0,
+        "age": 23.3
+      },
+      "score_raw": "2-6 4-6 6-4 6-3 7-6(6)",
+      "sets": [
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 242.0,
+      "best_of": 5
+    },
+    {
+      "id": "2021_australian_open",
+      "year": 2021,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20210208,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 33.7
+      },
+      "loser": {
+        "name": "Daniil Medvedev",
+        "country": "RUS",
+        "seed": 4.0,
+        "age": 24.9
+      },
+      "score_raw": "7-5 6-2 6-2",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 5
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": 113.0,
+      "best_of": 5
+    },
+    {
+      "id": "2021_roland_garros",
+      "year": 2021,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20210531,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 34.0
+      },
+      "loser": {
+        "name": "Stefanos Tsitsipas",
+        "country": "GRE",
+        "seed": 5.0,
+        "age": 22.8
+      },
+      "score_raw": "6-7(6) 2-6 6-3 6-2 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 251.0,
+      "best_of": 5
+    },
+    {
+      "id": "2021_wimbledon",
+      "year": 2021,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20210628,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 34.1
+      },
+      "loser": {
+        "name": "Matteo Berrettini",
+        "country": "ITA",
+        "seed": 7.0,
+        "age": 25.2
+      },
+      "score_raw": "6-7(4) 6-4 6-4 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 204.0,
+      "best_of": 5
+    },
+    {
+      "id": "2021_us_open",
+      "year": 2021,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20210830,
+      "winner": {
+        "name": "Daniil Medvedev",
+        "country": "RUS",
+        "seed": 2.0,
+        "age": 25.5
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 34.2
+      },
+      "score_raw": "6-4 6-4 6-4",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 136.0,
+      "best_of": 5
+    },
+    {
+      "id": "2022_australian_open",
+      "year": 2022,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20220117,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 6.0,
+        "age": 35.6
+      },
+      "loser": {
+        "name": "Daniil Medvedev",
+        "country": "RUS",
+        "seed": 2.0,
+        "age": 25.9
+      },
+      "score_raw": "2-6 6-7(5) 6-4 6-4 7-5",
+      "sets": [
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        }
+      ],
+      "duration_minutes": 324.0,
+      "best_of": 5
+    },
+    {
+      "id": "2022_roland_garros",
+      "year": 2022,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20220523,
+      "winner": {
+        "name": "Rafael Nadal",
+        "country": "ESP",
+        "seed": 5.0,
+        "age": 35.9
+      },
+      "loser": {
+        "name": "Casper Ruud",
+        "country": "NOR",
+        "seed": 8.0,
+        "age": 23.4
+      },
+      "score_raw": "6-3 6-3 6-0",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 0
+        }
+      ],
+      "duration_minutes": 138.0,
+      "best_of": 5
+    },
+    {
+      "id": "2022_wimbledon",
+      "year": 2022,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20220627,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 1.0,
+        "age": 35.0
+      },
+      "loser": {
+        "name": "Nick Kyrgios",
+        "country": "AUS",
+        "seed": null,
+        "age": 27.1
+      },
+      "score_raw": "4-6 6-3 6-4 7-6(3)",
+      "sets": [
+        {
+          "winner": 4,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 181.0,
+      "best_of": 5
+    },
+    {
+      "id": "2022_us_open",
+      "year": 2022,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20220829,
+      "winner": {
+        "name": "Carlos Alcaraz",
+        "country": "ESP",
+        "seed": 3.0,
+        "age": 19.3
+      },
+      "loser": {
+        "name": "Casper Ruud",
+        "country": "NOR",
+        "seed": 5.0,
+        "age": 23.6
+      },
+      "score_raw": "6-4 2-6 7-6(1) 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 200.0,
+      "best_of": 5
+    },
+    {
+      "id": "2023_australian_open",
+      "year": 2023,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20230116,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 4.0,
+        "age": 35.6
+      },
+      "loser": {
+        "name": "Stefanos Tsitsipas",
+        "country": "GRE",
+        "seed": 3.0,
+        "age": 24.4
+      },
+      "score_raw": "6-3 7-6(4) 7-6(5)",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 176.0,
+      "best_of": 5
+    },
+    {
+      "id": "2023_roland_garros",
+      "year": 2023,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20230529,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 3.0,
+        "age": 36.0
+      },
+      "loser": {
+        "name": "Casper Ruud",
+        "country": "NOR",
+        "seed": 4.0,
+        "age": 24.4
+      },
+      "score_raw": "7-6(1) 6-3 7-5",
+      "sets": [
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        }
+      ],
+      "duration_minutes": 194.0,
+      "best_of": 5
+    },
+    {
+      "id": "2023_wimbledon",
+      "year": 2023,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20230703,
+      "winner": {
+        "name": "Carlos Alcaraz",
+        "country": "ESP",
+        "seed": 1.0,
+        "age": 20.1
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 36.1
+      },
+      "score_raw": "1-6 7-6(6) 6-1 3-6 6-4",
+      "sets": [
+        {
+          "winner": 1,
+          "loser": 6
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        }
+      ],
+      "duration_minutes": 283.0,
+      "best_of": 5
+    },
+    {
+      "id": "2023_us_open",
+      "year": 2023,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20230828,
+      "winner": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 36.2
+      },
+      "loser": {
+        "name": "Daniil Medvedev",
+        "country": "RUS",
+        "seed": 3.0,
+        "age": 27.5
+      },
+      "score_raw": "6-3 7-6(5) 6-3",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 197.0,
+      "best_of": 5
+    },
+    {
+      "id": "2024_australian_open",
+      "year": 2024,
+      "tournament": "Australian Open",
+      "surface": "Hard",
+      "date": 20240115,
+      "winner": {
+        "name": "Jannik Sinner",
+        "country": "ITA",
+        "seed": 4.0,
+        "age": 22.4
+      },
+      "loser": {
+        "name": "Daniil Medvedev",
+        "country": "RUS",
+        "seed": 3.0,
+        "age": 27.9
+      },
+      "score_raw": "3-6 3-6 6-4 6-4 6-3",
+      "sets": [
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 3,
+          "loser": 6
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 6,
+          "loser": 3
+        }
+      ],
+      "duration_minutes": 224.0,
+      "best_of": 5
+    },
+    {
+      "id": "2024_roland_garros",
+      "year": 2024,
+      "tournament": "French Open",
+      "surface": "Clay",
+      "date": 20240527,
+      "winner": {
+        "name": "Carlos Alcaraz",
+        "country": "ESP",
+        "seed": 3.0,
+        "age": 21.0
+      },
+      "loser": {
+        "name": "Alexander Zverev",
+        "country": "GER",
+        "seed": 4.0,
+        "age": 27.1
+      },
+      "score_raw": "6-3 2-6 5-7 6-1 6-2",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 2,
+          "loser": 6
+        },
+        {
+          "winner": 5,
+          "loser": 7
+        },
+        {
+          "winner": 6,
+          "loser": 1
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        }
+      ],
+      "duration_minutes": null,
+      "best_of": 5
+    },
+    {
+      "id": "2024_wimbledon",
+      "year": 2024,
+      "tournament": "Wimbledon",
+      "surface": "Grass",
+      "date": 20240701,
+      "winner": {
+        "name": "Carlos Alcaraz",
+        "country": "ESP",
+        "seed": 3.0,
+        "age": 21.1
+      },
+      "loser": {
+        "name": "Novak Djokovic",
+        "country": "SRB",
+        "seed": 2.0,
+        "age": 37.1
+      },
+      "score_raw": "6-2 6-2 7-6(4)",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 6,
+          "loser": 2
+        },
+        {
+          "winner": 7,
+          "loser": 6
+        }
+      ],
+      "duration_minutes": 147.0,
+      "best_of": 5
+    },
+    {
+      "id": "2024_us_open",
+      "year": 2024,
+      "tournament": "US Open",
+      "surface": "Hard",
+      "date": 20240826,
+      "winner": {
+        "name": "Jannik Sinner",
+        "country": "ITA",
+        "seed": 1.0,
+        "age": 23.0
+      },
+      "loser": {
+        "name": "Taylor Fritz",
+        "country": "USA",
+        "seed": 12.0,
+        "age": 26.8
+      },
+      "score_raw": "6-3 6-4 7-5",
+      "sets": [
+        {
+          "winner": 6,
+          "loser": 3
+        },
+        {
+          "winner": 6,
+          "loser": 4
+        },
+        {
+          "winner": 7,
+          "loser": 5
+        }
+      ],
+      "duration_minutes": 136.0,
+      "best_of": 5
+    }
+  ],
+  "metadata": {
+    "data_range": "2000-2024",
+    "total_finals": 94,
+    "tournaments": [
+      "Australian Open",
+      "French Open",
+      "Wimbledon",
+      "US Open"
+    ]
+  }
+}

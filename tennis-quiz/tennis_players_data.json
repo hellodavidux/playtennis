@@ -1,0 +1,602 @@
+[
+  {
+    "id": 100284,
+    "name": "Jimmy Connors",
+    "titles": 110,
+    "hand": "L",
+    "country": "USA",
+    "height": 178.0
+  },
+  {
+    "id": 103819,
+    "name": "Roger Federer",
+    "titles": 103,
+    "hand": "R",
+    "country": "SUI",
+    "height": 185.0
+  },
+  {
+    "id": 104925,
+    "name": "Novak Djokovic",
+    "titles": 99,
+    "hand": "R",
+    "country": "SRB",
+    "height": 188.0
+  },
+  {
+    "id": 100656,
+    "name": "Ivan Lendl",
+    "titles": 95,
+    "hand": "R",
+    "country": "USA",
+    "height": 188.0
+  },
+  {
+    "id": 104745,
+    "name": "Rafael Nadal",
+    "titles": 92,
+    "hand": "L",
+    "country": "ESP",
+    "height": 185.0
+  },
+  {
+    "id": 100581,
+    "name": "John McEnroe",
+    "titles": 78,
+    "hand": "L",
+    "country": "USA",
+    "height": 180.0
+  },
+  {
+    "id": 100029,
+    "name": "Rod Laver",
+    "titles": 72,
+    "hand": "L",
+    "country": "AUS",
+    "height": 173.0
+  },
+  {
+    "id": 100119,
+    "name": "Ilie Nastase",
+    "titles": 66,
+    "hand": "R",
+    "country": "ROU",
+    "height": 183.0
+  },
+  {
+    "id": 100437,
+    "name": "Bjorn Borg",
+    "titles": 66,
+    "hand": "R",
+    "country": "SWE",
+    "height": 180.0
+  },
+  {
+    "id": 101948,
+    "name": "Pete Sampras",
+    "titles": 65,
+    "hand": "R",
+    "country": "USA",
+    "height": 185.0
+  },
+  {
+    "id": 100282,
+    "name": "Guillermo Vilas",
+    "titles": 63,
+    "hand": "L",
+    "country": "ARG",
+    "height": 180.0
+  },
+  {
+    "id": 101736,
+    "name": "Andre Agassi",
+    "titles": 60,
+    "hand": "R",
+    "country": "USA",
+    "height": 180.0
+  },
+  {
+    "id": 100126,
+    "name": "Stan Smith",
+    "titles": 52,
+    "hand": "R",
+    "country": "USA",
+    "height": 193.0
+  },
+  {
+    "id": 101414,
+    "name": "Boris Becker",
+    "titles": 50,
+    "hand": "R",
+    "country": "GER",
+    "height": 190.0
+  },
+  {
+    "id": 100074,
+    "name": "Arthur Ashe",
+    "titles": 49,
+    "hand": "R",
+    "country": "USA",
+    "height": 185.0
+  },
+  {
+    "id": 104918,
+    "name": "Andy Murray",
+    "titles": 46,
+    "hand": "R",
+    "country": "GBR",
+    "height": 191.0
+  },
+  {
+    "id": 101222,
+    "name": "Stefan Edberg",
+    "titles": 45,
+    "hand": "R",
+    "country": "SWE",
+    "height": 188.0
+  },
+  {
+    "id": 101404,
+    "name": "Thomas Muster",
+    "titles": 44,
+    "hand": "L",
+    "country": "AUT",
+    "height": 180.0
+  },
+  {
+    "id": 100087,
+    "name": "John Newcombe",
+    "titles": 41,
+    "hand": "R",
+    "country": "AUS",
+    "height": 183.0
+  },
+  {
+    "id": 100016,
+    "name": "Ken Rosewall",
+    "titles": 40,
+    "hand": "R",
+    "country": "AUS",
+    "height": 175.0
+  },
+  {
+    "id": 100174,
+    "name": "Manuel Orantes",
+    "titles": 39,
+    "hand": "L",
+    "country": "ESP",
+    "height": 178.0
+  },
+  {
+    "id": 100084,
+    "name": "Tom Okker",
+    "titles": 37,
+    "hand": "R",
+    "country": "NED",
+    "height": 178.0
+  },
+  {
+    "id": 102021,
+    "name": "Michael Chang",
+    "titles": 35,
+    "hand": "R",
+    "country": "USA",
+    "height": 175.0
+  },
+  {
+    "id": 101062,
+    "name": "Mats Wilander",
+    "titles": 34,
+    "hand": "R",
+    "country": "SWE",
+    "height": 183.0
+  },
+  {
+    "id": 104053,
+    "name": "Andy Roddick",
+    "titles": 32,
+    "hand": "R",
+    "country": "USA",
+    "height": 188.0
+  },
+  {
+    "id": 103720,
+    "name": "Lleyton Hewitt",
+    "titles": 31,
+    "hand": "R",
+    "country": "AUS",
+    "height": 180.0
+  },
+  {
+    "id": 102338,
+    "name": "Yevgeny Kafelnikov",
+    "titles": 27,
+    "hand": "R",
+    "country": "RUS",
+    "height": 190.0
+  },
+  {
+    "id": 103970,
+    "name": "David Ferrer",
+    "titles": 27,
+    "hand": "R",
+    "country": "ESP",
+    "height": 175.0
+  },
+  {
+    "id": 100342,
+    "name": "Vitas Gerulaitis",
+    "titles": 26,
+    "hand": "R",
+    "country": "USA",
+    "height": 183.0
+  },
+  {
+    "id": 100555,
+    "name": "Jose Luis Clerc",
+    "titles": 26,
+    "hand": "R",
+    "country": "ARG",
+    "height": 185.0
+  },
+  {
+    "id": 100261,
+    "name": "Brian Gottfried",
+    "titles": 25,
+    "hand": "R",
+    "country": "USA",
+    "height": 183.0
+  },
+  {
+    "id": 101964,
+    "name": "Goran Ivanisevic",
+    "titles": 24,
+    "hand": "L",
+    "country": "CRO",
+    "height": 193.0
+  },
+  {
+    "id": 100644,
+    "name": "Alexander Zverev",
+    "titles": 24,
+    "hand": "R",
+    "country": "GER",
+    "height": 198.0
+  },
+  {
+    "id": 100128,
+    "name": "Cliff Richey",
+    "titles": 23,
+    "hand": "R",
+    "country": "USA",
+    "height": 175.0
+  },
+  {
+    "id": 100676,
+    "name": "Yannick Noah",
+    "titles": 23,
+    "hand": "R",
+    "country": "FRA",
+    "height": 193.0
+  },
+  {
+    "id": 101793,
+    "name": "Jim Courier",
+    "titles": 23,
+    "hand": "R",
+    "country": "USA",
+    "height": 185.0
+  },
+  {
+    "id": 100232,
+    "name": "Eddie Dibbs",
+    "titles": 22,
+    "hand": "R",
+    "country": "USA",
+    "height": 170.0
+  },
+  {
+    "id": 100286,
+    "name": "Harold Solomon",
+    "titles": 22,
+    "hand": "R",
+    "country": "USA",
+    "height": 168.0
+  },
+  {
+    "id": 105223,
+    "name": "Juan Martin del Potro",
+    "titles": 22,
+    "hand": "R",
+    "country": "ARG",
+    "height": 198.0
+  },
+  {
+    "id": 100100,
+    "name": "Tony Roche",
+    "titles": 21,
+    "hand": "L",
+    "country": "AUS",
+    "height": 178.0
+  },
+  {
+    "id": 100653,
+    "name": "Andres Gomez",
+    "titles": 21,
+    "hand": "L",
+    "country": "ECU",
+    "height": 193.0
+  },
+  {
+    "id": 100763,
+    "name": "Brad Gilbert",
+    "titles": 21,
+    "hand": "R",
+    "country": "USA",
+    "height": 185.0
+  },
+  {
+    "id": 103786,
+    "name": "Nikolay Davydenko",
+    "titles": 21,
+    "hand": "R",
+    "country": "RUS",
+    "height": 178.0
+  },
+  {
+    "id": 105227,
+    "name": "Marin Cilic",
+    "titles": 21,
+    "hand": "R",
+    "country": "CRO",
+    "height": 198.0
+  },
+  {
+    "id": 106421,
+    "name": "Daniil Medvedev",
+    "titles": 21,
+    "hand": "R",
+    "country": "RUS",
+    "height": 198.0
+  },
+  {
+    "id": 100309,
+    "name": "Raul Ramirez",
+    "titles": 20,
+    "hand": "R",
+    "country": "MEX",
+    "height": 183.0
+  },
+  {
+    "id": 102845,
+    "name": "Carlos Moya",
+    "titles": 20,
+    "hand": "R",
+    "country": "ESP",
+    "height": 190.0
+  },
+  {
+    "id": 102856,
+    "name": "Gustavo Kuerten",
+    "titles": 20,
+    "hand": "R",
+    "country": "BRA",
+    "height": 190.0
+  },
+  {
+    "id": 101529,
+    "name": "Michael Stich",
+    "titles": 19,
+    "hand": "R",
+    "country": "GER",
+    "height": 193.0
+  },
+  {
+    "id": 102358,
+    "name": "Thomas Enqvist",
+    "titles": 19,
+    "hand": "R",
+    "country": "SWE",
+    "height": 190.0
+  },
+  {
+    "id": 206173,
+    "name": "Jannik Sinner",
+    "titles": 19,
+    "hand": "R",
+    "country": "ITA",
+    "height": 191.0
+  },
+  {
+    "id": 100300,
+    "name": "Jose Higueras",
+    "titles": 18,
+    "hand": "R",
+    "country": "ESP",
+    "height": 178.0
+  },
+  {
+    "id": 102701,
+    "name": "Marcelo Rios",
+    "titles": 18,
+    "hand": "L",
+    "country": "CHI",
+    "height": 175.0
+  },
+  {
+    "id": 104542,
+    "name": "Jo-Wilfried Tsonga",
+    "titles": 18,
+    "hand": "R",
+    "country": "FRA",
+    "height": 188.0
+  },
+  {
+    "id": 100255,
+    "name": "Roscoe Tanner",
+    "titles": 17,
+    "hand": "L",
+    "country": "USA",
+    "height": 183.0
+  },
+  {
+    "id": 101990,
+    "name": "Richard Krajicek",
+    "titles": 17,
+    "hand": "R",
+    "country": "NED",
+    "height": 196.0
+  },
+  {
+    "id": 102374,
+    "name": "Alex Corretja",
+    "titles": 17,
+    "hand": "R",
+    "country": "ESP",
+    "height": 180.0
+  },
+  {
+    "id": 103163,
+    "name": "Tommy Haas",
+    "titles": 17,
+    "hand": "R",
+    "country": "GER",
+    "height": 188.0
+  },
+  {
+    "id": 106233,
+    "name": "Dominic Thiem",
+    "titles": 17,
+    "hand": "R",
+    "country": "AUT",
+    "height": 185.0
+  },
+  {
+    "id": 126094,
+    "name": "Andrey Rublev",
+    "titles": 17,
+    "hand": "R",
+    "country": "RUS",
+    "height": 188.0
+  },
+  {
+    "id": 207989,
+    "name": "Carlos Alcaraz",
+    "titles": 17,
+    "hand": "R",
+    "country": "ESP",
+    "height": 183.0
+  },
+  {
+    "id": 100321,
+    "name": "Vijay Amritraj",
+    "titles": 16,
+    "hand": "R",
+    "country": "IND",
+    "height": 193.0
+  },
+  {
+    "id": 101142,
+    "name": "Emilio Sanchez",
+    "titles": 16,
+    "hand": "R",
+    "country": "ESP",
+    "height": 180.0
+  },
+  {
+    "id": 101820,
+    "name": "Marc Rosset",
+    "titles": 16,
+    "hand": "R",
+    "country": "SUI",
+    "height": 201.0
+  },
+  {
+    "id": 103507,
+    "name": "Juan Carlos Ferrero",
+    "titles": 16,
+    "hand": "R",
+    "country": "ESP",
+    "height": 183.0
+  },
+  {
+    "id": 104755,
+    "name": "Richard Gasquet",
+    "titles": 16,
+    "hand": "R",
+    "country": "FRA",
+    "height": 183.0
+  },
+  {
+    "id": 104527,
+    "name": "Stan Wawrinka",
+    "titles": 16,
+    "hand": "R",
+    "country": "SUI",
+    "height": 183.0
+  },
+  {
+    "id": 104545,
+    "name": "John Isner",
+    "titles": 16,
+    "hand": "R",
+    "country": "USA",
+    "height": 208.0
+  },
+  {
+    "id": 100060,
+    "name": "Marty Riessen",
+    "titles": 15,
+    "hand": "R",
+    "country": "USA",
+    "height": 185.0
+  },
+  {
+    "id": 100073,
+    "name": "Mark Cox",
+    "titles": 15,
+    "hand": "L",
+    "country": "GBR",
+    "height": 185.0
+  },
+  {
+    "id": 100280,
+    "name": "Wojtek Fibak",
+    "titles": 15,
+    "hand": "R",
+    "country": "POL",
+    "height": 183.0
+  },
+  {
+    "id": 100428,
+    "name": "Gene Mayer",
+    "titles": 15,
+    "hand": "R",
+    "country": "USA",
+    "height": 183.0
+  },
+  {
+    "id": 101843,
+    "name": "Sergi Bruguera",
+    "titles": 15,
+    "hand": "R",
+    "country": "ESP",
+    "height": 188.0
+  },
+  {
+    "id": 101320,
+    "name": "Magnus Gustafsson",
+    "titles": 15,
+    "hand": "R",
+    "country": "SWE",
+    "height": 185.0
+  },
+  {
+    "id": 101965,
+    "name": "Wayne Ferreira",
+    "titles": 15,
+    "hand": "R",
+    "country": "RSA",
+    "height": 185.0
+  }
+]

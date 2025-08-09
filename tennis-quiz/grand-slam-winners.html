@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Slam Winners Quiz - Test Your Tennis Knowledge | Tennis Quiz Games</title>
+    <meta name="description" content="Challenge yourself with our Grand Slam Winners Quiz! Name champions from 2024 back to 2000. Test your tennis history knowledge with this interactive quiz game.">
+    <meta name="keywords" content="Grand Slam winners quiz, tennis champions quiz, tennis history quiz, Grand Slam tennis, tennis quiz game, tennis trivia">
+    <meta name="author" content="David">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tennis-quiz.com/grand-slam-winners.html">
+    <meta property="og:title" content="Grand Slam Winners Quiz - Test Your Tennis Knowledge">
+    <meta property="og:description" content="Challenge yourself with our Grand Slam Winners Quiz! Name champions from 2024 back to 2000. Test your tennis history knowledge with this interactive quiz game.">
+    <meta property="og:image" content="https://tennis-quiz.com/images/champions-gs-history.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tennis-quiz.com/grand-slam-winners.html">
+    <meta property="twitter:title" content="Grand Slam Winners Quiz - Test Your Tennis Knowledge">
+    <meta property="twitter:description" content="Challenge yourself with our Grand Slam Winners Quiz! Name champions from 2024 back to 2000. Test your tennis history knowledge with this interactive quiz game.">
+    <meta property="twitter:image" content="https://tennis-quiz.com/images/champions-gs-history.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tennis-quiz.com/grand-slam-winners.html">
+    
+    <link rel="icon" type="image/png" href="images/logo-tennis-quiz.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tennis-blue': '#667eea',
+                        'tennis-purple': '#764ba2'
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4aa, #00b894);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-unified {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sign-up-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .sign-up-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .main-container {
+            padding-top: 5rem;
+        }
+
+        .header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .game-content {
+            padding: 2rem;
+        }
+
+        @media (max-width: 640px) {
+            .nav-unified {
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+            
+            .main-container {
+                padding-top: 5.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .game-content {
+                padding: 1rem;
+            }
+        }
+
+        /* Responsive game cards - Desktop: horizontal, Mobile: column */
+        .game-card-responsive {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-button-responsive {
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .game-card-responsive {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .play-button-responsive {
+                text-align: center;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Unified Navigation -->
+    <nav class="nav-unified">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <img src="images/logo-tennis-quiz.png" alt="Tennis Quiz Logo" style="width: 20px; height: 20px; ">
+                TENNIS GAMES
+            </a>
+        </div>
+        <div class="nav-actions">
+            <button class="sign-up-btn" onclick="openJoinModal()">
+                Join for more
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="header">
+                <h1>🏆 Guess the GS Winners</h1>
+                <p>Do you remember who won each GS? One wrong answer = game over!</p>
+            </div>
+
+            <div class="game-content">
+
+
+                <!-- Game Container -->
+                <div id="game-container" class="space-y-6">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Wrong Answer Modal -->
+            <div id="wrong-answer-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
+                <div class="bg-white rounded-2xl p-6 m-4 max-w-md w-full shadow-2xl">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">😅</div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Oops!</h2>
+                        <div id="wrong-answer-content" class="text-gray-600 mb-6"></div>
+                        
+                        <div class="bg-tennis-light p-4 rounded-lg mb-6">
+                            <div class="text-sm text-gray-600">Your Progress</div>
+                            <div id="progress-display" class="text-lg font-bold text-tennis-blue"></div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <button id="continue-playing-btn" class="w-full bg-tennis-blue hover:bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors">
+                                ▶️ Continue Playing
+                            </button>
+                            <div class="mt-4 text-center">
+                                <button 
+                                    onclick="copyResults()"
+                                    class="text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
+                                    style="border: none; background: none;"
+                                    id="copyButton1"
+                                >
+                                    copy my results as a text
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Success Modal -->
+            <div id="success-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
+                <div class="bg-white rounded-2xl p-6 m-4 max-w-md w-full shadow-2xl">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4 animate-bounce-slow">🎉</div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Year Complete!</h2>
+                        <p id="success-message" class="text-gray-600 mb-6"></p>
+                        
+                        <button id="continue-btn" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors">
+                            ➡️ Continue to Next Year
+                        </button>
+                        <div class="mt-4 text-center">
+                            <button 
+                                onclick="copyResults()"
+                                class="text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
+                                style="border: none; background: none;"
+                                id="copyButton2"
+                            >
+                                copy my results as a text
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Embedded winners data
+        const WINNERS_BY_YEAR = {
+  "2024": {
+    "AO": "Jannik Sinner",
+    "RG": "Carlos Alcaraz",
+    "WB": "Carlos Alcaraz",
+    "US": "Jannik Sinner"
+  },
+  "2023": {
+    "AO": "Novak Djokovic",
+    "RG": "Novak Djokovic",
+    "WB": "Carlos Alcaraz",
+    "US": "Novak Djokovic"
+  },
+  "2022": {
+    "AO": "Rafael Nadal",
+        "RG": "Rafael Nadal",
+    "WB": "Novak Djokovic",
+    "US": "Carlos Alcaraz"
+  },
+  "2021": {
+    "AO": "Novak Djokovic",
+    "RG": "Novak Djokovic",
+    "WB": "Novak Djokovic",
+    "US": "Daniil Medvedev"
+  },
+  "2020": {
+    "AO": "Novak Djokovic",
+        "RG": "Rafael Nadal",
+    "US": "Dominic Thiem"
+    },
+  "2019": {
+    "AO": "Novak Djokovic",
+        "RG": "Rafael Nadal",
+    "WB": "Novak Djokovic",
+        "US": "Rafael Nadal"
+    },
+  "2018": {
+    "AO": "Roger Federer",
+        "RG": "Rafael Nadal",
+        "WB": "Novak Djokovic",
+        "US": "Novak Djokovic"
+    },
+  "2017": {
+    "AO": "Roger Federer",
+        "RG": "Rafael Nadal",
+        "WB": "Roger Federer",
+        "US": "Rafael Nadal"
+    },
+  "2016": {
+    "AO": "Novak Djokovic",
+    "RG": "Novak Djokovic",
+    "WB": "Andy Murray",
+    "US": "Stan Wawrinka"
+    },
+    "2015": {
+        "AO": "Novak Djokovic",
+        "RG": "Stan Wawrinka",
+        "WB": "Novak Djokovic",
+        "US": "Novak Djokovic"
+    },
+  "2014": {
+    "AO": "Stan Wawrinka",
+    "RG": "Rafael Nadal",
+    "WB": "Novak Djokovic",
+    "US": "Marin Cilic"
+  },
+  "2013": {
+        "AO": "Novak Djokovic",
+    "RG": "Rafael Nadal",
+        "WB": "Andy Murray",
+    "US": "Rafael Nadal"
+    },
+  "2012": {
+    "AO": "Novak Djokovic",
+        "RG": "Rafael Nadal",
+        "WB": "Roger Federer",
+    "US": "Andy Murray"
+    },
+  "2011": {
+    "AO": "Novak Djokovic",
+        "RG": "Rafael Nadal",
+        "WB": "Novak Djokovic",
+        "US": "Novak Djokovic"
+    },
+  "2010": {
+    "AO": "Roger Federer",
+        "RG": "Rafael Nadal",
+    "WB": "Rafael Nadal",
+        "US": "Rafael Nadal"
+    },
+  "2009": {
+    "AO": "Rafael Nadal",
+    "RG": "Roger Federer",
+    "WB": "Roger Federer",
+    "US": "Juan Martin del Potro"
+  },
+  "2008": {
+        "AO": "Novak Djokovic",
+    "RG": "Rafael Nadal",
+    "WB": "Rafael Nadal",
+    "US": "Roger Federer"
+  },
+  "2007": {
+    "AO": "Roger Federer",
+    "RG": "Rafael Nadal",
+    "WB": "Roger Federer",
+    "US": "Roger Federer"
+  },
+  "2006": {
+    "AO": "Roger Federer",
+    "RG": "Rafael Nadal",
+    "WB": "Roger Federer",
+    "US": "Roger Federer"
+  },
+  "2005": {
+    "AO": "Marat Safin",
+        "RG": "Rafael Nadal",
+    "WB": "Roger Federer",
+    "US": "Roger Federer"
+  },
+  "2004": {
+    "AO": "Roger Federer",
+    "RG": "Gaston Gaudio",
+    "WB": "Roger Federer",
+    "US": "Roger Federer"
+  },
+  "2003": {
+    "AO": "Andre Agassi",
+    "RG": "Juan Carlos Ferrero",
+    "WB": "Roger Federer",
+    "US": "Andy Roddick"
+  },
+  "2002": {
+    "AO": "Thomas Johansson",
+    "RG": "Albert Costa",
+    "WB": "Lleyton Hewitt",
+    "US": "Pete Sampras"
+  },
+  "2001": {
+    "AO": "Andre Agassi",
+    "RG": "Gustavo Kuerten",
+    "WB": "Goran Ivanisevic",
+    "US": "Lleyton Hewitt"
+  },
+  "2000": {
+    "AO": "Andre Agassi",
+    "RG": "Gustavo Kuerten",
+    "WB": "Pete Sampras",
+    "US": "Marat Safin"
+    }
+};
+
+        const ALL_WINNERS = [
+            "Albert Costa", "Alex Corretja", "Alexander Zverev", "Andre Agassi",
+            "Andy Murray", "Andy Roddick", "Arnaud Clement", "Carlos Alcaraz",
+            "Casper Ruud", "Daniil Medvedev", "David Ferrer", "David Nalbandian",
+            "Dominic Thiem", "Fernando Gonzalez", "Gaston Gaudio", "Goran Ivanisevic",
+            "Guillermo Coria", "Gustavo Kuerten", "Jannik Sinner", "Jo-Wilfried Tsonga",
+            "Juan Carlos Ferrero", "Juan Martin del Potro", "Kei Nishikori", "Kevin Anderson",
+            "Lleyton Hewitt", "Magnus Norman", "Marat Safin", "Marcos Baghdatis",
+            "Mariano Puerta", "Marin Cilic", "Mark Philippoussis", "Martin Verkerk",
+            "Matteo Berrettini", "Milos Raonic", "Nick Kyrgios", "Novak Djokovic",
+            "Patrick Rafter", "Pete Sampras", "Rafael Nadal", "Rainer Schuettler",
+            "Robin Soderling", "Roger Federer", "Stan Wawrinka", "Stefanos Tsitsipas",
+            "Taylor Fritz", "Thomas Johansson", "Tomas Berdych", "Yevgeny Kafelnikov"
+        ];
+
+        // Tournament info
+        const TOURNAMENTS = {
+            'AO': { name: 'Australian Open', flag: '🇦🇺', color: 'bg-blue-500' },
+            'RG': { name: 'French Open', flag: '🇫🇷', color: 'bg-orange-500' },
+            'WB': { name: 'Wimbledon', flag: '🇬🇧', color: 'bg-green-500' },
+            'US': { name: 'US Open', flag: '🇺🇸', color: 'bg-blue-600' }
+        };
+
+        const TOURNAMENT_ORDER = ['AO', 'RG', 'WB', 'US'];
+
+        // Game state
+        let currentYear = 2024;
+        let gameOver = false;
+        let revealMode = false;
+        let savedAnswers = {}; // Store all user answers (correct and incorrect)
+        let lastWrongAnswer = null; // Store last wrong answer context for continue playing
+
+        // Initialize the game
+        function initGame() {
+            currentYear = 2024;
+            gameOver = false;
+            revealMode = false;
+            savedAnswers = {};
+            lastWrongAnswer = null;
+            renderGame();
+        }
+
+        // Render the current game state
+        function renderGame() {
+            const container = document.getElementById('game-container');
+            container.innerHTML = '';
+
+            // Show completed years first (from newest to oldest)
+            for (let year = 2024; year > currentYear; year--) {
+                const completedCard = createYearCard(year, false, true); // true = completed/readonly
+                container.appendChild(completedCard);
+            }
+
+            // Show current year
+            const yearCard = createYearCard(currentYear, false);
+            container.appendChild(yearCard);
+
+            // Show next few years as locked preview
+            for (let year = currentYear - 1; year >= Math.max(currentYear - 3, 2000); year--) {
+                const lockedCard = createYearCard(year, true);
+                container.appendChild(lockedCard);
+            }
+
+            // Add "many more years" indicator
+            if (currentYear > 2003) {
+                const moreDiv = document.createElement('div');
+                moreDiv.className = 'bg-white/20 rounded-xl p-6 text-center text-white/60';
+                moreDiv.innerHTML = `
+                    <div class="text-2xl mb-2">...</div>
+                    <p class="text-sm">Continue back to 2000<br>Keep going to unlock more years!</p>
+                `;
+                container.appendChild(moreDiv);
+            }
+        }
+
+        // Create a year card
+        function createYearCard(year, isLocked, isCompleted = false) {
+            const yearData = WINNERS_BY_YEAR[year];
+            if (!yearData) return document.createElement('div');
+
+            const card = document.createElement('div');
+            card.className = `bg-white rounded-xl  ${isLocked ? 'opacity-60' : ''} ${isCompleted ? 'border-2 border-green-400' : ''}`;
+            
+            let cardContent = `
+                <div class="p-4 text-center">
+                    <h2 class="text-2xl font-bold text-gray-800 bg-gray-100 rounded-lg py-2 px-4 inline-block">${year} ${isCompleted ? '✅' : ''}</h2>
+                    ${isLocked ? '<p class="text-sm text-gray-600">🔒 Complete previous year to unlock</p>' : ''}
+                    ${isCompleted ? '<p class="text-sm text-green-600">🏆 Completed!</p>' : ''}
+                </div>
+                <div class="p-4 space-y-3">
+            `;
+
+            // Add tournament selectors
+            TOURNAMENT_ORDER.forEach((tournamentKey, index) => {
+                const tournament = TOURNAMENTS[tournamentKey];
+                const correctAnswer = yearData[tournamentKey];
+                
+                if (correctAnswer) {
+                    const savedAnswer = savedAnswers[`${year}-${tournamentKey}`] || '';
+                    const isCorrect = savedAnswer === correctAnswer;
+                    const isIncorrect = savedAnswer && savedAnswer !== correctAnswer;
+                    
+                    // For completed years, preserve original user answers (both right and wrong)
+                    const effectiveAnswer = savedAnswer || '';
+                    const effectiveIsCorrect = isCorrect;
+                    const effectiveIsIncorrect = isIncorrect;
+                    
+                    const sequentialLock = (index > 0 && !isLocked && !revealMode && !isCompleted && !isPreviousTournamentComplete(year, index));
+                    
+                    const isDisabled = isLocked || 
+                                     isCompleted || // All completed year inputs are disabled
+                                     effectiveIsCorrect || // Correct answers are disabled
+                                     effectiveIsIncorrect || // Wrong answers are locked
+                                     sequentialLock; // Sequential tournament locking
+                    
+                    let inputClass = "w-full p-2 border rounded-lg focus:ring-2 focus:ring-tennis-blue focus:border-transparent";
+                    if (revealMode) {
+                        inputClass += " bg-green-50 border-green-500";
+                    } else if (effectiveIsCorrect) {
+                        inputClass += " bg-green-50 border-green-500";
+                    } else if (effectiveIsIncorrect) {
+                        inputClass += " bg-red-50 border-red-500";
+                    } else {
+                        inputClass += " border-gray-300";
+                    }
+                    
+                    cardContent += `
+                        <div class="border rounded-lg p-3 ${tournament.color}/20 ${isDisabled ? 'opacity-50' : ''}">
+                            <div class="flex items-center mb-2">
+                                <span class="font-semibold text-gray-700">
+                                    ${tournament.flag} ${tournament.name}
+                                </span>
+                            </div>
+                            
+                            ${isLocked ? 
+                                `<div class="text-gray-400 text-center py-2">🔒 Complete previous year</div>` :
+                                (index > 0 && !isLocked && !revealMode && !isCompleted && !isPreviousTournamentComplete(year, index)) ?
+                                `<div class="text-gray-400 text-center py-2">🔒 Complete ${TOURNAMENTS[TOURNAMENT_ORDER[index-1]].name} first</div>` :
+                                `<div class="relative">
+                                    <input 
+                                        type="text" 
+                                        id="${year}-${tournamentKey}-input"
+                                        class="${inputClass} ${effectiveIsCorrect ? 'pr-10' : ''}"
+                                        placeholder="Type in the winner of this GS..."
+                                        autocomplete="off"
+                                        value="${revealMode ? correctAnswer : effectiveAnswer}"
+                                        ${isDisabled ? 'disabled' : ''}
+                                        oninput="filterPlayers('${year}', '${tournamentKey}')"
+                                        onblur="setTimeout(() => hideSuggestions('${year}', '${tournamentKey}'), 200)"
+                                        onkeydown="handleKeydown(event, '${year}', '${tournamentKey}')"
+                                        onfocus="filterPlayers('${year}', '${tournamentKey}')"
+                                    />
+                                    ${effectiveIsCorrect ? '<div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-600 text-lg">✓</div>' : ''}
+                                    <div id="${year}-${tournamentKey}-suggestions" class="absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 max-h-48 overflow-y-auto hidden">
+                                        ${ALL_WINNERS.map(winner => 
+                                            `<div class="p-2 hover:bg-tennis-blue hover:text-white cursor-pointer transition-colors" onclick="selectPlayer('${year}', '${tournamentKey}', '${winner}')">${winner}</div>`
+                                        ).join('')}
+                                    </div>
+                                    <input type="hidden" id="${year}-${tournamentKey}" value="${revealMode ? correctAnswer : effectiveAnswer}" />
+                                    ${effectiveIsIncorrect ? `<div class="text-xs text-red-600 mt-1">❌ Incorrect. The right answer is: ${correctAnswer}</div>` : ''}
+                                </div>`
+                            }
+                        </div>
+                    `;
+                }
+            });
+
+            cardContent += '</div>';
+            card.innerHTML = cardContent;
+            
+            return card;
+        }
+
+        // Check if previous tournament in the same year is complete
+        function isPreviousTournamentComplete(year, tournamentIndex) {
+            if (tournamentIndex === 0) return true; // First tournament is always available
+            
+            const previousTournament = TOURNAMENT_ORDER[tournamentIndex - 1];
+            const correctAnswer = WINNERS_BY_YEAR[year][previousTournament];
+            const savedAnswer = savedAnswers[`${year}-${previousTournament}`];
+            
+            // Consider a tournament "complete" if there's any answer (right or wrong)
+            // This allows progression to next tournament even after wrong answers
+            return savedAnswer && savedAnswer.length > 0;
+        }
+
+        // Filter players based on search input
+        function filterPlayers(year, tournament) {
+            const input = document.getElementById(`${year}-${tournament}-input`);
+            const suggestions = document.getElementById(`${year}-${tournament}-suggestions`);
+            const searchTerm = input.value.toLowerCase();
+
+            if (searchTerm.length === 0) {
+                suggestions.classList.add('hidden');
+                return;
+            }
+
+            // Filter players that match the search term
+            const matchedPlayers = ALL_WINNERS.filter(player => 
+                player.toLowerCase().includes(searchTerm)
+            );
+
+            if (matchedPlayers.length > 0) {
+                suggestions.innerHTML = matchedPlayers.map(winner => 
+                    `<div class="p-2 hover:bg-tennis-blue hover:text-white cursor-pointer transition-colors" onclick="selectPlayer('${year}', '${tournament}', '${winner}')">${winner}</div>`
+                ).join('');
+                suggestions.classList.remove('hidden');
+            } else {
+                suggestions.classList.add('hidden');
+            }
+        }
+
+        // Hide suggestions dropdown
+        function hideSuggestions(year, tournament) {
+            const suggestions = document.getElementById(`${year}-${tournament}-suggestions`);
+            if (suggestions) {
+                suggestions.classList.add('hidden');
+            }
+        }
+
+        // Handle keyboard navigation in search
+        function handleKeydown(event, year, tournament) {
+            const suggestions = document.getElementById(`${year}-${tournament}-suggestions`);
+            const suggestionElements = suggestions.querySelectorAll('div');
+            
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                
+                // If there's exactly one suggestion, select it
+                if (suggestionElements.length === 1) {
+                    const playerName = suggestionElements[0].textContent;
+                    selectPlayer(year, tournament, playerName);
+                }
+                // If there's a highlighted suggestion, select it
+                else {
+                    const highlighted = suggestions.querySelector('.bg-tennis-blue');
+                    if (highlighted) {
+                        const playerName = highlighted.textContent;
+                        selectPlayer(year, tournament, playerName);
+                    }
+                }
+            }
+            else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                event.preventDefault();
+                
+                if (suggestionElements.length > 0) {
+                    const current = suggestions.querySelector('.bg-tennis-blue');
+                    
+                    // Remove current highlight
+                    if (current) {
+                        current.classList.remove('bg-tennis-blue', 'text-white');
+                    }
+                    
+                    let nextIndex = 0;
+                    if (current) {
+                        const currentIndex = Array.from(suggestionElements).indexOf(current);
+                        if (event.key === 'ArrowDown') {
+                            nextIndex = (currentIndex + 1) % suggestionElements.length;
+                    } else {
+                            nextIndex = (currentIndex - 1 + suggestionElements.length) % suggestionElements.length;
+                        }
+                    }
+                    
+                    // Highlight next item
+                    suggestionElements[nextIndex].classList.add('bg-tennis-blue', 'text-white');
+                    suggestionElements[nextIndex].scrollIntoView({ block: 'nearest' });
+                }
+            }
+            else if (event.key === 'Escape') {
+                hideSuggestions(year, tournament);
+            }
+        }
+
+        // Select a player from suggestions
+        function selectPlayer(year, tournament, playerName) {
+            const input = document.getElementById(`${year}-${tournament}-input`);
+            const hiddenInput = document.getElementById(`${year}-${tournament}`);
+            const suggestions = document.getElementById(`${year}-${tournament}-suggestions`);
+
+            input.value = playerName;
+            hiddenInput.value = playerName;
+            suggestions.classList.add('hidden');
+
+            // Handle the answer
+            handleAnswer(year, tournament, playerName);
+        }
+
+        // Handle answer selection
+        function handleAnswer(year, tournament, answer) {
+            if (gameOver || revealMode) return;
+
+            const correctAnswer = WINNERS_BY_YEAR[year][tournament];
+            const answerKey = `${year}-${tournament}`;
+            
+            // Save the answer regardless of if it's correct or not
+            savedAnswers[answerKey] = answer;
+
+            if (answer === correctAnswer) {
+                
+                // Correct answer - provide immediate visual feedback
+                renderGame(); // Update UI immediately to show green styling and checkmark
+                
+                // Enable next tournament and check completion
+                enableNextTournament(year, tournament);
+                checkYearCompletion(year);
+            } else if (answer) {
+                // Wrong answer - show modal with progress and continue option
+                renderGame(); // Update the UI first
+                setTimeout(() => {
+                    showWrongAnswerModal(year, tournament, correctAnswer, answer);
+                }, 300);
+            }
+        }
+
+        // Enable the next tournament in the sequence  
+        function enableNextTournament(year, currentTournament) {
+            const currentIndex = TOURNAMENT_ORDER.indexOf(currentTournament);
+            if (currentIndex < TOURNAMENT_ORDER.length - 1) {
+                // Next tournament will be enabled when renderGame() is called from handleAnswer
+                // No need to render again here
+            }
+        }
+
+        // Check if current year is complete (all tournaments attempted)
+        function checkYearCompletion(year) {
+            const yearData = WINNERS_BY_YEAR[year];
+            let allAttempted = true;
+            let allCorrect = true;
+
+            TOURNAMENT_ORDER.forEach(tournament => {
+                if (yearData[tournament]) {
+                    const savedAnswer = savedAnswers[`${year}-${tournament}`];
+                    const correctAnswer = yearData[tournament];
+                    const isAttempted = savedAnswer && savedAnswer.length > 0;
+                    
+                    if (!isAttempted) {
+                        allAttempted = false;
+                    }
+                    if (!savedAnswer || savedAnswer !== correctAnswer) {
+                        allCorrect = false;
+                    }
+                }
+            });
+
+            // Allow progression if all tournaments have been attempted (regardless of correctness)
+            if (allAttempted) {
+                // Auto-progress to next year after short delay
+                setTimeout(() => {
+                    if (currentYear > 2000) {
+                        currentYear--;
+                        renderGame();
+                        
+                        // Focus on first tournament of new year after render
+                        setTimeout(() => {
+                            const firstTournament = TOURNAMENT_ORDER[0]; // AO
+                            const input = document.getElementById(`${currentYear}-${firstTournament}-input`);
+                            if (input && !input.disabled) {
+                                input.focus();
+                                input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        }, 100);
+                    } else {
+                        // Reached 2000 - show victory message
+                        currentYearDisplay.textContent = `🏆 2000 - You've reached the beginning!`;
+                    }
+                }, 1200);
+            }
+        }
+
+        // Show year completion modal
+        function showYearComplete(year, allCorrect = true) {
+            const modal = document.getElementById('success-modal');
+            const message = document.getElementById('success-message');
+            
+            if (year === 2000) {
+                message.textContent = `Incredible! You've reached 2000 - the very beginning! You're a true tennis champion! 🏆`;
+                document.getElementById('continue-btn').textContent = '🎉 You Won!';
+                document.getElementById('continue-btn').onclick = () => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                };
+            } else {
+                if (allCorrect) {
+                    message.textContent = `Perfect! You got all ${Object.keys(WINNERS_BY_YEAR[year]).length} champions for ${year} correct. Ready for ${year - 1}?`;
+                } else {
+                    const correctCount = TOURNAMENT_ORDER.filter(tournament => {
+                        const yearData = WINNERS_BY_YEAR[year];
+                        if (yearData[tournament]) {
+                            const savedAnswer = savedAnswers[`${year}-${tournament}`];
+                            return savedAnswer === yearData[tournament];
+                        }
+                        return false;
+                    }).length;
+                    
+                    message.textContent = `Nice work! You got ${correctCount}/${Object.keys(WINNERS_BY_YEAR[year]).length} champions correct for ${year}. Ready to continue to ${year - 1}?`;
+                }
+                document.getElementById('continue-btn').textContent = `Continue to ${year - 1}`;
+                document.getElementById('continue-btn').onclick = continueToNextYear;
+            }
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Continue to next year
+        function continueToNextYear() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.getElementById('success-modal').classList.remove('flex');
+            
+            if (currentYear > 2000) {
+                currentYear--;
+                renderGame();
+                
+                // Focus on first tournament of new year after render
+                setTimeout(() => {
+                    const firstTournament = TOURNAMENT_ORDER[0]; // AO
+                    const input = document.getElementById(`${currentYear}-${firstTournament}-input`);
+                    if (input && !input.disabled) {
+                        input.focus();
+                        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 100);
+            }
+        }
+
+
+
+        // Count correct answers
+        function countCorrectAnswers() {
+            let correctCount = 0;
+            let totalPossible = 0;
+
+            for (let year = 2024; year >= currentYear; year--) {
+                const yearData = WINNERS_BY_YEAR[year];
+                TOURNAMENT_ORDER.forEach(tournament => {
+                    if (yearData[tournament]) {
+                        totalPossible++;
+                        const savedAnswer = savedAnswers[`${year}-${tournament}`];
+                        if (savedAnswer === yearData[tournament]) {
+                            correctCount++;
+                        }
+                    }
+                });
+            }
+
+            return { correct: correctCount, total: totalPossible };
+        }
+
+        // Show wrong answer modal
+        function showWrongAnswerModal(year, tournament, correctAnswer, userAnswer) {
+            const modal = document.getElementById('wrong-answer-modal');
+            const content = document.getElementById('wrong-answer-content');
+            const progressDisplay = document.getElementById('progress-display');
+            
+            // Store the context for continue playing
+            lastWrongAnswer = { year, tournament };
+            
+            const tournamentName = TOURNAMENTS[tournament].name;
+            content.innerHTML = `
+                <p class="text-lg mb-2">You guessed <span class="font-bold text-red-600">${userAnswer}</span></p>
+                <p class="text-lg">The correct answer was <span class="font-bold text-green-600">${correctAnswer}</span></p>
+                <p class="text-sm mt-2 text-gray-500">${tournamentName} ${year}</p>
+            `;
+
+            const progress = countCorrectAnswers();
+            progressDisplay.textContent = `${progress.correct} / ${progress.total} correct answers`;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Hide wrong answer modal
+        function hideWrongAnswerModal() {
+            const modal = document.getElementById('wrong-answer-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Find next tournament after the wrong answer
+        function findNextTournamentAfterWrong() {
+            if (!lastWrongAnswer) return null;
+            
+            const { year: wrongYear, tournament: wrongTournament } = lastWrongAnswer;
+            const wrongIndex = TOURNAMENT_ORDER.indexOf(wrongTournament);
+            
+            // First, try to find next tournament in the same year
+            if (wrongIndex < TOURNAMENT_ORDER.length - 1) {
+                const nextTournamentInYear = TOURNAMENT_ORDER[wrongIndex + 1];
+                const yearData = WINNERS_BY_YEAR[wrongYear];
+                
+                if (yearData[nextTournamentInYear]) {
+                    const savedAnswer = savedAnswers[`${wrongYear}-${nextTournamentInYear}`];
+                    const correctAnswer = yearData[nextTournamentInYear];
+                    
+                    // Check if it's not already correctly filled
+                    if (savedAnswer !== correctAnswer) {
+                        return { year: wrongYear, tournament: nextTournamentInYear };
+                    }
+                }
+            }
+            
+            // If no next tournament in same year, unlock next year and find its first tournament
+            // Go backwards in time (2023, 2022, etc.)
+            for (let year = wrongYear - 1; year >= 2000; year--) {
+                const yearData = WINNERS_BY_YEAR[year];
+                const firstTournament = TOURNAMENT_ORDER[0];
+                
+                if (yearData[firstTournament]) {
+                    const savedAnswer = savedAnswers[`${year}-${firstTournament}`];
+                    const correctAnswer = yearData[firstTournament];
+                    
+                    // If this year hasn't been attempted yet, or first tournament not correct, make it available
+                    if (!savedAnswer || savedAnswer !== correctAnswer) {
+                        // Unlock this year by updating currentYear
+                        if (year < currentYear) {
+                            currentYear = year;
+                        }
+                        return { year, tournament: firstTournament };
+                    }
+                }
+            }
+            
+            return null;
+        }
+
+        // Continue playing - focus on next tournament after wrong answer
+        function continuePlayingToNext() {
+            hideWrongAnswerModal();
+            
+            const nextTournament = findNextTournamentAfterWrong();
+            if (nextTournament) {
+                // Re-render the game to show the newly unlocked year
+                renderGame();
+                
+                // Focus on the next tournament input after rendering
+                setTimeout(() => {
+                    const input = document.getElementById(`${nextTournament.year}-${nextTournament.tournament}-input`);
+                    if (input && !input.disabled) {
+                        input.focus();
+                        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 100);
+            }
+        }
+
+        // Reveal all answers
+        function revealAllAnswers() {
+            revealMode = true;
+            gameOver = true;
+            
+            // Re-render with answers revealed - the template will handle showing all answers
+            renderGame();
+        }
+
+        // Event listeners
+
+        // Wrong answer modal event listeners
+        document.getElementById('continue-playing-btn').onclick = continuePlayingToNext;
+
+        // Copy results function
+        function copyResults() {
+            const correctAnswers = countCorrectAnswers();
+            const totalAnswers = Object.keys(userAnswers).length;
+            const percentage = totalAnswers > 0 ? Math.round((correctAnswers / totalAnswers) * 100) : 0;
+            const resultsText = `Grand Slam Winners Quiz - Score: ${correctAnswers}/${totalAnswers} (${percentage}%)`;
+            
+            navigator.clipboard.writeText(resultsText).then(() => {
+                // Change text to "copied" for both buttons
+                const button1 = document.getElementById('copyButton1');
+                const button2 = document.getElementById('copyButton2');
+                if (button1) button1.textContent = 'copied';
+                if (button2) button2.textContent = 'copied';
+                
+                // Reset text after 2 seconds
+                setTimeout(() => {
+                    if (button1) button1.textContent = 'copy my results as a text';
+                    if (button2) button2.textContent = 'copy my results as a text';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                // Fallback for browsers that don't support clipboard API
+                const textArea = document.createElement('textarea');
+                textArea.value = resultsText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                // Change text to "copied" for both buttons
+                const button1 = document.getElementById('copyButton1');
+                const button2 = document.getElementById('copyButton2');
+                if (button1) button1.textContent = 'copied';
+                if (button2) button2.textContent = 'copied';
+                
+                // Reset text after 2 seconds
+                setTimeout(() => {
+                    if (button1) button1.textContent = 'copy my results as a text';
+                    if (button2) button2.textContent = 'copy my results as a text';
+                }, 2000);
+            });
+        }
+
+        // Initialize game when page loads
+        window.addEventListener('DOMContentLoaded', initGame);
+    </script>
+
+    <!-- Play More Games Section -->
+    <div style="margin-top: 3rem; padding: 2rem 0; background: rgba(255, 255, 255, 0.05); border-radius: 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+            <h2 style="text-align: center; color: white; font-size: 2rem; margin-bottom: 2rem; font-weight: bold;">🎾 Play More Games</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto;">
+                
+                <!-- Mystery Player Timeline -->
+                <a href="guess-player-performance-timeline.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #5f27cd, #341f97); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/mistery-player.png" alt="Mystery Player Timeline" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Mystery Player Timeline</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their Grand Slam performance timeline</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- ATP Ranking Riddle -->
+                <a href="guess-atp-rankings.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #3742fa, #2f3542); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/ranking-riddle.png" alt="ATP Ranking Riddle" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">ATP Ranking Riddle</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their highest ATP ranking each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- BIG3 Finals Scores -->
+                <a href="guess-scores.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff4757, #c44569); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/big3-scores.png" alt="BIG3 Finals Scores" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">BIG3 Finals Scores</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess set scores from Big 3 Grand Slam finals</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Random Legends Tier -->
+                <a href="tennis-tier-list.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ffd700, #ff9f43); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/random-tierlist.png" alt="Random Legends Tier" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Random Legends Tier</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Rank tennis legends by their ATP titles</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Top-10 Time Machine -->
+                <a href="top10-game.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff9f43, #ee5a24); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/top-10-tbt.png" alt="Top-10 Time Machine" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Top-10 Time Machine</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess ATP Year-End Top 10 Rankings for each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Head-to-Head Masters -->
+                <a href="head-to-head-masters.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #e74c3c, #c0392b); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/h2h.png" alt="Head-to-Head Masters" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Head-to-Head Masters</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Test your knowledge of tennis's greatest rivalries</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 2rem; padding: 1.5rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; text-align: center;">
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">
+                Developed by David
+            </p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                Data sources: <a href="https://www.tennisabstract.com/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Tennis Abstract</a> and <a href="https://github.com/jeffsackmann" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Jeff Sackmann</a>
+            </p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">
+                Would you like to give feedback? - <a href="mailto:feedback@tennis-quiz.com" style="color: white; text-decoration: underline;">send a comment here</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Grand Slam Winners Quiz",
+        "description": "Challenge yourself with our Grand Slam Winners Quiz! Name champions from 2024 back to 2000. Test your tennis history knowledge with this interactive quiz game.",
+        "url": "https://tennis-quiz.com/grand-slam-winners.html",
+        "image": "https://tennis-quiz.com/images/champions-gs-history.png",
+        "gameType": "Quiz",
+        "genre": "Sports Trivia",
+        "category": "Tennis",
+        "author": {
+            "@type": "Person",
+            "name": "David"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tennis Quiz Games"
+        },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+
+    <!-- Join Modal -->
+    <div id="joinModal" class="join-modal-overlay" style="display: none;">
+        <div class="join-modal">
+            <div class="join-modal-header">
+                <h2>Join Tennis Quiz Community</h2>
+                <button class="join-modal-close" onclick="closeJoinModal()">&times;</button>
+            </div>
+            <div class="join-modal-content">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-vUaKLdZVDtMyI64qCU_nPamziods5VaTm2P5Gw5jejkimA/viewform?embedded=true" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .join-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .join-modal {
+            background: white;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .join-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e5e7eb;
+            background: linear-gradient(135deg, #00d4aa 0%, #ffd700 100%);
+            color: white;
+        }
+
+        .join-modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .join-modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .join-modal-close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .join-modal-content {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .join-modal-content iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .join-modal {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .join-modal-header {
+                padding: 16px 20px;
+            }
+
+            .join-modal-header h2 {
+                font-size: 1.25rem;
+            }
+
+            .join-modal-content iframe {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .join-modal-overlay {
+                padding: 10px;
+            }
+
+            .join-modal {
+                max-width: 100vw;
+                max-height: 100vh;
+                border-radius: 8px;
+            }
+
+            .join-modal-content iframe {
+                height: 450px;
+            }
+        }
+    </style>
+
+    <script>
+        function openJoinModal() {
+            document.getElementById('joinModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeJoinModal() {
+            document.getElementById('joinModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('joinModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeJoinModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('joinModal').style.display === 'flex') {
+                closeJoinModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2652 @@
+{
+  "2000": {
+    "year": 2000,
+    "date": "20001225",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "102856",
+        "name": "Gustavo Kuerten",
+        "first_name": "Gustavo",
+        "last_name": "Kuerten",
+        "country": "BRA",
+        "points": 4195,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "103498",
+        "name": "Marat Safin",
+        "first_name": "Marat",
+        "last_name": "Safin",
+        "country": "RUS",
+        "points": 4120,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "101948",
+        "name": "Pete Sampras",
+        "first_name": "Pete",
+        "last_name": "Sampras",
+        "country": "USA",
+        "points": 3385,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "102796",
+        "name": "Magnus Norman",
+        "first_name": "Magnus",
+        "last_name": "Norman",
+        "country": "SWE",
+        "points": 3110,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "102338",
+        "name": "Yevgeny Kafelnikov",
+        "first_name": "Yevgeny",
+        "last_name": "Kafelnikov",
+        "country": "RUS",
+        "points": 2935,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "101736",
+        "name": "Andre Agassi",
+        "first_name": "Andre",
+        "last_name": "Agassi",
+        "country": "USA",
+        "points": 2765,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "103720",
+        "name": "Lleyton Hewitt",
+        "first_name": "Lleyton",
+        "last_name": "Hewitt",
+        "country": "AUS",
+        "points": 2625,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "102374",
+        "name": "Alex Corretja",
+        "first_name": "Alex",
+        "last_name": "Corretja",
+        "country": "ESP",
+        "points": 2475,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "102358",
+        "name": "Thomas Enqvist",
+        "first_name": "Thomas",
+        "last_name": "Enqvist",
+        "country": "SWE",
+        "points": 2210,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "102450",
+        "name": "Tim Henman",
+        "first_name": "Tim",
+        "last_name": "Henman",
+        "country": "GBR",
+        "points": 2020,
+        "hand": "R"
+      }
+    ]
+  },
+  "2001": {
+    "year": 2001,
+    "date": "20011231",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "103720",
+        "name": "Lleyton Hewitt",
+        "first_name": "Lleyton",
+        "last_name": "Hewitt",
+        "country": "AUS",
+        "points": 4365,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "102856",
+        "name": "Gustavo Kuerten",
+        "first_name": "Gustavo",
+        "last_name": "Kuerten",
+        "country": "BRA",
+        "points": 3855,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "101736",
+        "name": "Andre Agassi",
+        "first_name": "Andre",
+        "last_name": "Agassi",
+        "country": "USA",
+        "points": 3520,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "102338",
+        "name": "Yevgeny Kafelnikov",
+        "first_name": "Yevgeny",
+        "last_name": "Kafelnikov",
+        "country": "RUS",
+        "points": 3090,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103507",
+        "name": "Juan Carlos Ferrero",
+        "first_name": "Juan Carlos",
+        "last_name": "Ferrero",
+        "country": "ESP",
+        "points": 3040,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "103206",
+        "name": "Sebastien Grosjean",
+        "first_name": "Sebastien",
+        "last_name": "Grosjean",
+        "country": "FRA",
+        "points": 2790,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "102158",
+        "name": "Patrick Rafter",
+        "first_name": "Patrick",
+        "last_name": "Rafter",
+        "country": "AUS",
+        "points": 2785,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "103163",
+        "name": "Tommy Haas",
+        "first_name": "Tommy",
+        "last_name": "Haas",
+        "country": "GER",
+        "points": 2285,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "102450",
+        "name": "Tim Henman",
+        "first_name": "Tim",
+        "last_name": "Henman",
+        "country": "GBR",
+        "points": 2100,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "101948",
+        "name": "Pete Sampras",
+        "first_name": "Pete",
+        "last_name": "Sampras",
+        "country": "USA",
+        "points": 1940,
+        "hand": "R"
+      }
+    ]
+  },
+  "2002": {
+    "year": 2002,
+    "date": "20021230",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "103720",
+        "name": "Lleyton Hewitt",
+        "first_name": "Lleyton",
+        "last_name": "Hewitt",
+        "country": "AUS",
+        "points": 4485,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "101736",
+        "name": "Andre Agassi",
+        "first_name": "Andre",
+        "last_name": "Agassi",
+        "country": "USA",
+        "points": 3395,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "103498",
+        "name": "Marat Safin",
+        "first_name": "Marat",
+        "last_name": "Safin",
+        "country": "RUS",
+        "points": 2845,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "103507",
+        "name": "Juan Carlos Ferrero",
+        "first_name": "Juan Carlos",
+        "last_name": "Ferrero",
+        "country": "ESP",
+        "points": 2740,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "102845",
+        "name": "Carlos Moya",
+        "first_name": "Carlos",
+        "last_name": "Moya",
+        "country": "ESP",
+        "points": 2630,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 2590,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "102562",
+        "name": "Jiri Novak",
+        "first_name": "Jiri",
+        "last_name": "Novak",
+        "country": "CZE",
+        "points": 2335,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "102450",
+        "name": "Tim Henman",
+        "first_name": "Tim",
+        "last_name": "Henman",
+        "country": "GBR",
+        "points": 2215,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "102610",
+        "name": "Albert Costa",
+        "first_name": "Albert",
+        "last_name": "Costa",
+        "country": "ESP",
+        "points": 2070,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 2045,
+        "hand": "R"
+      }
+    ]
+  },
+  "2003": {
+    "year": 2003,
+    "date": "20031229",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 4535,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 4375,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "103507",
+        "name": "Juan Carlos Ferrero",
+        "first_name": "Juan Carlos",
+        "last_name": "Ferrero",
+        "country": "ESP",
+        "points": 4205,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "101736",
+        "name": "Andre Agassi",
+        "first_name": "Andre",
+        "last_name": "Agassi",
+        "country": "USA",
+        "points": 3425,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103909",
+        "name": "Guillermo Coria",
+        "first_name": "Guillermo",
+        "last_name": "Coria",
+        "country": "ARG",
+        "points": 3330,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "102783",
+        "name": "Rainer Schuettler",
+        "first_name": "Rainer",
+        "last_name": "Schuettler",
+        "country": "GER",
+        "points": 3205,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "102845",
+        "name": "Carlos Moya",
+        "first_name": "Carlos",
+        "last_name": "Moya",
+        "country": "ESP",
+        "points": 2280,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "103900",
+        "name": "David Nalbandian",
+        "first_name": "David",
+        "last_name": "Nalbandian",
+        "country": "ARG",
+        "points": 2060,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "102882",
+        "name": "Mark Philippoussis",
+        "first_name": "Mark",
+        "last_name": "Philippoussis",
+        "country": "AUS",
+        "points": 1615,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "103206",
+        "name": "Sebastien Grosjean",
+        "first_name": "Sebastien",
+        "last_name": "Grosjean",
+        "country": "FRA",
+        "points": 1610,
+        "hand": "R"
+      }
+    ]
+  },
+  "2004": {
+    "year": 2004,
+    "date": "20041227",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 6335,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 3655,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "103720",
+        "name": "Lleyton Hewitt",
+        "first_name": "Lleyton",
+        "last_name": "Hewitt",
+        "country": "AUS",
+        "points": 3590,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "103498",
+        "name": "Marat Safin",
+        "first_name": "Marat",
+        "last_name": "Safin",
+        "country": "RUS",
+        "points": 3060,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "102845",
+        "name": "Carlos Moya",
+        "first_name": "Carlos",
+        "last_name": "Moya",
+        "country": "ESP",
+        "points": 2520,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "102450",
+        "name": "Tim Henman",
+        "first_name": "Tim",
+        "last_name": "Henman",
+        "country": "GBR",
+        "points": 2465,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "103909",
+        "name": "Guillermo Coria",
+        "first_name": "Guillermo",
+        "last_name": "Coria",
+        "country": "ARG",
+        "points": 2400,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "101736",
+        "name": "Andre Agassi",
+        "first_name": "Andre",
+        "last_name": "Agassi",
+        "country": "USA",
+        "points": 2100,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "103900",
+        "name": "David Nalbandian",
+        "first_name": "David",
+        "last_name": "Nalbandian",
+        "country": "ARG",
+        "points": 1945,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "103292",
+        "name": "Gaston Gaudio",
+        "first_name": "Gaston",
+        "last_name": "Gaudio",
+        "country": "ARG",
+        "points": 1920,
+        "hand": "R"
+      }
+    ]
+  },
+  "2005": {
+    "year": 2005,
+    "date": "20051226",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 6725,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 4765,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 3085,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "103720",
+        "name": "Lleyton Hewitt",
+        "first_name": "Lleyton",
+        "last_name": "Hewitt",
+        "country": "AUS",
+        "points": 2490,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103786",
+        "name": "Nikolay Davydenko",
+        "first_name": "Nikolay",
+        "last_name": "Davydenko",
+        "country": "RUS",
+        "points": 2390,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "103900",
+        "name": "David Nalbandian",
+        "first_name": "David",
+        "last_name": "Nalbandian",
+        "country": "ARG",
+        "points": 2370,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "101736",
+        "name": "Andre Agassi",
+        "first_name": "Andre",
+        "last_name": "Agassi",
+        "country": "USA",
+        "points": 2275,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "103909",
+        "name": "Guillermo Coria",
+        "first_name": "Guillermo",
+        "last_name": "Coria",
+        "country": "ARG",
+        "points": 2190,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "103344",
+        "name": "Ivan Ljubicic",
+        "first_name": "Ivan",
+        "last_name": "Ljubicic",
+        "country": "CRO",
+        "points": 2180,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "103292",
+        "name": "Gaston Gaudio",
+        "first_name": "Gaston",
+        "last_name": "Gaudio",
+        "country": "ARG",
+        "points": 2050,
+        "hand": "R"
+      }
+    ]
+  },
+  "2006": {
+    "year": 2006,
+    "date": "20061225",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 8370,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 4470,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "103786",
+        "name": "Nikolay Davydenko",
+        "first_name": "Nikolay",
+        "last_name": "Davydenko",
+        "country": "RUS",
+        "points": 2825,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "103484",
+        "name": "James Blake",
+        "first_name": "James",
+        "last_name": "Blake",
+        "country": "USA",
+        "points": 2530,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103344",
+        "name": "Ivan Ljubicic",
+        "first_name": "Ivan",
+        "last_name": "Ljubicic",
+        "country": "CRO",
+        "points": 2495,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 2415,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "103990",
+        "name": "Tommy Robredo",
+        "first_name": "Tommy",
+        "last_name": "Robredo",
+        "country": "ESP",
+        "points": 2375,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "103900",
+        "name": "David Nalbandian",
+        "first_name": "David",
+        "last_name": "Nalbandian",
+        "country": "ARG",
+        "points": 2295,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104339",
+        "name": "Mario Ancic",
+        "first_name": "Mario",
+        "last_name": "Ancic",
+        "country": "CRO",
+        "points": 2060,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "103602",
+        "name": "Fernando Gonzalez",
+        "first_name": "Fernando",
+        "last_name": "Gonzalez",
+        "country": "CHI",
+        "points": 2015,
+        "hand": "R"
+      }
+    ]
+  },
+  "2007": {
+    "year": 2007,
+    "date": "20071231",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 7180,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 5735,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 4470,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "103786",
+        "name": "Nikolay Davydenko",
+        "first_name": "Nikolay",
+        "last_name": "Davydenko",
+        "country": "RUS",
+        "points": 2825,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103970",
+        "name": "David Ferrer",
+        "first_name": "David",
+        "last_name": "Ferrer",
+        "country": "ESP",
+        "points": 2750,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 2530,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "103602",
+        "name": "Fernando Gonzalez",
+        "first_name": "Fernando",
+        "last_name": "Gonzalez",
+        "country": "CHI",
+        "points": 2005,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "104755",
+        "name": "Richard Gasquet",
+        "first_name": "Richard",
+        "last_name": "Gasquet",
+        "country": "FRA",
+        "points": 1930,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "103900",
+        "name": "David Nalbandian",
+        "first_name": "David",
+        "last_name": "Nalbandian",
+        "country": "ARG",
+        "points": 1775,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "103990",
+        "name": "Tommy Robredo",
+        "first_name": "Tommy",
+        "last_name": "Robredo",
+        "country": "ESP",
+        "points": 1765,
+        "hand": "R"
+      }
+    ]
+  },
+  "2008": {
+    "year": 2008,
+    "date": "20081229",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 6675,
+        "hand": "L"
+      },
+      {
+        "rank": 2,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 5305,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 5295,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 3720,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103786",
+        "name": "Nikolay Davydenko",
+        "first_name": "Nikolay",
+        "last_name": "Davydenko",
+        "country": "RUS",
+        "points": 2715,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104542",
+        "name": "Jo-Wilfried Tsonga",
+        "first_name": "Jo-Wilfried",
+        "last_name": "Tsonga",
+        "country": "FRA",
+        "points": 2050,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "104468",
+        "name": "Gilles Simon",
+        "first_name": "Gilles",
+        "last_name": "Simon",
+        "country": "FRA",
+        "points": 1980,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 1970,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "105223",
+        "name": "Juan Martin del Potro",
+        "first_name": "Juan Martin",
+        "last_name": "del Potro",
+        "country": "ARG",
+        "points": 1945,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "103484",
+        "name": "James Blake",
+        "first_name": "James",
+        "last_name": "Blake",
+        "country": "USA",
+        "points": 1775,
+        "hand": "R"
+      }
+    ]
+  },
+  "2009": {
+    "year": 2009,
+    "date": "20091228",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 10550,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 9205,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 8310,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 7030,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "105223",
+        "name": "Juan Martin del Potro",
+        "first_name": "Juan Martin",
+        "last_name": "del Potro",
+        "country": "ARG",
+        "points": 6785,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "103786",
+        "name": "Nikolay Davydenko",
+        "first_name": "Nikolay",
+        "last_name": "Davydenko",
+        "country": "RUS",
+        "points": 4930,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 4410,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "104417",
+        "name": "Robin Soderling",
+        "first_name": "Robin",
+        "last_name": "Soderling",
+        "country": "SWE",
+        "points": 3410,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104269",
+        "name": "Fernando Verdasco",
+        "first_name": "Fernando",
+        "last_name": "Verdasco",
+        "country": "ESP",
+        "points": 3300,
+        "hand": "L"
+      },
+      {
+        "rank": 10,
+        "player_id": "104542",
+        "name": "Jo-Wilfried Tsonga",
+        "first_name": "Jo-Wilfried",
+        "last_name": "Tsonga",
+        "country": "FRA",
+        "points": 2875,
+        "hand": "R"
+      }
+    ]
+  },
+  "2010": {
+    "year": 2010,
+    "date": "20101227",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 12450,
+        "hand": "L"
+      },
+      {
+        "rank": 2,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 9145,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 6240,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 5760,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "104417",
+        "name": "Robin Soderling",
+        "first_name": "Robin",
+        "last_name": "Soderling",
+        "country": "SWE",
+        "points": 5580,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104607",
+        "name": "Tomas Berdych",
+        "first_name": "Tomas",
+        "last_name": "Berdych",
+        "country": "CZE",
+        "points": 3955,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "103970",
+        "name": "David Ferrer",
+        "first_name": "David",
+        "last_name": "Ferrer",
+        "country": "ESP",
+        "points": 3735,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "104053",
+        "name": "Andy Roddick",
+        "first_name": "Andy",
+        "last_name": "Roddick",
+        "country": "USA",
+        "points": 3665,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104269",
+        "name": "Fernando Verdasco",
+        "first_name": "Fernando",
+        "last_name": "Verdasco",
+        "country": "ESP",
+        "points": 3240,
+        "hand": "L"
+      },
+      {
+        "rank": 10,
+        "player_id": "104022",
+        "name": "Mikhail Youzhny",
+        "first_name": "Mikhail",
+        "last_name": "Youzhny",
+        "country": "RUS",
+        "points": 2920,
+        "hand": "R"
+      }
+    ]
+  },
+  "2011": {
+    "year": 2011,
+    "date": "20111226",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 13630,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 9595,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 8170,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 7380,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103970",
+        "name": "David Ferrer",
+        "first_name": "David",
+        "last_name": "Ferrer",
+        "country": "ESP",
+        "points": 4925,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104542",
+        "name": "Jo-Wilfried Tsonga",
+        "first_name": "Jo-Wilfried",
+        "last_name": "Tsonga",
+        "country": "FRA",
+        "points": 4335,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "104607",
+        "name": "Tomas Berdych",
+        "first_name": "Tomas",
+        "last_name": "Berdych",
+        "country": "CZE",
+        "points": 3700,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "103888",
+        "name": "Mardy Fish",
+        "first_name": "Mardy",
+        "last_name": "Fish",
+        "country": "USA",
+        "points": 2965,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104386",
+        "name": "Janko Tipsarevic",
+        "first_name": "Janko",
+        "last_name": "Tipsarevic",
+        "country": "SRB",
+        "points": 2595,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "104597",
+        "name": "Nicolas Almagro",
+        "first_name": "Nicolas",
+        "last_name": "Almagro",
+        "country": "ESP",
+        "points": 2380,
+        "hand": "R"
+      }
+    ]
+  },
+  "2012": {
+    "year": 2012,
+    "date": "20121231",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 12920,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 10265,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 8000,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 6690,
+        "hand": "L"
+      },
+      {
+        "rank": 5,
+        "player_id": "103970",
+        "name": "David Ferrer",
+        "first_name": "David",
+        "last_name": "Ferrer",
+        "country": "ESP",
+        "points": 6505,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104607",
+        "name": "Tomas Berdych",
+        "first_name": "Tomas",
+        "last_name": "Berdych",
+        "country": "CZE",
+        "points": 4680,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "105223",
+        "name": "Juan Martin del Potro",
+        "first_name": "Juan Martin",
+        "last_name": "del Potro",
+        "country": "ARG",
+        "points": 4480,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "104542",
+        "name": "Jo-Wilfried Tsonga",
+        "first_name": "Jo-Wilfried",
+        "last_name": "Tsonga",
+        "country": "FRA",
+        "points": 3490,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104386",
+        "name": "Janko Tipsarevic",
+        "first_name": "Janko",
+        "last_name": "Tipsarevic",
+        "country": "SRB",
+        "points": 2990,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "104755",
+        "name": "Richard Gasquet",
+        "first_name": "Richard",
+        "last_name": "Gasquet",
+        "country": "FRA",
+        "points": 2515,
+        "hand": "R"
+      }
+    ]
+  },
+  "2013": {
+    "year": 2013,
+    "date": "20131230",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 13030,
+        "hand": "L"
+      },
+      {
+        "rank": 2,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 12260,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "103970",
+        "name": "David Ferrer",
+        "first_name": "David",
+        "last_name": "Ferrer",
+        "country": "ESP",
+        "points": 5800,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 5790,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "105223",
+        "name": "Juan Martin del Potro",
+        "first_name": "Juan Martin",
+        "last_name": "del Potro",
+        "country": "ARG",
+        "points": 5255,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 4205,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "104607",
+        "name": "Tomas Berdych",
+        "first_name": "Tomas",
+        "last_name": "Berdych",
+        "country": "CZE",
+        "points": 4180,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "104527",
+        "name": "Stan Wawrinka",
+        "first_name": "Stan",
+        "last_name": "Wawrinka",
+        "country": "SUI",
+        "points": 3730,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104755",
+        "name": "Richard Gasquet",
+        "first_name": "Richard",
+        "last_name": "Gasquet",
+        "country": "FRA",
+        "points": 3300,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "104542",
+        "name": "Jo-Wilfried Tsonga",
+        "first_name": "Jo-Wilfried",
+        "last_name": "Tsonga",
+        "country": "FRA",
+        "points": 3065,
+        "hand": "R"
+      }
+    ]
+  },
+  "2014": {
+    "year": 2014,
+    "date": "20141229",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 11360,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 9775,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 6835,
+        "hand": "L"
+      },
+      {
+        "rank": 4,
+        "player_id": "104527",
+        "name": "Stan Wawrinka",
+        "first_name": "Stan",
+        "last_name": "Wawrinka",
+        "country": "SUI",
+        "points": 5370,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "105453",
+        "name": "Kei Nishikori",
+        "first_name": "Kei",
+        "last_name": "Nishikori",
+        "country": "JPN",
+        "points": 5025,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 4675,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "104607",
+        "name": "Tomas Berdych",
+        "first_name": "Tomas",
+        "last_name": "Berdych",
+        "country": "CZE",
+        "points": 4600,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "105683",
+        "name": "Milos Raonic",
+        "first_name": "Milos",
+        "last_name": "Raonic",
+        "country": "CAN",
+        "points": 4440,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "105227",
+        "name": "Marin Cilic",
+        "first_name": "Marin",
+        "last_name": "Cilic",
+        "country": "CRO",
+        "points": 4150,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "103970",
+        "name": "David Ferrer",
+        "first_name": "David",
+        "last_name": "Ferrer",
+        "country": "ESP",
+        "points": 4045,
+        "hand": "R"
+      }
+    ]
+  },
+  "2015": {
+    "year": 2015,
+    "date": "20151228",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 16585,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 8945,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 8265,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104527",
+        "name": "Stan Wawrinka",
+        "first_name": "Stan",
+        "last_name": "Wawrinka",
+        "country": "SUI",
+        "points": 6865,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 5230,
+        "hand": "L"
+      },
+      {
+        "rank": 6,
+        "player_id": "104607",
+        "name": "Tomas Berdych",
+        "first_name": "Tomas",
+        "last_name": "Berdych",
+        "country": "CZE",
+        "points": 4620,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "103970",
+        "name": "David Ferrer",
+        "first_name": "David",
+        "last_name": "Ferrer",
+        "country": "ESP",
+        "points": 4305,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "105453",
+        "name": "Kei Nishikori",
+        "first_name": "Kei",
+        "last_name": "Nishikori",
+        "country": "JPN",
+        "points": 4235,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104755",
+        "name": "Richard Gasquet",
+        "first_name": "Richard",
+        "last_name": "Gasquet",
+        "country": "FRA",
+        "points": 2850,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "104542",
+        "name": "Jo-Wilfried Tsonga",
+        "first_name": "Jo-Wilfried",
+        "last_name": "Tsonga",
+        "country": "FRA",
+        "points": 2635,
+        "hand": "R"
+      }
+    ]
+  },
+  "2016": {
+    "year": 2016,
+    "date": "20161226",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104918",
+        "name": "Andy Murray",
+        "first_name": "Andy",
+        "last_name": "Murray",
+        "country": "GBR",
+        "points": 12410,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 11780,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "105683",
+        "name": "Milos Raonic",
+        "first_name": "Milos",
+        "last_name": "Raonic",
+        "country": "CAN",
+        "points": 5450,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "104527",
+        "name": "Stan Wawrinka",
+        "first_name": "Stan",
+        "last_name": "Wawrinka",
+        "country": "SUI",
+        "points": 5315,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "105453",
+        "name": "Kei Nishikori",
+        "first_name": "Kei",
+        "last_name": "Nishikori",
+        "country": "JPN",
+        "points": 4905,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "105227",
+        "name": "Marin Cilic",
+        "first_name": "Marin",
+        "last_name": "Cilic",
+        "country": "CRO",
+        "points": 3650,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "104792",
+        "name": "Gael Monfils",
+        "first_name": "Gael",
+        "last_name": "Monfils",
+        "country": "FRA",
+        "points": 3625,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "106233",
+        "name": "Dominic Thiem",
+        "first_name": "Dominic",
+        "last_name": "Thiem",
+        "country": "AUT",
+        "points": 3415,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 3300,
+        "hand": "L"
+      },
+      {
+        "rank": 10,
+        "player_id": "104607",
+        "name": "Tomas Berdych",
+        "first_name": "Tomas",
+        "last_name": "Berdych",
+        "country": "CZE",
+        "points": 3060,
+        "hand": "R"
+      }
+    ]
+  },
+  "2017": {
+    "year": 2017,
+    "date": "20171225",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 10645,
+        "hand": "L"
+      },
+      {
+        "rank": 2,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 9605,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "105777",
+        "name": "Grigor Dimitrov",
+        "first_name": "Grigor",
+        "last_name": "Dimitrov",
+        "country": "BUL",
+        "points": 5150,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "100644",
+        "name": "Alexander Zverev",
+        "first_name": "Alexander",
+        "last_name": "Zverev",
+        "country": "GER",
+        "points": 4610,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "106233",
+        "name": "Dominic Thiem",
+        "first_name": "Dominic",
+        "last_name": "Thiem",
+        "country": "AUT",
+        "points": 4015,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "105227",
+        "name": "Marin Cilic",
+        "first_name": "Marin",
+        "last_name": "Cilic",
+        "country": "CRO",
+        "points": 3805,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "105676",
+        "name": "David Goffin",
+        "first_name": "David",
+        "last_name": "Goffin",
+        "country": "BEL",
+        "points": 3775,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "106058",
+        "name": "Jack Sock",
+        "first_name": "Jack",
+        "last_name": "Sock",
+        "country": "USA",
+        "points": 3165,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "104527",
+        "name": "Stan Wawrinka",
+        "first_name": "Stan",
+        "last_name": "Wawrinka",
+        "country": "SUI",
+        "points": 3150,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "105807",
+        "name": "Pablo Carreno Busta",
+        "first_name": "Pablo",
+        "last_name": "Carreno Busta",
+        "country": "ESP",
+        "points": 2615,
+        "hand": "R"
+      }
+    ]
+  },
+  "2018": {
+    "year": 2018,
+    "date": "20181231",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 9045,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 7480,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 6420,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "100644",
+        "name": "Alexander Zverev",
+        "first_name": "Alexander",
+        "last_name": "Zverev",
+        "country": "GER",
+        "points": 6385,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "105223",
+        "name": "Juan Martin del Potro",
+        "first_name": "Juan Martin",
+        "last_name": "del Potro",
+        "country": "ARG",
+        "points": 5300,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104731",
+        "name": "Kevin Anderson",
+        "first_name": "Kevin",
+        "last_name": "Anderson",
+        "country": "RSA",
+        "points": 4710,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "105227",
+        "name": "Marin Cilic",
+        "first_name": "Marin",
+        "last_name": "Cilic",
+        "country": "CRO",
+        "points": 4250,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "106233",
+        "name": "Dominic Thiem",
+        "first_name": "Dominic",
+        "last_name": "Thiem",
+        "country": "AUT",
+        "points": 4095,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "105453",
+        "name": "Kei Nishikori",
+        "first_name": "Kei",
+        "last_name": "Nishikori",
+        "country": "JPN",
+        "points": 3590,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "104545",
+        "name": "John Isner",
+        "first_name": "John",
+        "last_name": "Isner",
+        "country": "USA",
+        "points": 3155,
+        "hand": "R"
+      }
+    ]
+  },
+  "2019": {
+    "year": 2019,
+    "date": "20191230",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 9985,
+        "hand": "L"
+      },
+      {
+        "rank": 2,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 9145,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 6590,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "106233",
+        "name": "Dominic Thiem",
+        "first_name": "Dominic",
+        "last_name": "Thiem",
+        "country": "AUT",
+        "points": 5825,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "106421",
+        "name": "Daniil Medvedev",
+        "first_name": "Daniil",
+        "last_name": "Medvedev",
+        "country": "RUS",
+        "points": 5705,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "126774",
+        "name": "Stefanos Tsitsipas",
+        "first_name": "Stefanos",
+        "last_name": "Tsitsipas",
+        "country": "GRE",
+        "points": 5300,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "100644",
+        "name": "Alexander Zverev",
+        "first_name": "Alexander",
+        "last_name": "Zverev",
+        "country": "GER",
+        "points": 3345,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "126610",
+        "name": "Matteo Berrettini",
+        "first_name": "Matteo",
+        "last_name": "Berrettini",
+        "country": "ITA",
+        "points": 2870,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "105138",
+        "name": "Roberto Bautista Agut",
+        "first_name": "Roberto",
+        "last_name": "Bautista Agut",
+        "country": "ESP",
+        "points": 2540,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "104792",
+        "name": "Gael Monfils",
+        "first_name": "Gael",
+        "last_name": "Monfils",
+        "country": "FRA",
+        "points": 2530,
+        "hand": "R"
+      }
+    ]
+  },
+  "2020": {
+    "year": 2020,
+    "date": "20201228",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 12030,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 9850,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "106233",
+        "name": "Dominic Thiem",
+        "first_name": "Dominic",
+        "last_name": "Thiem",
+        "country": "AUT",
+        "points": 9125,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "106421",
+        "name": "Daniil Medvedev",
+        "first_name": "Daniil",
+        "last_name": "Medvedev",
+        "country": "RUS",
+        "points": 8470,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "103819",
+        "name": "Roger Federer",
+        "first_name": "Roger",
+        "last_name": "Federer",
+        "country": "SUI",
+        "points": 6630,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "126774",
+        "name": "Stefanos Tsitsipas",
+        "first_name": "Stefanos",
+        "last_name": "Tsitsipas",
+        "country": "GRE",
+        "points": 5925,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "100644",
+        "name": "Alexander Zverev",
+        "first_name": "Alexander",
+        "last_name": "Zverev",
+        "country": "GER",
+        "points": 5525,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "126094",
+        "name": "Andrey Rublev",
+        "first_name": "Andrey",
+        "last_name": "Rublev",
+        "country": "RUS",
+        "points": 4119,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "106043",
+        "name": "Diego Schwartzman",
+        "first_name": "Diego",
+        "last_name": "Schwartzman",
+        "country": "ARG",
+        "points": 3455,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "126610",
+        "name": "Matteo Berrettini",
+        "first_name": "Matteo",
+        "last_name": "Berrettini",
+        "country": "ITA",
+        "points": 3075,
+        "hand": "R"
+      }
+    ]
+  },
+  "2021": {
+    "year": 2021,
+    "date": "20211227",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 11540,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "106421",
+        "name": "Daniil Medvedev",
+        "first_name": "Daniil",
+        "last_name": "Medvedev",
+        "country": "RUS",
+        "points": 8640,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "100644",
+        "name": "Alexander Zverev",
+        "first_name": "Alexander",
+        "last_name": "Zverev",
+        "country": "GER",
+        "points": 7840,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "126774",
+        "name": "Stefanos Tsitsipas",
+        "first_name": "Stefanos",
+        "last_name": "Tsitsipas",
+        "country": "GRE",
+        "points": 6540,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "126094",
+        "name": "Andrey Rublev",
+        "first_name": "Andrey",
+        "last_name": "Rublev",
+        "country": "RUS",
+        "points": 5150,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 4875,
+        "hand": "L"
+      },
+      {
+        "rank": 7,
+        "player_id": "126610",
+        "name": "Matteo Berrettini",
+        "first_name": "Matteo",
+        "last_name": "Berrettini",
+        "country": "ITA",
+        "points": 4568,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "134770",
+        "name": "Casper Ruud",
+        "first_name": "Casper",
+        "last_name": "Ruud",
+        "country": "NOR",
+        "points": 4160,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "128034",
+        "name": "Hubert Hurkacz",
+        "first_name": "Hubert",
+        "last_name": "Hurkacz",
+        "country": "POL",
+        "points": 3706,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "206173",
+        "name": "Jannik Sinner",
+        "first_name": "Jannik",
+        "last_name": "Sinner",
+        "country": "ITA",
+        "points": 3350,
+        "hand": "R"
+      }
+    ]
+  },
+  "2022": {
+    "year": 2022,
+    "date": "20221226",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "207989",
+        "name": "Carlos Alcaraz",
+        "first_name": "Carlos",
+        "last_name": "Alcaraz",
+        "country": "ESP",
+        "points": 6820,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "104745",
+        "name": "Rafael Nadal",
+        "first_name": "Rafael",
+        "last_name": "Nadal",
+        "country": "ESP",
+        "points": 6020,
+        "hand": "L"
+      },
+      {
+        "rank": 3,
+        "player_id": "134770",
+        "name": "Casper Ruud",
+        "first_name": "Casper",
+        "last_name": "Ruud",
+        "country": "NOR",
+        "points": 5820,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "126774",
+        "name": "Stefanos Tsitsipas",
+        "first_name": "Stefanos",
+        "last_name": "Tsitsipas",
+        "country": "GRE",
+        "points": 5550,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 4820,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "200000",
+        "name": "Felix Auger Aliassime",
+        "first_name": "Felix",
+        "last_name": "Auger Aliassime",
+        "country": "CAN",
+        "points": 4195,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "106421",
+        "name": "Daniil Medvedev",
+        "first_name": "Daniil",
+        "last_name": "Medvedev",
+        "country": "RUS",
+        "points": 4065,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "126094",
+        "name": "Andrey Rublev",
+        "first_name": "Andrey",
+        "last_name": "Rublev",
+        "country": "RUS",
+        "points": 3930,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "126203",
+        "name": "Taylor Fritz",
+        "first_name": "Taylor",
+        "last_name": "Fritz",
+        "country": "USA",
+        "points": 3355,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "128034",
+        "name": "Hubert Hurkacz",
+        "first_name": "Hubert",
+        "last_name": "Hurkacz",
+        "country": "POL",
+        "points": 2905,
+        "hand": "R"
+      }
+    ]
+  },
+  "2023": {
+    "year": 2023,
+    "date": "20231225",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 11245,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "207989",
+        "name": "Carlos Alcaraz",
+        "first_name": "Carlos",
+        "last_name": "Alcaraz",
+        "country": "ESP",
+        "points": 8855,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "106421",
+        "name": "Daniil Medvedev",
+        "first_name": "Daniil",
+        "last_name": "Medvedev",
+        "country": "RUS",
+        "points": 7600,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "206173",
+        "name": "Jannik Sinner",
+        "first_name": "Jannik",
+        "last_name": "Sinner",
+        "country": "ITA",
+        "points": 6490,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "126094",
+        "name": "Andrey Rublev",
+        "first_name": "Andrey",
+        "last_name": "Rublev",
+        "country": "RUS",
+        "points": 4805,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "126774",
+        "name": "Stefanos Tsitsipas",
+        "first_name": "Stefanos",
+        "last_name": "Tsitsipas",
+        "country": "GRE",
+        "points": 4235,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "100644",
+        "name": "Alexander Zverev",
+        "first_name": "Alexander",
+        "last_name": "Zverev",
+        "country": "GER",
+        "points": 3985,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "208029",
+        "name": "Holger Rune",
+        "first_name": "Holger",
+        "last_name": "Rune",
+        "country": "DEN",
+        "points": 3660,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "128034",
+        "name": "Hubert Hurkacz",
+        "first_name": "Hubert",
+        "last_name": "Hurkacz",
+        "country": "POL",
+        "points": 3245,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "126203",
+        "name": "Taylor Fritz",
+        "first_name": "Taylor",
+        "last_name": "Fritz",
+        "country": "USA",
+        "points": 3100,
+        "hand": "R"
+      }
+    ]
+  },
+  "2024": {
+    "year": 2024,
+    "date": "20241230",
+    "top_10": [
+      {
+        "rank": 1,
+        "player_id": "206173",
+        "name": "Jannik Sinner",
+        "first_name": "Jannik",
+        "last_name": "Sinner",
+        "country": "ITA",
+        "points": 11830,
+        "hand": "R"
+      },
+      {
+        "rank": 2,
+        "player_id": "100644",
+        "name": "Alexander Zverev",
+        "first_name": "Alexander",
+        "last_name": "Zverev",
+        "country": "GER",
+        "points": 7915,
+        "hand": "R"
+      },
+      {
+        "rank": 3,
+        "player_id": "207989",
+        "name": "Carlos Alcaraz",
+        "first_name": "Carlos",
+        "last_name": "Alcaraz",
+        "country": "ESP",
+        "points": 7010,
+        "hand": "R"
+      },
+      {
+        "rank": 4,
+        "player_id": "126203",
+        "name": "Taylor Fritz",
+        "first_name": "Taylor",
+        "last_name": "Fritz",
+        "country": "USA",
+        "points": 5100,
+        "hand": "R"
+      },
+      {
+        "rank": 5,
+        "player_id": "106421",
+        "name": "Daniil Medvedev",
+        "first_name": "Daniil",
+        "last_name": "Medvedev",
+        "country": "RUS",
+        "points": 5030,
+        "hand": "R"
+      },
+      {
+        "rank": 6,
+        "player_id": "134770",
+        "name": "Casper Ruud",
+        "first_name": "Casper",
+        "last_name": "Ruud",
+        "country": "NOR",
+        "points": 4255,
+        "hand": "R"
+      },
+      {
+        "rank": 7,
+        "player_id": "104925",
+        "name": "Novak Djokovic",
+        "first_name": "Novak",
+        "last_name": "Djokovic",
+        "country": "SRB",
+        "points": 3910,
+        "hand": "R"
+      },
+      {
+        "rank": 8,
+        "player_id": "126094",
+        "name": "Andrey Rublev",
+        "first_name": "Andrey",
+        "last_name": "Rublev",
+        "country": "RUS",
+        "points": 3760,
+        "hand": "R"
+      },
+      {
+        "rank": 9,
+        "player_id": "200282",
+        "name": "Alex De Minaur",
+        "first_name": "Alex",
+        "last_name": "De Minaur",
+        "country": "AUS",
+        "points": 3745,
+        "hand": "R"
+      },
+      {
+        "rank": 10,
+        "player_id": "105777",
+        "name": "Grigor Dimitrov",
+        "first_name": "Grigor",
+        "last_name": "Dimitrov",
+        "country": "BUL",
+        "points": 3350,
+        "hand": "R"
+      }
+    ]
+  }
+}

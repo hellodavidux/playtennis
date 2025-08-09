@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-10 Time Machine - ATP Rankings Quiz Game | Tennis Quiz Games</title>
+    <meta name="description" content="Travel through time with our Top-10 Time Machine game! Guess ATP Year-End Top 10 Rankings for each year. Test your tennis history knowledge with this interactive quiz game.">
+    <meta name="keywords" content="ATP top 10 rankings, tennis rankings quiz, year-end rankings game, tennis history quiz, ATP rankings game, tennis quiz game">
+    <meta name="author" content="David">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tennis-quiz.com/top10-game.html">
+    <meta property="og:title" content="Top-10 Time Machine - ATP Rankings Quiz Game">
+    <meta property="og:description" content="Travel through time with our Top-10 Time Machine game! Guess ATP Year-End Top 10 Rankings for each year. Test your tennis history knowledge with this interactive quiz game.">
+    <meta property="og:image" content="https://tennis-quiz.com/images/top-10-tbt.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tennis-quiz.com/top10-game.html">
+    <meta property="twitter:title" content="Top-10 Time Machine - ATP Rankings Quiz Game">
+    <meta property="twitter:description" content="Travel through time with our Top-10 Time Machine game! Guess ATP Year-End Top 10 Rankings for each year. Test your tennis history knowledge with this interactive quiz game.">
+    <meta property="twitter:image" content="https://tennis-quiz.com/images/top-10-tbt.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tennis-quiz.com/top10-game.html">
+    
+    <link rel="icon" type="image/png" href="images/logo-tennis-quiz.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff9f43 0%, #ee5a24 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .nav-unified {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sign-up-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .sign-up-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .main-container {
+            padding-top: 5rem;
+        }
+
+        .header {
+            color: white;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .game-content {
+            padding: 2rem;
+        }
+
+        .year-display {
+            color: #2c3e50;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .year-display h2 {
+            font-size: 2em;
+            margin-bottom: 0.5rem;
+        }
+
+        .year-display p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .rankings-section {
+            margin-bottom: 2rem;
+        }
+
+        .rankings-title {
+            font-size: 1.5em;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .rankings-grid {
+            display: grid;
+            gap: 0.75rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ranking-row {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .ranking-row:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .rank-number {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .player-search-container {
+            flex: 1;
+            position: relative;
+        }
+
+        .player-search-container.active {
+            z-index: 10000;
+        }
+
+        .player-search {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1.1em;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .player-search:focus {
+            border-color: #667eea;
+            background: white;
+        }
+
+        .player-search.filled {
+            background: #f8f9fa;
+            border-color: #6c757d;
+            font-weight: 600;
+        }
+
+        .player-search.revealed {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+            font-weight: 600;
+        }
+
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 0 0 8px 8px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 9999;
+            display: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .suggestion {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        .suggestion:hover {
+            background: #f8f9fa;
+        }
+
+        .suggestion:last-child {
+            border-bottom: none;
+        }
+
+        .player-country {
+            margin-left: 1rem;
+            padding: 0.4rem 0.8rem;
+            background: #f8f9fa;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #666;
+            min-width: 60px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .game-controls {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .guess-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        .guess-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .reveal-button {
+            background: transparent;
+            color: #f5576c;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reveal-button:hover {
+            transform: translateY(-2px);
+            background: #f5576c;
+            color: white;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal {
+            background: white;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .modal-content {
+            padding: 2rem;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .year-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .year-info h3 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .year-info p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .result-stats {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+
+
+        .answer-comparison {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .comparison-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-rank {
+            font-weight: bold;
+            color: #2c3e50;
+            width: 40px;
+        }
+
+        .comparison-guess {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .comparison-actual {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .comparison-correct {
+            color: #28a745;
+        }
+
+        .comparison-incorrect {
+            color: #dc3545;
+        }
+
+        .modal-actions {
+            flex-direction: column;
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 2rem 2rem 2rem;
+            border-top: 1px solid #e9ecef;
+            background: white;
+            border-radius: 0 0 20px 20px;
+            flex-shrink: 0;
+        }
+
+        .next-year-button {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-weight: 600;
+        }
+
+        .next-year-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .close-modal-button {
+            flex: 1;
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .close-modal-button:hover {
+            transform: translateY(-2px);
+            background: #5a6268;
+        }
+
+        @media (max-width: 640px) {
+            .nav-unified {
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+            
+            .main-container {
+                padding-top: 5.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .game-content {
+                padding: 1rem;
+            }
+
+            .ranking-row {
+                padding: 0.6rem 0.8rem;
+            }
+
+            .rank-number {
+                font-size: 1em;
+                margin-right: 1rem;
+            }
+
+            .player-search {
+                font-size: 1em;
+                padding: 0.6rem 0.8rem;
+            }
+
+            .modal {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .modal-content {
+                padding: 1.5rem;
+            }
+
+            .modal-actions {
+                padding: 1rem 1.5rem 1.5rem 1.5rem;
+            }
+
+            .year-info h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        /* Responsive game cards - Desktop: horizontal, Mobile: column */
+        .game-card-responsive {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-button-responsive {
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .game-card-responsive {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .play-button-responsive {
+                text-align: center;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Unified Navigation -->
+    <nav class="nav-unified">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <img src="images/logo-tennis-quiz.png" alt="Tennis Quiz Logo" style="width: 20px; height: 20px; ">
+                TENNIS GAMES
+            </a>
+        </div>
+        <div class="nav-actions">
+            <button class="sign-up-btn" onclick="openJoinModal()">
+                Join for more
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="container">
+        
+        <div class="header bg-gray-50 px-8 pt-8 pb-0">
+            <h1 style="color: #2c3e50;">🏆 Top 10 Year-End Rankings</h1>
+        </div>
+
+        <div class="game-content">
+            <div class="loading" id="loadingMessage">
+                Loading year-end rankings data...
+            </div>
+
+            <div class="error" id="errorMessage" style="display: none;">
+                Failed to load data. Please refresh the page.
+            </div>
+
+            <div id="gameContent" style="display: none;">
+                <div class="year-display">
+                    <h2 id="currentYear">2006</h2>
+                    <p>Type the names of the top 10 players in the correct order</p>
+                </div>
+
+                <div class="rankings-section">
+                    
+                    <div class="rankings-grid" id="rankingsGrid">
+                        <!-- Rankings will be generated here -->
+                    </div>
+                </div>
+
+                <div class="game-controls">
+                    <button class="guess-button" id="submitGuess">Submit Guess</button>
+                    <button class="reveal-button" id="revealAnswer">Reveal Answer and Play Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Modal -->
+        <div class="modal-overlay" id="resultModal" style="display: none;">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Result</h2>
+                </div>
+                <div class="modal-content">
+                    <div class="year-info">
+                        <h3 id="modalYear">2006</h3>
+                        <p id="modalYearDetails">ATP Year-End Rankings</p>
+                    </div>
+                    <div class="result-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Correct Guesses:</span>
+                            <span class="stat-value" id="modalCorrect">0/10</span>
+                        </div>
+                        <div class="stat-row" style="border-top: 1px solid #ddd; margin-top: 0.5rem; padding-top: 0.5rem;">
+                            <span class="stat-label">Your Total Score:</span>
+                            <span class="stat-value" id="modalScore">0/0 (0%)</span>
+                        </div>
+                    </div>
+
+                    <div class="answer-comparison" id="answerComparison">
+                        <!-- Comparison will be generated here -->
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="next-year-button" id="nextYearButton">🏆 Next Year</button>
+                    <div class="mt-4 text-center">
+                        <button 
+                            onclick="copyResults()"
+                            class="text-base text-gray-400 hover:text-white transition-colors cursor-pointer"
+                            style="border: none; background: none;"
+                            id="copyButton"
+                        >
+                            copy my results as a text
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Play More Games Section -->
+    <div style="margin-top: 3rem; padding: 2rem 0; background: rgba(255, 255, 255, 0.05); border-radius: 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+            <h2 style="text-align: center; color: white; font-size: 2rem; margin-bottom: 2rem; font-weight: bold;">🎾 Play More Games</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto;">
+                
+                <!-- Mystery Player Timeline -->
+                <a href="guess-player-performance-timeline.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #5f27cd, #341f97); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/mistery-player.png" alt="Mystery Player Timeline" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Mystery Player Timeline</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their Grand Slam performance timeline</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- ATP Ranking Riddle -->
+                <a href="guess-atp-rankings.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #3742fa, #2f3542); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/ranking-riddle.png" alt="ATP Ranking Riddle" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">ATP Ranking Riddle</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their highest ATP ranking each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- BIG3 Finals Scores -->
+                <a href="guess-scores.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff4757, #c44569); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/big3-scores.png" alt="BIG3 Finals Scores" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">BIG3 Finals Scores</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess set scores from Big 3 Grand Slam finals</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Random Legends Tier -->
+                <a href="tennis-tier-list.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ffd700, #ff9f43); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/random-tierlist.png" alt="Random Legends Tier" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Random Legends Tier</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Rank tennis legends by their ATP titles</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- GS Champions Ladder -->
+                <a href="grand-slam-winners.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #00d4aa, #00b894); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/champions-gs-history.png" alt="GS Champions Ladder" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">GS Champions Ladder</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Name Grand Slam champions from 2024 back to 2000</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Head-to-Head Masters -->
+                <a href="head-to-head-masters.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #e74c3c, #c0392b); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/h2h.png" alt="Head-to-Head Masters" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Head-to-Head Masters</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Test your knowledge of tennis's greatest rivalries</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class Top10RankingsGame {
+            constructor() {
+                this.yearData = {};
+                this.currentYear = null;
+                this.currentYearData = null;
+                this.userGuesses = {};
+                this.gameRevealed = false;
+                this.allPlayers = [];
+                this.correctGuesses = 0;
+                this.totalAttempts = 0;
+                this.availableYears = [];
+                this.currentYearIndex = 0;
+                // Clear old localStorage data to ensure fresh start
+                localStorage.removeItem('tennisQuizCurrentYear');
+                this.loadScore();
+                this.init();
+            }
+
+            async init() {
+                try {
+                    await this.loadData();
+                    this.selectYearOfTheDay();
+                    this.displayGame();
+                    this.setupEventListeners();
+                } catch (error) {
+                    console.error('Error initializing game:', error);
+                    this.showError('Failed to load game data. Please refresh the page.');
+                }
+            }
+
+            async loadData() {
+                const response = await fetch('./year_end_top10.json');
+                this.yearData = await response.json();
+                
+                // Extract all unique players for search functionality
+                this.allPlayers = [];
+                const playerSet = new Set();
+                
+                for (const [year, data] of Object.entries(this.yearData)) {
+                    for (const player of data.top_10) {
+                        const playerKey = `${player.name}-${player.country}`;
+                        if (!playerSet.has(playerKey)) {
+                            playerSet.add(playerKey);
+                            this.allPlayers.push({
+                                name: player.name,
+                                country: player.country,
+                                first_name: player.first_name,
+                                last_name: player.last_name
+                            });
+                        }
+                    }
+                }
+                
+                // Sort available years (most recent first)
+                this.availableYears = Object.keys(this.yearData).sort((a, b) => parseInt(b) - parseInt(a));
+                
+                console.log(`Loaded ${this.availableYears.length} years of rankings data`);
+                console.log(`Loaded ${this.allPlayers.length} unique players for search`);
+            }
+
+            // localStorage helper functions
+            saveCurrentYearToStorage() {
+                if (this.currentYear) {
+                    const yearState = {
+                        year: this.currentYear,
+                        yearIndex: this.currentYearIndex,
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem('tennisQuizCurrentYear', JSON.stringify(yearState));
+                }
+            }
+
+            loadYearFromStorage() {
+                try {
+                    const savedData = localStorage.getItem('tennisQuizCurrentYear');
+                    if (savedData) {
+                        const yearState = JSON.parse(savedData);
+                        const twentyFourHours = 24 * 60 * 60 * 1000;
+                        if (Date.now() - yearState.timestamp < twentyFourHours) {
+                            if (yearState.yearIndex >= 0 && yearState.yearIndex < this.availableYears.length) {
+                                this.currentYearIndex = yearState.yearIndex;
+                                this.currentYear = this.availableYears[this.currentYearIndex];
+                                this.currentYearData = this.yearData[this.currentYear];
+                                console.log(`Loaded year from localStorage: ${this.currentYear}`);
+                                return true;
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error loading year from localStorage:', error);
+                    localStorage.removeItem('tennisQuizCurrentYear');
+                }
+                return false;
+            }
+
+            // Score tracking functions
+            loadScore() {
+                try {
+                    const savedScore = localStorage.getItem('tennisQuizTop10Score');
+                    if (savedScore) {
+                        const scoreData = JSON.parse(savedScore);
+                        this.correctGuesses = scoreData.correctGuesses || 0;
+                        this.totalAttempts = scoreData.totalAttempts || 0;
+                    }
+                } catch (error) {
+                    console.error('Error loading score:', error);
+                    this.correctGuesses = 0;
+                    this.totalAttempts = 0;
+                }
+            }
+
+            saveScore() {
+                try {
+                    const scoreData = {
+                        correctGuesses: this.correctGuesses,
+                        totalAttempts: this.totalAttempts,
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem('tennisQuizTop10Score', JSON.stringify(scoreData));
+                } catch (error) {
+                    console.error('Error saving score:', error);
+                }
+            }
+
+            updateScore(correctCount, totalCount) {
+                this.totalAttempts++;
+                if (correctCount === totalCount) {
+                    this.correctGuesses++;
+                }
+                this.saveScore();
+            }
+
+            selectYearOfTheDay() {
+                // Force start with 2024 (first year in our sorted array)
+                this.currentYearIndex = 0;
+                this.currentYear = this.availableYears[this.currentYearIndex];
+                this.currentYearData = this.yearData[this.currentYear];
+                
+                console.log(`Selected year: ${this.currentYear} (index ${this.currentYearIndex})`);
+                console.log(`Available years:`, this.availableYears.slice(0, 5));
+                
+                this.saveCurrentYearToStorage();
+            }
+
+            displayGame() {
+                // Hide loading message
+                document.getElementById('loadingMessage').style.display = 'none';
+                
+                // Show game content
+                document.getElementById('gameContent').style.display = 'block';
+                
+                // Update year display
+                document.getElementById('currentYear').textContent = this.currentYear;
+                
+                // Create rankings grid
+                this.createRankingsGrid();
+                
+                // Reset user guesses
+                this.userGuesses = {};
+                this.gameRevealed = false;
+            }
+
+            createRankingsGrid() {
+                const grid = document.getElementById('rankingsGrid');
+                grid.innerHTML = '';
+                
+                for (let rank = 1; rank <= 10; rank++) {
+                    const row = document.createElement('div');
+                    row.className = 'ranking-row';
+                    
+                    row.innerHTML = `
+                        <div class="rank-number">#${rank}</div>
+                        <div class="player-search-container">
+                            <input type="text" class="player-search" 
+                                   data-rank="${rank}" 
+                                   placeholder="Type in the player name...">
+                            <div class="suggestions" id="suggestions-${rank}"></div>
+                        </div>
+                        <div class="player-country" id="country-${rank}">🏳️</div>
+                    `;
+                    
+                    grid.appendChild(row);
+                }
+                
+                // Set up event listeners for the new ranking inputs
+                this.setupRankingEventListeners();
+            }
+
+            setupEventListeners() {
+                const submitButton = document.getElementById('submitGuess');
+                const revealButton = document.getElementById('revealAnswer');
+                const nextYearButton = document.getElementById('nextYearButton');
+                const modalOverlay = document.getElementById('resultModal');
+
+                // Submit and reveal buttons
+                submitButton.addEventListener('click', () => {
+                    this.submitGuess();
+                });
+
+                revealButton.addEventListener('click', () => {
+                    this.revealAnswer();
+                });
+
+                // Modal buttons
+                nextYearButton.addEventListener('click', () => {
+                    this.playNextYear();
+                });
+
+                // Set up the initial ranking event listeners
+                this.setupRankingEventListeners();
+
+                // Hide suggestions when clicking outside (only set up once)
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.player-search-container') && !e.target.closest('.modal')) {
+                        for (let rank = 1; rank <= 10; rank++) {
+                            const suggestionsEl = document.getElementById(`suggestions-${rank}`);
+                            if (suggestionsEl) {
+                                suggestionsEl.style.display = 'none';
+                                // Remove active class from all containers
+                                const container = document.querySelector(`[data-rank="${rank}"]`);
+                                if (container) {
+                                    const containerEl = container.closest('.player-search-container');
+                                    if (containerEl) {
+                                        containerEl.classList.remove('active');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            setupRankingEventListeners() {
+                // Setup search functionality for each rank
+                for (let rank = 1; rank <= 10; rank++) {
+                    const input = document.querySelector(`[data-rank="${rank}"]`);
+                    const suggestions = document.getElementById(`suggestions-${rank}`);
+                    
+                    if (input && suggestions) {
+                        input.addEventListener('input', (e) => {
+                            this.handlePlayerSearch(e, rank);
+                        });
+
+                        suggestions.addEventListener('click', (e) => {
+                            if (e.target.classList.contains('suggestion')) {
+                                this.selectPlayer(e.target.textContent, rank);
+                            }
+                        });
+                    }
+                }
+            }
+
+            handlePlayerSearch(event, rank) {
+                const query = event.target.value.toLowerCase();
+                const suggestions = document.getElementById(`suggestions-${rank}`);
+                const container = event.target.closest('.player-search-container');
+                
+                if (query.length < 2) {
+                    suggestions.style.display = 'none';
+                    container.classList.remove('active');
+                    return;
+                }
+
+                const matches = this.allPlayers
+                    .filter(player => player.name.toLowerCase().includes(query))
+                    .slice(0, 8);
+
+                if (matches.length > 0) {
+                    suggestions.innerHTML = matches
+                        .map(player => `<div class="suggestion">${player.name}</div>`)
+                        .join('');
+                    
+                    container.classList.add('active');
+                    suggestions.style.display = 'block';
+                } else {
+                    suggestions.style.display = 'none';
+                    container.classList.remove('active');
+                }
+            }
+
+            selectPlayer(playerName, rank) {
+                const input = document.querySelector(`[data-rank="${rank}"]`);
+                const suggestions = document.getElementById(`suggestions-${rank}`);
+                const countryDiv = document.getElementById(`country-${rank}`);
+                const container = input.closest('.player-search-container');
+                
+                input.value = playerName;
+                input.classList.add('filled');
+                suggestions.style.display = 'none';
+                container.classList.remove('active');
+                
+                // Find player country
+                const player = this.allPlayers.find(p => p.name === playerName);
+                if (player) {
+                    countryDiv.textContent = this.getCountryFlag(player.country) + ' ' + player.country;
+                    this.userGuesses[rank] = {
+                        name: playerName,
+                        country: player.country
+                    };
+                }
+            }
+
+            getCountryFlag(countryCode) {
+                const flagMap = {
+                    'ESP': '🇪🇸', 'SRB': '🇷🇸', 'SUI': '🇨🇭', 'FRA': '🇫🇷', 'GER': '🇩🇪',
+                    'USA': '🇺🇸', 'GBR': '🇬🇧', 'AUS': '🇦🇺', 'ARG': '🇦🇷', 'BRA': '🇧🇷',
+                    'ITA': '🇮🇹', 'NOR': '🇳🇴', 'CRO': '🇭🇷', 'AUT': '🇦🇹', 'RUS': '🇷🇺',
+                    'CHI': '🇨🇱', 'CAN': '🇨🇦', 'JPN': '🇯🇵', 'KOR': '🇰🇷', 'CHN': '🇨🇳',
+                    'POL': '🇵🇱', 'DEN': '🇩🇰', 'SWE': '🇸🇪', 'NED': '🇳🇱', 'BEL': '🇧🇪',
+                    'CZE': '🇨🇿', 'GRE': '🇬🇷', 'RSA': '🇿🇦', 'UKR': '🇺🇦', 'LAT': '🇱🇻',
+                    'LUX': '🇱🇺', 'ISR': '🇮🇱', 'HUN': '🇭🇺', 'CYP': '🇨🇾', 'SVK': '🇸🇰',
+                    'ROU': '🇷🇴', 'BIH': '🇧🇦', 'KAZ': '🇰🇿', 'GEO': '🇬🇪', 'THA': '🇹🇭',
+                    'NZL': '🇳🇿', 'PER': '🇵🇪', 'COL': '🇨🇴', 'ECU': '🇪🇨', 'UZB': '🇺🇿',
+                    'TUN': '🇹🇳', 'MAR': '🇲🇦', 'BUL': '🇧🇬', 'FIN': '🇫🇮', 'ARM': '🇦🇲',
+                    'MDA': '🇲🇩', 'SVN': '🇸🇮', 'LTU': '🇱🇹', 'EST': '🇪🇪', 'IND': '🇮🇳'
+                };
+                return flagMap[countryCode] || '🏳️';
+            }
+
+            submitGuess() {
+                const correctCount = this.checkGuesses();
+                this.updateScore(correctCount, 10);
+                this.revealCorrectAnswers();
+                
+                if (correctCount === 10) {
+                    this.showModal('🎉 Perfect!', `Amazing! You got all 10 positions exactly right!`, 'correct');
+                } else if (correctCount >= 7) {
+                    this.showModal('🎾 Great Job!', `Excellent! You got ${correctCount} out of 10 positions correct!`, 'correct');
+                } else if (correctCount >= 5) {
+                    this.showModal('👍 Good Effort!', `Nice work! You got ${correctCount} out of 10 positions correct.`, 'incorrect');
+                } else {
+                    this.showModal('📈 Keep Trying!', `You got ${correctCount} out of 10 positions correct. Practice makes perfect!`, 'incorrect');
+                }
+                
+                this.gameRevealed = true;
+                this.disableInputs();
+            }
+
+            revealAnswer() {
+                const correctCount = this.checkGuesses();
+                this.updateScore(correctCount, 10);
+                this.revealCorrectAnswers();
+                this.showModal('🔍 Answer Revealed', `Here are the actual year-end rankings for ${this.currentYear}:`, 'revealed');
+                this.gameRevealed = true;
+                this.disableInputs();
+            }
+
+            checkGuesses() {
+                let correctCount = 0;
+                
+                for (let rank = 1; rank <= 10; rank++) {
+                    const actualPlayer = this.currentYearData.top_10[rank - 1];
+                    const userGuess = this.userGuesses[rank];
+                    
+                    if (userGuess && actualPlayer && userGuess.name === actualPlayer.name) {
+                        correctCount++;
+                    }
+                }
+                
+                return correctCount;
+            }
+
+            revealCorrectAnswers() {
+                for (let rank = 1; rank <= 10; rank++) {
+                    const input = document.querySelector(`[data-rank="${rank}"]`);
+                    const countryDiv = document.getElementById(`country-${rank}`);
+                    const actualPlayer = this.currentYearData.top_10[rank - 1];
+                    
+                    if (actualPlayer) {
+                        const userGuess = this.userGuesses[rank];
+                        const isCorrect = userGuess && userGuess.name === actualPlayer.name;
+                        
+                        input.value = actualPlayer.name;
+                        input.classList.add('revealed');
+                        if (isCorrect) {
+                            input.classList.add('filled');
+                        }
+                        
+                        countryDiv.textContent = this.getCountryFlag(actualPlayer.country) + ' ' + actualPlayer.country;
+                    }
+                }
+            }
+
+            showModal(title, message, type) {
+                document.getElementById('modalTitle').textContent = title;
+                document.getElementById('modalYear').textContent = this.currentYear;
+                
+                // Convert date to readable format
+                const date = this.currentYearData.date;
+                const formattedDate = `${date.substring(6, 8)}/${date.substring(4, 6)}/${date.substring(0, 4)}`;
+                document.getElementById('modalYearDetails').textContent = `Rankings as of ${formattedDate}`;
+                
+                // Calculate and show statistics
+                const correctCount = this.checkGuesses();
+                document.getElementById('modalCorrect').textContent = `${correctCount}/10`;
+                
+                // Update total score
+                const percentage = this.totalAttempts > 0 ? Math.round((this.correctGuesses / this.totalAttempts) * 100) : 0;
+                document.getElementById('modalScore').textContent = `${this.correctGuesses}/${this.totalAttempts} (${percentage}%)`;
+                
+
+                
+                // Generate comparison
+                this.generateAnswerComparison();
+                
+                // Show modal
+                document.getElementById('resultModal').style.display = 'flex';
+            }
+
+            generateAnswerComparison() {
+                const container = document.getElementById('answerComparison');
+                let html = '<div class="comparison-row"><div class="comparison-rank">Rank</div><div class="comparison-guess">Your Guess</div><div class="comparison-actual">Actual</div></div>';
+                
+                for (let rank = 1; rank <= 10; rank++) {
+                    const actualPlayer = this.currentYearData.top_10[rank - 1];
+                    const userGuess = this.userGuesses[rank];
+                    const isCorrect = userGuess && actualPlayer && userGuess.name === actualPlayer.name;
+                    
+                    const guessText = userGuess ? userGuess.name : 'Not guessed';
+                    const actualText = actualPlayer ? actualPlayer.name : 'N/A';
+                    
+                    html += `
+                        <div class="comparison-row">
+                            <div class="comparison-rank">#${rank}</div>
+                            <div class="comparison-guess ${isCorrect ? 'comparison-correct' : 'comparison-incorrect'}">${guessText}</div>
+                            <div class="comparison-actual">${actualText}</div>
+                        </div>
+                    `;
+                }
+                
+                container.innerHTML = html;
+            }
+
+            closeModal() {
+                document.getElementById('resultModal').style.display = 'none';
+            }
+
+            playNextYear() {
+                this.closeModal();
+                this.resetGameState();
+                this.selectNextYear();
+                this.displayGame();
+            }
+
+            selectNextYear() {
+                this.currentYearIndex = (this.currentYearIndex + 1) % this.availableYears.length;
+                this.currentYear = this.availableYears[this.currentYearIndex];
+                this.currentYearData = this.yearData[this.currentYear];
+                this.saveCurrentYearToStorage();
+            }
+
+            resetGameState() {
+                this.gameRevealed = false;
+                this.userGuesses = {};
+                
+                // Enable buttons
+                document.getElementById('submitGuess').disabled = false;
+                document.getElementById('revealAnswer').disabled = false;
+                
+                // Reset all inputs
+                for (let rank = 1; rank <= 10; rank++) {
+                    const input = document.querySelector(`[data-rank="${rank}"]`);
+                    const countryDiv = document.getElementById(`country-${rank}`);
+                    
+                    input.value = '';
+                    input.disabled = false;
+                    input.classList.remove('filled', 'revealed');
+                    countryDiv.textContent = '🏳️';
+                }
+            }
+
+            disableInputs() {
+                document.getElementById('submitGuess').disabled = true;
+                document.getElementById('revealAnswer').disabled = true;
+                
+                for (let rank = 1; rank <= 10; rank++) {
+                    const input = document.querySelector(`[data-rank="${rank}"]`);
+                    input.disabled = true;
+                }
+            }
+
+            showError(message) {
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('errorMessage').textContent = message;
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+
+            copyResults() {
+                const score = this.correctGuesses;
+                const total = this.totalAttempts;
+                const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
+                const resultsText = `Top-10 Time Machine - Score: ${score}/${total} (${percentage}%)`;
+                
+                navigator.clipboard.writeText(resultsText).then(() => {
+                    // Change text to "copied"
+                    const button = document.getElementById('copyButton');
+                    if (button) button.textContent = 'copied';
+                    
+                    // Reset text after 2 seconds
+                    setTimeout(() => {
+                        if (button) button.textContent = 'copy my results as a text';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    // Fallback for browsers that don't support clipboard API
+                    const textArea = document.createElement('textarea');
+                    textArea.value = resultsText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    // Change text to "copied"
+                    const button = document.getElementById('copyButton');
+                    if (button) button.textContent = 'copied';
+                    
+                    // Reset text after 2 seconds
+                    setTimeout(() => {
+                        if (button) button.textContent = 'copy my results as a text';
+                    }, 2000);
+                });
+            }
+        }
+
+        // Global function for the onclick handler
+        function copyResults() {
+            if (window.gameInstance) {
+                window.gameInstance.copyResults();
+            }
+        }
+
+        // Initialize game when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            window.gameInstance = new Top10RankingsGame();
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer style="margin-top: 2rem; padding: 1.5rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; text-align: center;">
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">
+                Developed by David
+            </p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                Data sources: <a href="https://www.tennisabstract.com/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Tennis Abstract</a> and <a href="https://github.com/jeffsackmann" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Jeff Sackmann</a>
+            </p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">
+                Would you like to give feedback? - <a href="mailto:feedback@tennis-quiz.com" style="color: white; text-decoration: underline;">send a comment here</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Top-10 Time Machine",
+        "description": "Travel through time with our Top-10 Time Machine game! Guess ATP Year-End Top 10 Rankings for each year. Test your tennis history knowledge with this interactive quiz game.",
+        "url": "https://tennis-quiz.com/top10-game.html",
+        "image": "https://tennis-quiz.com/images/top-10-tbt.png",
+        "gameType": "Quiz",
+        "genre": "Sports Trivia",
+        "category": "Tennis",
+        "author": {
+            "@type": "Person",
+            "name": "David"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tennis Quiz Games"
+        },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+
+    <!-- Join Modal -->
+    <div id="joinModal" class="join-modal-overlay" style="display: none;">
+        <div class="join-modal">
+            <div class="join-modal-header">
+                <h2>Join Tennis Quiz Community</h2>
+                <button class="join-modal-close" onclick="closeJoinModal()">&times;</button>
+            </div>
+            <div class="join-modal-content">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-vUaKLdZVDtMyI64qCU_nPamziods5VaTm2P5Gw5jejkimA/viewform?embedded=true" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .join-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .join-modal {
+            background: white;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .join-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e5e7eb;
+            background: linear-gradient(135deg, #00d4aa 0%, #ffd700 100%);
+            color: white;
+        }
+
+        .join-modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .join-modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .join-modal-close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .join-modal-content {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .join-modal-content iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .join-modal {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .join-modal-header {
+                padding: 16px 20px;
+            }
+
+            .join-modal-header h2 {
+                font-size: 1.25rem;
+            }
+
+            .join-modal-content iframe {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .join-modal-overlay {
+                padding: 10px;
+            }
+
+            .join-modal {
+                max-width: 100vw;
+                max-height: 100vh;
+                border-radius: 8px;
+            }
+
+            .join-modal-content iframe {
+                height: 450px;
+            }
+        }
+    </style>
+
+    <script>
+        function openJoinModal() {
+            document.getElementById('joinModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeJoinModal() {
+            document.getElementById('joinModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('joinModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeJoinModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('joinModal').style.display === 'flex') {
+                closeJoinModal();
+            }
+        });
+    </script>
+</body>
+</html>

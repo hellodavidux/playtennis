@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Player Timeline - Grand Slam Performance Quiz | Tennis Quiz Games</title>
+    <meta name="description" content="Guess the tennis player by their Grand Slam performance timeline! Test your tennis knowledge with this interactive quiz game. Challenge yourself to identify players from their career achievements.">
+    <meta name="keywords" content="mystery player timeline, tennis player quiz, Grand Slam performance quiz, tennis timeline game, tennis player identification, tennis quiz game">
+    <meta name="author" content="David">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tennis-quiz.com/guess-player-performance-timeline.html">
+    <meta property="og:title" content="Mystery Player Timeline - Grand Slam Performance Quiz">
+    <meta property="og:description" content="Guess the tennis player by their Grand Slam performance timeline! Test your tennis knowledge with this interactive quiz game. Challenge yourself to identify players from their career achievements.">
+    <meta property="og:image" content="https://tennis-quiz.com/images/mistery-player.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tennis-quiz.com/guess-player-performance-timeline.html">
+    <meta property="twitter:title" content="Mystery Player Timeline - Grand Slam Performance Quiz">
+    <meta property="twitter:description" content="Guess the tennis player by their Grand Slam performance timeline! Test your tennis knowledge with this interactive quiz game. Challenge yourself to identify players from their career achievements.">
+    <meta property="twitter:image" content="https://tennis-quiz.com/images/mistery-player.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tennis-quiz.com/guess-player-performance-timeline.html">
+    
+    <link rel="icon" type="image/png" href="images/logo-tennis-quiz.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #5f27cd 0%, #341f97 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .nav-unified {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sign-up-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .sign-up-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .main-container {
+            padding-top: 5rem;
+        }
+
+        .header {
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .game-content {
+            padding: 2rem;
+        }
+
+        .player-of-day {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline-section {
+            margin-bottom: 2rem;
+        }
+
+        .timeline-title {
+            font-size: 1.5em;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 0 auto 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .table-container {
+                max-width: 1200px;
+                display: flex;
+                justify-content: center;
+                width: max-content;
+            }
+        }
+
+        .timeline-table {
+            width: auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            min-width: 800px; /* Ensure minimum width for proper display */
+        }
+
+        .timeline-table th {
+            color: white;
+            padding: 0.8rem 1rem;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .timeline-table th:first-child {
+            width: 100px;
+            text-align: left;
+        }
+
+        .timeline-table td {
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-weight: 600;
+            width: 80px;
+        }
+
+        .result-cell {
+            font-weight: 600;
+        }
+
+        /* Tournament result colors - matching the example */
+        .A { background-color: #e8e8e8; color: #333; }
+        .\31 R { background-color: #e8e8e8; color: #333; }
+        .\32 R { background-color: #b3e5fc; color: #333; }
+        .\33 R { background-color: #81d4fa; color: #333; }
+        .QF { background-color: #fff176; color: #333; }
+        .SF { background-color: #ffeb3b; color: #333; }
+        .F { background-color: #e1bee7; color: #333; }
+        .W { background-color: #4caf50; color: white; font-weight: bold; }
+        .NH { background-color: #f5f5f5; color: #999; }
+
+        .guess-section {
+            background: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .guess-section h3 {
+            margin-bottom: 2.5rem;
+            color: #2c3e50;
+            font-size: 1.5em;
+        }
+
+        .search-container {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 1rem;
+            font-size: 1.1em;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .search-input:focus {
+            border-color: #667eea;
+        }
+
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 0 0 10px 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .suggestion {
+            padding: 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .suggestion:hover {
+            background: #f8f9fa;
+        }
+
+        .guess-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-right: 1rem;
+            display: inline-block;
+        }
+
+        .guess-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .reveal-button {
+            background: transparent;
+            color: #f5576c;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+            display: inline-block;
+        }
+
+        .reveal-button:hover {
+            transform: translateY(-2px);
+            background: #f5576c;
+            color: white;
+        }
+
+
+
+        .result-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        .correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .revealed {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .modal-content {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .player-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .player-info h3 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .player-info p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .result-stats {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .result-message-modal {
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 1rem;
+        }
+
+        .result-message-modal.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .result-message-modal.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .result-message-modal.revealed {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .modal-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 0 2rem 2rem 2rem;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            margin-top: auto;
+        }
+
+        .next-player-button {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-weight: 600;
+        }
+
+        .next-player-button:hover {
+            transform: translateY(-2px);
+        }
+
+
+
+        @media (max-width: 640px) {
+            .nav-unified {
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+            
+            .main-container {
+                padding-top: 5.5rem;
+            }
+
+            .guess-button {
+                margin-bottom: 1rem;
+            }
+
+            .timeline-table th:first-child {
+                width: 80px;
+            }
+
+            .timeline-table td {
+                width: 60px;
+                min-width: 60px;
+                padding: 0.5rem 0.3rem;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .game-content {
+                padding: 1rem;
+            }
+            
+            .timeline-table th,
+            .timeline-table td {
+                padding: 0.5rem;
+                font-size: 0.9em;
+            }
+
+            .modal {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .modal-content {
+                padding: 1.5rem;
+            }
+
+            .modal-actions {
+                padding: 0 1.5rem 1.5rem 1.5rem;
+            }
+
+            .player-info h3 {
+                font-size: 1.5em;
+            }
+
+            .table-container {
+                /* Better scrolling on mobile */
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .timeline-table {
+                font-size: 0.8em;
+            }
+        }
+
+        /* Responsive game cards - Desktop: horizontal, Mobile: column */
+        .game-card-responsive {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-button-responsive {
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .game-card-responsive {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .play-button-responsive {
+                text-align: center;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Unified Navigation -->
+    <nav class="nav-unified">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <img src="images/logo-tennis-quiz.png" alt="Tennis Quiz Logo" style="width: 20px; height: 20px; ">
+                TENNIS GAMES
+            </a>
+        </div>
+        <div class="nav-actions">
+            <button class="sign-up-btn" onclick="openJoinModal()">
+                Join for more
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="container">
+        
+        <div class="header bg-gray-50 p-8 mb-8">
+            <h1 style="color: #2c3e50; margin-bottom: 1rem;">🎾 Mystery Player Timeline</h1>
+            <p style="color: #34495e; margin-bottom: 0.5rem;">Can you identify the tennis player by their Grand Slam performance timeline?</p>
+            <p style="font-size: 0.9em; color: #7f8c8d; margin-top: 0.5rem;">📅 Data coverage: 1968 - End of 2024</p>
+        </div>
+
+        <div class="game-content">
+
+
+            <div class="loading" id="loadingMessage">
+                Loading player data and generating timeline...
+            </div>
+
+            <div class="error" id="errorMessage" style="display: none;">
+                Failed to load data. Please refresh the page.
+            </div>
+
+            <div id="gameContent" style="display: none;">
+                <div class="timeline-section">
+
+                    
+                    
+                    <div class="table-container">
+                        <table class="timeline-table" id="timelineTable">
+                            <!-- Timeline will be generated here -->
+                        </table>
+                    </div>
+                </div>
+
+                <div class="guess-section">
+                    
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="playerSearch" placeholder="Start typing a player name...">
+                        <div class="suggestions" id="suggestions"></div>
+                    </div>
+                    <button class="guess-button" id="submitGuess">Submit Guess</button>
+                    <button class="reveal-button" id="revealAnswer">Reveal Player and Play Next</button>
+                    
+                    <div class="result-message" id="resultMessage"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Modal -->
+        <div class="modal-overlay" id="resultModal" style="display: none;">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Result</h2>
+                </div>
+                <div class="modal-content">
+                    <div class="player-info">
+                        <h3 id="modalPlayerName">Player Name</h3>
+                        <p id="modalPlayerDetails">Country • Years Active</p>
+                        <p id="modalPlayerLink" style="margin-top: 0.5rem; font-size: 0.9em;">
+                            <a href="#" id="playerSearchLink" target="_blank" style="color: #667eea; text-decoration: none; border-bottom: 1px solid #667eea;">
+                                search for [player name] career statistics on wikipedia
+                            </a>
+                        </p>
+                    </div>
+                    <div class="result-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Grand Slam Titles:</span>
+                            <span class="stat-value" id="modalTitles">0</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Finals Reached:</span>
+                            <span class="stat-value" id="modalFinals">0</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Years of Grand Slam Data:</span>
+                            <span class="stat-value" id="modalYearsActive">0</span>
+                        </div>
+                        <div class="stat-row" style="border-top: 1px solid #ddd; margin-top: 0.5rem; padding-top: 0.5rem;">
+                            <span class="stat-label">Your Score:</span>
+                            <span class="stat-value" id="modalScore">0/0 (0%)</span>
+                        </div>
+                    </div>
+                    <div class="result-message-modal" id="modalResultMessage"></div>
+                </div>
+                <div class="modal-actions">
+                    <button class="next-player-button" id="nextPlayerButton">🎾 Play Next Player</button>
+                    <div class="mt-4 text-center">
+                        <button 
+                            onclick="copyResults()"
+                            class="text-base text-sm text-gray-400 hover:text-white transition-colors cursor-pointer"
+                            style="border: none; background: none;"
+                            id="copyButton"
+                        >
+                            copy my results as a text
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Play More Games Section -->
+    <div style="margin-top: 3rem; padding: 2rem 0; background: rgba(255, 255, 255, 0.05); border-radius: 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+            <h2 style="text-align: center; color: white; font-size: 2rem; margin-bottom: 2rem; font-weight: bold;">🎾 Play More Games</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto;">
+                
+                <!-- ATP Ranking Riddle -->
+                <a href="guess-atp-rankings.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #3742fa, #2f3542); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/ranking-riddle.png" alt="ATP Ranking Riddle" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">ATP Ranking Riddle</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their highest ATP ranking each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- BIG3 Finals Scores -->
+                <a href="guess-scores.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff4757, #c44569); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/big3-scores.png" alt="BIG3 Finals Scores" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">BIG3 Finals Scores</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess set scores from Big 3 Grand Slam finals</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Random Legends Tier -->
+                <a href="tennis-tier-list.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ffd700, #ff9f43); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/random-tierlist.png" alt="Random Legends Tier" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Random Legends Tier</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Rank tennis legends by their ATP titles</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Top-10 Time Machine -->
+                <a href="top10-game.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff9f43, #ee5a24); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/top-10-tbt.png" alt="Top-10 Time Machine" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Top-10 Time Machine</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess ATP Year-End Top 10 Rankings for each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- GS Champions Ladder -->
+                <a href="grand-slam-winners.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #00d4aa, #00b894); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/champions-gs-history.png" alt="GS Champions Ladder" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">GS Champions Ladder</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Name Grand Slam champions from 2024 back to 2000</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Head-to-Head Masters -->
+                <a href="head-to-head-masters.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #e74c3c, #c0392b); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/h2h.png" alt="Head-to-Head Masters" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Head-to-Head Masters</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Test your knowledge of tennis's greatest rivalries</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class GrandSlamTimelineGame {
+            constructor() {
+                this.players = [];
+                this.currentPlayer = null;
+                this.playerTimeline = {};
+                this.gameRevealed = false;
+                this.grandSlamData = {};
+                this.currentPlayerIndex = 0;
+                this.eligiblePlayers = []; // Filtered list of players for consistent ordering
+                this.correctGuesses = 0;
+                this.totalAttempts = 0;
+                this.loadScore();
+                this.init();
+            }
+
+            async init() {
+                try {
+                    await this.loadData();
+                    this.selectPlayerOfTheDay();
+                    this.displayGame();
+                    this.setupEventListeners();
+                } catch (error) {
+                    console.error('Error initializing game:', error);
+                    this.showError('Failed to load game data. Please refresh the page.');
+                }
+            }
+
+            async loadData() {
+                // Load pre-processed Grand Slam timeline data
+                const response = await fetch('/grand_slam_timelines.json');
+                this.grandSlamData = await response.json();
+                
+                // Extract players list for search functionality
+                this.players = [];
+                for (const [playerId, playerData] of Object.entries(this.grandSlamData)) {
+                    const playerInfo = playerData.player_info;
+                    this.players.push({
+                        id: playerId,
+                        name: playerInfo.name,
+                        firstName: playerInfo.first_name,
+                        lastName: playerInfo.last_name,
+                        country: playerInfo.country,
+                        hand: playerInfo.hand,
+                        dob: playerInfo.dob
+                    });
+                }
+                
+                console.log(`Loaded ${Object.keys(this.grandSlamData).length} players with Grand Slam data`);
+            }
+
+            // localStorage helper functions for saving player progress
+            saveCurrentPlayerToStorage() {
+                if (this.currentPlayer) {
+                    const playerState = {
+                        playerId: this.currentPlayer.id,
+                        playerName: this.currentPlayer.name,
+                        playerIndex: this.currentPlayerIndex,
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem('tennisQuizCurrentPlayer', JSON.stringify(playerState));
+                    console.log(`Saved player to localStorage: ${this.currentPlayer.name} (index: ${this.currentPlayerIndex})`);
+                }
+            }
+
+            loadPlayerFromStorage() {
+                try {
+                    const savedData = localStorage.getItem('tennisQuizCurrentPlayer');
+                    if (savedData) {
+                        const playerState = JSON.parse(savedData);
+                        // Check if data is not too old (optional: expire after 24 hours)
+                        const twentyFourHours = 24 * 60 * 60 * 1000;
+                        if (Date.now() - playerState.timestamp < twentyFourHours) {
+                            // Ensure eligible players list is populated first
+                            this.populateEligiblePlayers();
+                            
+                            // Restore player index if available
+                            if (typeof playerState.playerIndex !== 'undefined') {
+                                this.currentPlayerIndex = playerState.playerIndex;
+                                
+                                // Get player from deterministic order
+                                if (this.currentPlayerIndex >= 0 && this.currentPlayerIndex < this.eligiblePlayers.length) {
+                                    this.currentPlayer = this.eligiblePlayers[this.currentPlayerIndex];
+                                    console.log(`Loaded player from localStorage: ${this.currentPlayer.name} (index: ${this.currentPlayerIndex})`);
+                                    return true;
+                                }
+                            } else {
+                                // Fallback for old localStorage format - find by ID
+                                const player = this.players.find(p => p.id === playerState.playerId);
+                                if (player && this.grandSlamData[playerState.playerId]) {
+                                    // Find the index of this player in eligible players
+                                    const playerIndex = this.eligiblePlayers.findIndex(p => p.id === player.id);
+                                    if (playerIndex >= 0) {
+                                        this.currentPlayerIndex = playerIndex;
+                                        this.currentPlayer = player;
+                                        console.log(`Loaded player from localStorage (fallback): ${player.name} (index: ${this.currentPlayerIndex})`);
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error loading player from localStorage:', error);
+                    localStorage.removeItem('tennisQuizCurrentPlayer');
+                }
+                return false;
+            }
+
+            // Score tracking functions
+            loadScore() {
+                try {
+                    const savedScore = localStorage.getItem('tennisQuizScore');
+                    if (savedScore) {
+                        const scoreData = JSON.parse(savedScore);
+                        this.correctGuesses = scoreData.correctGuesses || 0;
+                        this.totalAttempts = scoreData.totalAttempts || 0;
+                        console.log(`Loaded score: ${this.correctGuesses}/${this.totalAttempts}`);
+                    }
+                } catch (error) {
+                    console.error('Error loading score:', error);
+                    this.correctGuesses = 0;
+                    this.totalAttempts = 0;
+                }
+            }
+
+            saveScore() {
+                try {
+                    const scoreData = {
+                        correctGuesses: this.correctGuesses,
+                        totalAttempts: this.totalAttempts,
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem('tennisQuizScore', JSON.stringify(scoreData));
+                    console.log(`Saved score: ${this.correctGuesses}/${this.totalAttempts}`);
+                } catch (error) {
+                    console.error('Error saving score:', error);
+                }
+            }
+
+            updateScore(wasCorrect) {
+                this.totalAttempts++;
+                if (wasCorrect) {
+                    this.correctGuesses++;
+                }
+                this.saveScore();
+                // Score will be displayed in modal when showModal is called
+            }
+
+            displayScore() {
+                // Score is now displayed in modals only, not in header
+                // This function is kept for compatibility but doesn't do anything
+            }
+
+            populateEligiblePlayers() {
+                // Filter for players who have reached at least a Grand Slam semifinal
+                let candidatePlayers = this.players.filter(player => {
+                    return this.hasReachedSemifinal(player.id);
+                });
+
+                if (candidatePlayers.length === 0) {
+                    // Fallback to any player with substantial data
+                    candidatePlayers = this.players.filter(player => {
+                        const playerData = this.grandSlamData[player.id];
+                        if (!playerData || !playerData.timeline) return false;
+                        const yearsWithData = Object.keys(playerData.timeline).length;
+                        return yearsWithData >= 5;
+                    });
+                }
+
+                // Sort players alphabetically by name for consistent order across all users
+                this.eligiblePlayers = candidatePlayers.sort((a, b) => a.name.localeCompare(b.name));
+                console.log(`Populated ${this.eligiblePlayers.length} eligible players in deterministic order`);
+            }
+
+            selectPlayerOfTheDay() {
+                // Populate eligible players list
+                this.populateEligiblePlayers();
+                
+                // First, try to load from localStorage to continue where user left off
+                if (this.loadPlayerFromStorage()) {
+                    console.log(`Continuing with saved player: ${this.currentPlayer.name} (${this.currentPlayer.id})`);
+                    return;
+                }
+                
+                // Start from the beginning of the deterministic order
+                this.currentPlayerIndex = 0;
+                this.currentPlayer = this.eligiblePlayers[this.currentPlayerIndex];
+                
+                console.log(`Selected starting player: ${this.currentPlayer.name} (${this.currentPlayer.id}) - index: ${this.currentPlayerIndex}`);
+                // Save the new player to localStorage
+                this.saveCurrentPlayerToStorage();
+            }
+
+            hashCode(str) {
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    const char = str.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + char;
+                    hash = hash & hash; // Convert to 32-bit integer
+                }
+                return hash;
+            }
+
+            async buildPlayerTimeline() {
+                // Get pre-processed timeline data for the current player
+                const playerData = this.grandSlamData[this.currentPlayer.id];
+                if (!playerData || !playerData.timeline) {
+                    this.playerTimeline = {};
+                    return {
+                        totalMatches: 0,
+                        totalWins: 0,
+                        grandSlamTitles: 0,
+                        finalsReached: 0,
+                        semifinalsReached: 0
+                    };
+                }
+
+                this.playerTimeline = playerData.timeline;
+
+                // Calculate statistics from the timeline
+                const stats = {
+                    totalMatches: 0,
+                    totalWins: 0,
+                    grandSlamTitles: 0,
+                    finalsReached: 0,
+                    semifinalsReached: 0
+                };
+
+                for (const [year, tournaments] of Object.entries(this.playerTimeline)) {
+                    for (const [tournament, result] of Object.entries(tournaments)) {
+                        stats.totalMatches++;
+                        
+                        if (result === 'W') {
+                            stats.grandSlamTitles++;
+                            stats.finalsReached++;
+                            stats.totalWins++;
+                        } else if (result === 'F') {
+                            stats.finalsReached++;
+                        } else if (result === 'SF') {
+                            stats.semifinalsReached++;
+                        }
+                    }
+                }
+
+                console.log(`Player timeline loaded: ${Object.keys(this.playerTimeline).length} years of data`);
+                return stats;
+            }
+
+
+
+            async displayGame() {
+                await this.buildPlayerTimeline();
+                
+                // Hide loading message
+                document.getElementById('loadingMessage').style.display = 'none';
+                
+                // Show game content
+                document.getElementById('gameContent').style.display = 'block';
+                
+                // Display timeline
+                this.displayTimeline();
+                
+                // Initialize score display
+                this.displayScore();
+            }
+
+            displayTimeline() {
+                const table = document.getElementById('timelineTable');
+                const years = Object.keys(this.playerTimeline).sort();
+                
+                if (years.length === 0) {
+                    table.innerHTML = '<tr><td colspan="5">No Grand Slam data available for this player</td></tr>';
+                    return;
+                }
+
+                const tournaments = ['AO', 'RG', 'W', 'USO'];
+                const tournamentNames = ['Australian Open', 'French Open', 'Wimbledon', 'US Open'];
+                
+                let html = '<thead><tr><th style="text-align: left; background: #2c3e50;">Tournament</th>';
+                years.forEach(year => {
+                    html += `<th style="background: #667eea;">${year}</th>`;
+                });
+                html += '</tr></thead><tbody>';
+
+                tournaments.forEach((tournament, index) => {
+                    html += '<tr>';
+                    html += `<td style="background: #2c3e50; color: white; text-align: left; font-weight: bold;">${tournamentNames[index]}</td>`;
+                    
+                    years.forEach(year => {
+                        const result = this.playerTimeline[year]?.[tournament] || 'A';
+                        const displayResult = this.formatResult(result);
+                        const cssClass = this.getResultClass(result);
+                        html += `<td class="result-cell ${cssClass}">${displayResult}</td>`;
+                    });
+                    
+                    html += '</tr>';
+                });
+
+                html += '</tbody>';
+                table.innerHTML = html;
+            }
+
+            formatResult(result) {
+                switch(result) {
+                    case 'R128': return '1R';
+                    case 'R64': return '2R';
+                    case 'R32': return '3R';
+                    case 'R16': return '4R';
+                    case 'QF': return 'QF';
+                    case 'SF': return 'SF';
+                    case 'F': return 'F';
+                    case 'W': return 'W';
+                    case 'NH':
+                    case 'DNP': return 'NH';
+                    case 'A': return 'A';
+                    default: return result;
+                }
+            }
+
+            getResultClass(result) {
+                switch(result) {
+                    case 'R128': return '1R';
+                    case 'R64': return '2R';
+                    case 'R32': return '3R';
+                    case 'R16': return '4R';
+                    case 'QF': return 'QF';
+                    case 'SF': return 'SF';
+                    case 'F': return 'F';
+                    case 'W': return 'W';
+                    case 'NH':
+                    case 'DNP': return 'NH';
+                    case 'A': return 'A';
+                    default: return result;
+                }
+            }
+
+            setupEventListeners() {
+                const searchInput = document.getElementById('playerSearch');
+                const suggestions = document.getElementById('suggestions');
+                const submitButton = document.getElementById('submitGuess');
+                const revealButton = document.getElementById('revealAnswer');
+                const nextPlayerButton = document.getElementById('nextPlayerButton');
+                const modalOverlay = document.getElementById('resultModal');
+
+                // Search functionality
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase();
+                    if (query.length < 2) {
+                        suggestions.style.display = 'none';
+                        return;
+                    }
+
+                    const matches = this.players
+                        .filter(player => player.name.toLowerCase().includes(query))
+                        .slice(0, 10);
+
+                    if (matches.length > 0) {
+                        suggestions.innerHTML = matches
+                            .map(player => `<div class="suggestion" data-player="${player.name}">${player.name}</div>`)
+                            .join('');
+                        suggestions.style.display = 'block';
+                    } else {
+                        suggestions.style.display = 'none';
+                    }
+                });
+
+                // Suggestion selection
+                suggestions.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('suggestion')) {
+                        searchInput.value = e.target.dataset.player;
+                        suggestions.style.display = 'none';
+                    }
+                });
+
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.search-container') && !e.target.closest('.modal')) {
+                        suggestions.style.display = 'none';
+                    }
+                });
+
+                // Submit guess
+                submitButton.addEventListener('click', () => {
+                    this.submitGuess();
+                });
+
+                // Reveal answer and play next
+                revealButton.addEventListener('click', () => {
+                    this.revealAnswerAndPlayNext();
+                });
+
+                // Enter key to submit
+                searchInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        this.submitGuess();
+                    }
+                });
+
+                // Modal event listeners
+                nextPlayerButton.addEventListener('click', () => {
+                    this.playNextPlayer();
+                });
+
+                // Close modal when clicking overlay - DISABLED to prevent accidental closure
+                // modalOverlay.addEventListener('click', (e) => {
+                //     if (e.target === modalOverlay) {
+                //         this.closeModal();
+                //     }
+                // });
+
+                // Close modal with Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modalOverlay.style.display !== 'none') {
+                        this.closeModal();
+                    }
+                });
+            }
+
+            submitGuess() {
+                const guess = document.getElementById('playerSearch').value.trim();
+
+                if (!guess) {
+                    this.showMessage('Please enter a player name.', 'incorrect');
+                    return;
+                }
+
+                const isCorrect = guess.toLowerCase() === this.currentPlayer.name.toLowerCase();
+                
+                // Update score
+                this.updateScore(isCorrect);
+                
+                if (isCorrect) {
+                    this.showModal('🎉 Correct!', `Amazing! You correctly identified ${this.currentPlayer.name}!`, 'correct');
+                } else {
+                    this.showModal('❌ Incorrect', `Sorry, that's not correct. The answer was ${this.currentPlayer.name}.`, 'incorrect');
+                }
+
+                this.gameRevealed = true;
+                this.disableGuessing();
+            }
+
+
+
+            revealAnswerAndPlayNext() {
+                // Track this as an incorrect guess (since user gave up)
+                this.updateScore(false);
+                
+                // Show modal with revealed answer
+                this.showModal('🔍 Player Revealed', `The player is ${this.currentPlayer.name} from ${this.currentPlayer.country}`, 'revealed');
+                this.gameRevealed = true;
+                this.disableGuessing();
+            }
+
+            showModal(title, message, type) {
+                // Calculate current stats
+                const stats = this.calculateCurrentStats();
+                
+                // Update modal content
+                document.getElementById('modalTitle').textContent = title;
+                document.getElementById('modalPlayerName').textContent = this.currentPlayer.name;
+                
+                // Get years active
+                const years = Object.keys(this.playerTimeline);
+                const yearRange = years.length > 0 ? `${Math.min(...years)} - ${Math.max(...years)}` : 'No data';
+                document.getElementById('modalPlayerDetails').textContent = `${this.currentPlayer.country} • Active: ${yearRange}`;
+                
+                // Update player search link
+                const searchLink = document.getElementById('playerSearchLink');
+                const searchText = `search for ${this.currentPlayer.name} career statistics on wikipedia`;
+                searchLink.textContent = searchText;
+                searchLink.href = `https://www.google.com/search?q=${encodeURIComponent(this.currentPlayer.name + ' career statistics wikipedia')}`;
+                
+                // Update stats
+                document.getElementById('modalTitles').textContent = stats.grandSlamTitles;
+                document.getElementById('modalFinals').textContent = stats.finalsReached;
+                document.getElementById('modalYearsActive').textContent = years.length;
+                
+                // Update score in modal
+                const percentage = this.totalAttempts > 0 ? Math.round((this.correctGuesses / this.totalAttempts) * 100) : 0;
+                document.getElementById('modalScore').textContent = `${this.correctGuesses}/${this.totalAttempts} (${percentage}%)`;
+                
+                // Update result message
+                const modalMessage = document.getElementById('modalResultMessage');
+                modalMessage.textContent = message;
+                modalMessage.className = `result-message-modal ${type}`;
+                
+                // Show modal
+                document.getElementById('resultModal').style.display = 'flex';
+            }
+
+            calculateCurrentStats() {
+                const stats = {
+                    grandSlamTitles: 0,
+                    finalsReached: 0,
+                    semifinalsReached: 0
+                };
+
+                for (const [year, tournaments] of Object.entries(this.playerTimeline)) {
+                    for (const [tournament, result] of Object.entries(tournaments)) {
+                        if (result === 'W') {
+                            stats.grandSlamTitles++;
+                            stats.finalsReached++;
+                        } else if (result === 'F') {
+                            stats.finalsReached++;
+                        } else if (result === 'SF') {
+                            stats.semifinalsReached++;
+                        }
+                    }
+                }
+
+                return stats;
+            }
+
+            closeModal() {
+                document.getElementById('resultModal').style.display = 'none';
+            }
+
+            playNextPlayer() {
+                // Close modal
+                this.closeModal();
+                
+                // Reset game state
+                this.resetGameState();
+                
+                // Select next player in deterministic order
+                this.selectNextPlayer();
+                
+                // Display new game
+                this.displayGame();
+            }
+
+            selectNextPlayer() {
+                // Ensure eligible players are populated
+                if (this.eligiblePlayers.length === 0) {
+                    this.populateEligiblePlayers();
+                }
+                
+                // Move to next player in the deterministic order
+                this.currentPlayerIndex = (this.currentPlayerIndex + 1) % this.eligiblePlayers.length;
+                this.currentPlayer = this.eligiblePlayers[this.currentPlayerIndex];
+                
+                console.log(`Selected next player: ${this.currentPlayer.name} (${this.currentPlayer.id}) - index: ${this.currentPlayerIndex}/${this.eligiblePlayers.length}`);
+                // Save the new player to localStorage
+                this.saveCurrentPlayerToStorage();
+            }
+
+            hasReachedSemifinal(playerId) {
+                const playerData = this.grandSlamData[playerId];
+                if (!playerData || !playerData.timeline) return false;
+                
+                // Check if player has reached at least a semifinal (SF, F, or W) in any tournament/year
+                for (const [year, tournaments] of Object.entries(playerData.timeline)) {
+                    for (const [tournament, result] of Object.entries(tournaments)) {
+                        if (result === 'SF' || result === 'F' || result === 'W') {
+                            return true;
+                        }
+                    }
+                }
+                
+                return false;
+            }
+
+            resetGameState() {
+                // Reset game flags
+                this.gameRevealed = false;
+                
+                // Clear search input
+                document.getElementById('playerSearch').value = '';
+                document.getElementById('playerSearch').disabled = false;
+                
+                // Enable buttons
+                document.getElementById('submitGuess').disabled = false;
+                document.getElementById('revealAnswer').disabled = false;
+                
+                // Hide suggestions
+                document.getElementById('suggestions').style.display = 'none';
+                
+                // Clear any existing inline messages
+                document.getElementById('resultMessage').style.display = 'none';
+            }
+
+            showMessage(message, type) {
+                const resultMessage = document.getElementById('resultMessage');
+                resultMessage.textContent = message;
+                resultMessage.className = `result-message ${type}`;
+                resultMessage.style.display = 'block';
+            }
+
+            disableGuessing() {
+                document.getElementById('playerSearch').disabled = true;
+                document.getElementById('submitGuess').disabled = true;
+                document.getElementById('revealAnswer').disabled = true;
+            }
+
+            showError(message) {
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('errorMessage').textContent = message;
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+
+            copyResults() {
+                const score = this.correctGuesses;
+                const total = this.totalAttempts;
+                const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
+                const resultsText = `Mystery Player Timeline - Score: ${score}/${total} (${percentage}%)`;
+                
+                navigator.clipboard.writeText(resultsText).then(() => {
+                    // Change text to "copied"
+                    const button = document.getElementById('copyButton');
+                    if (button) button.textContent = 'copied';
+                    
+                    // Reset text after 2 seconds
+                    setTimeout(() => {
+                        if (button) button.textContent = 'copy my results as a text';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    // Fallback for browsers that don't support clipboard API
+                    const textArea = document.createElement('textarea');
+                    textArea.value = resultsText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    // Change text to "copied"
+                    const button = document.getElementById('copyButton');
+                    if (button) button.textContent = 'copied';
+                    
+                    // Reset text after 2 seconds
+                    setTimeout(() => {
+                        if (button) button.textContent = 'copy my results as a text';
+                    }, 2000);
+                });
+            }
+        }
+
+        // Global function for the onclick handler
+        function copyResults() {
+            if (window.gameInstance) {
+                window.gameInstance.copyResults();
+            }
+        }
+
+        // Initialize game when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            window.gameInstance = new GrandSlamTimelineGame();
+        });
+    </script>
+
+    <!-- Join Modal -->
+    <div id="joinModal" class="join-modal-overlay" style="display: none;">
+        <div class="join-modal">
+            <div class="join-modal-header">
+                <h2>Join Tennis Quiz Community</h2>
+                <button class="join-modal-close" onclick="closeJoinModal()">&times;</button>
+            </div>
+            <div class="join-modal-content">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-vUaKLdZVDtMyI64qCU_nPamziods5VaTm2P5Gw5jejkimA/viewform?embedded=true" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .join-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .join-modal {
+            background: white;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .join-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e5e7eb;
+            background: linear-gradient(135deg, #00d4aa 0%, #ffd700 100%);
+            color: white;
+        }
+
+        .join-modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .join-modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .join-modal-close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .join-modal-content {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .join-modal-content iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .join-modal {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .join-modal-header {
+                padding: 16px 20px;
+            }
+
+            .join-modal-header h2 {
+                font-size: 1.25rem;
+            }
+
+            .join-modal-content iframe {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .join-modal-overlay {
+                padding: 10px;
+            }
+
+            .join-modal {
+                max-width: 100vw;
+                max-height: 100vh;
+                border-radius: 8px;
+            }
+
+            .join-modal-content iframe {
+                height: 450px;
+            }
+        }
+    </style>
+
+    <script>
+        function openJoinModal() {
+            document.getElementById('joinModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeJoinModal() {
+            document.getElementById('joinModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('joinModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeJoinModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('joinModal').style.display === 'flex') {
+                closeJoinModal();
+            }
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer style="margin-top: 2rem; padding: 1.5rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; text-align: center;">
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">
+                Developed by David
+            </p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                Data sources: <a href="https://www.tennisabstract.com/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Tennis Abstract</a> and <a href="https://github.com/jeffsackmann" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Jeff Sackmann</a>
+            </p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">
+                Would you like to give feedback? - <a href="mailto:feedback@tennis-quiz.com" style="color: white; text-decoration: underline;">send a comment here</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Mystery Player Timeline",
+        "description": "Guess the tennis player by their Grand Slam performance timeline! Test your tennis knowledge with this interactive quiz game. Challenge yourself to identify players from their career achievements.",
+        "url": "https://tennis-quiz.com/guess-player-performance-timeline.html",
+        "image": "https://tennis-quiz.com/images/mistery-player.png",
+        "gameType": "Quiz",
+        "genre": "Sports Trivia",
+        "category": "Tennis",
+        "author": {
+            "@type": "Person",
+            "name": "David"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tennis Quiz Games"
+        },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+</body>
+</html>
