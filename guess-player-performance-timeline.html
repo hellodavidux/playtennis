@@ -11,22 +11,25 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tennis-quiz.com/guess-player-performance-timeline.html">
+    <meta property="og:url" content="https://funtennis.games/guess-player-performance-timeline.html">
     <meta property="og:title" content="Mystery Player Timeline - Grand Slam Performance Quiz">
     <meta property="og:description" content="Guess the tennis player by their Grand Slam performance timeline! Test your tennis knowledge with this interactive quiz game. Challenge yourself to identify players from their career achievements.">
-    <meta property="og:image" content="https://tennis-quiz.com/images/mistery-player.png">
+    <meta property="og:image" content="https://funtennis.games/images/mistery-player.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tennis-quiz.com/guess-player-performance-timeline.html">
+    <meta property="twitter:url" content="https://funtennis.games/guess-player-performance-timeline.html">
     <meta property="twitter:title" content="Mystery Player Timeline - Grand Slam Performance Quiz">
     <meta property="twitter:description" content="Guess the tennis player by their Grand Slam performance timeline! Test your tennis knowledge with this interactive quiz game. Challenge yourself to identify players from their career achievements.">
-    <meta property="twitter:image" content="https://tennis-quiz.com/images/mistery-player.png">
+    <meta property="twitter:image" content="https://funtennis.games/images/mistery-player.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://tennis-quiz.com/guess-player-performance-timeline.html">
+    <link rel="canonical" href="https://funtennis.games/guess-player-performance-timeline.html">
     
     <link rel="icon" type="image/png" href="images/logo-tennis-quiz.png">
+    
+    <!-- Mailchimp CSS -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7D5439VQZL"></script>
@@ -67,7 +70,7 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 50;
+            z-index: 1001;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -415,6 +418,16 @@
             backdrop-filter: blur(5px);
         }
 
+        /* Cooldown modal specific styles */
+        #cooldownModal {
+            z-index: 999;
+        }
+
+        #cooldownModal .modal-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+        }
+
         .modal {
             background: white;
             border-radius: 20px;
@@ -425,6 +438,12 @@
             flex-direction: column;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             animation: modalSlideIn 0.3s ease-out;
+        }
+
+        /* Cooldown modal positioning */
+        #cooldownModal .modal {
+            max-height: 75vh;
+            margin-top: 2rem;
         }
 
         @keyframes modalSlideIn {
@@ -629,6 +648,125 @@
             .timeline-table {
                 font-size: 0.8em;
             }
+
+            /* Cooldown modal mobile optimizations */
+            #cooldownModal .modal {
+                max-height: 85vh;
+                overflow-y: auto;
+                margin-top: 1rem;
+            }
+
+            #cooldownModal .modal-content {
+                padding: 1rem;
+            }
+
+            #cooldownModal .player-info h3 {
+                font-size: 1.2em;
+                margin-bottom: 0.5rem;
+            }
+
+            #cooldownModal .player-info p {
+                font-size: 0.9em;
+                margin-bottom: 0.5rem;
+            }
+
+            #cooldownModal .result-stats {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            #cooldownModal .stat-row {
+                padding: 0.4rem 0;
+            }
+
+            #cooldownModal .stat-label {
+                font-size: 0.9em;
+            }
+
+            #cooldownModal .stat-value {
+                font-size: 1em;
+            }
+
+            #cooldownModal .result-message-modal {
+                padding: 0.75rem;
+                font-size: 0.9em;
+                margin-bottom: 0.75rem;
+            }
+
+            #cooldownModal .modal-actions {
+                padding: 0 1rem 1rem 1rem;
+            }
+
+            #cooldownModal .game-card-responsive {
+                padding: 0.4rem !important;
+                gap: 0.4rem !important;
+            }
+
+            #cooldownModal .game-card-responsive img {
+                width: 36px !important;
+                height: 36px !important;
+            }
+
+            #cooldownModal .game-card-responsive > div {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            #cooldownModal .game-card-responsive h3 {
+                font-size: 0.85rem !important;
+                margin-bottom: 0.15rem !important;
+            }
+
+            #cooldownModal .game-card-responsive p {
+                font-size: 0.75rem !important;
+                margin-bottom: 0.4rem !important;
+            }
+
+            #cooldownModal .play-button-responsive {
+                padding: 0.25rem 0.5rem !important;
+                font-size: 0.75rem !important;
+            }
+
+            /* Email signup mobile optimizations */
+            #cooldownModal .email-signup-section h4 {
+                font-size: 1rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+
+            #cooldownModal #mc_embed_signup {
+               
+                margin-bottom: 1rem !important;
+            }
+
+            #cooldownModal .mc-field-group {
+                margin-bottom: 0.75rem !important;
+            }
+
+            #cooldownModal .mc-field-group label {
+                font-size: 0.9rem !important;
+                margin-bottom: 0.4rem !important;
+            }
+
+            #cooldownModal .mc-field-group input {
+                padding: 0.6rem !important;
+                font-size: 0.9rem !important;
+            }
+
+            #cooldownModal #mc-embedded-subscribe {
+                padding: 0.6rem 1rem !important;
+                font-size: 0.9rem !important;
+            }
+
+            /* Countdown section mobile optimizations */
+            #cooldownModal .result-message-modal {
+                padding: 0.75rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            #cooldownModal .result-message-modal #countdownTimer {
+                font-size: 1.3rem !important;
+            }
         }
 
         /* Responsive game cards - Desktop: horizontal, Mobile: column */
@@ -644,7 +782,7 @@
 
         @media (max-width: 768px) {
             .game-card-responsive {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: stretch;
             }
             
@@ -773,6 +911,78 @@
                 </div>
             </div>
         </div>
+
+        <!-- Cooldown Modal -->
+        <div class="modal-overlay" id="cooldownModal" style="display: none;">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>⏰ Daily Limit Reached</h2>
+                </div>
+                <div class="modal-content">
+                    <div class="player-info">
+                        <h3>Great job today! 🎾</h3>
+                        <p>You've played 3 players today. Come back in 6 hours for 3 new players!</p>
+                    </div>
+                    
+                    <!-- Countdown Section -->
+                    <div class="result-message-modal" style="background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; margin-bottom: 1.5rem;">
+                        <div style="text-align: center; margin-bottom: 0.5rem;">
+                            <strong>Time Until Reset:</strong>
+                        </div>
+                        <div style="text-align: center; font-size: 1.5rem; font-weight: bold; color: #2c3e50;" id="countdownTimer">
+                            6:00:00
+                        </div>
+                        <div style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem;">
+                            New players will be available every 6 hours to keep the game fresh and challenging!
+                        </div>
+                    </div>
+                    
+                    <!-- Email Signup Section -->
+                    <div class="email-signup-section">
+                        <h4 style="color: #2c3e50; margin-bottom: 1rem; text-align: center; font-size: 1.1rem;">Get notified when new players are available!</h4>
+                        <div id="mc_embed_signup" style="background: #f8f9fa; border-radius: 10px; ">
+                            <form action="https://gmail.us6.list-manage.com/subscribe/post?u=fd24a0bb273abe25063583819&amp;id=02e79ef4e9&amp;f_id=00d51de2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                <div id="mc_embed_signup_scroll">
+                                    <div class="mc-field-group" style="margin-bottom: 1rem;">
+                                        <label for="mce-EMAIL" style="display: block; margin-bottom: 0.5rem; color: #2c3e50; font-weight: 600;">Email Address <span class="asterisk" style="color: #e74c3c;">*</span></label>
+                                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                                    </div>
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display: none; color: #e74c3c; font-size: 0.9rem; margin-top: 0.5rem;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none; color: #27ae60; font-size: 0.9rem; margin-top: 0.5rem;"></div>
+                                    </div>
+                                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                        <input type="text" name="b_fd24a0bb273abe25063583819_02e79ef4e9" tabindex="-1" value="">
+                                    </div>
+                                    <div class="optionalParent">
+                                        <div class="clear foot">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Get Reminders" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: transform 0.3s ease; width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="result-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Your Total Score:</span>
+                            <span class="stat-value" id="cooldownScore">0/0 (0%)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <a href="guess-atp-rankings.html" class="game-card-responsive" style="padding: 0.75rem; background: linear-gradient(145deg, #3742fa, #2f3542); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease; display: flex; align-items: center; gap: 0.75rem;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/ranking-riddle.png" alt="ATP Ranking Riddle" style="width: 48px; height: 48px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex: 1;">
+                            <h3 style="color: white; font-size: 1rem; font-weight: bold; margin-bottom: 0.25rem;">ATP Ranking Riddle</h3>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.85rem;">Guess the player by their highest ATP ranking each year</p>
+                            <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: 600; font-size: 0.85rem; align-self: flex-start; margin-top: 0.5rem;">Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -841,6 +1051,16 @@
                     </div>
                     <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
                 </a>
+
+                <!-- Tennis Web -->
+                <a href="tennis-web.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #667eea, #764ba2); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/6-deg.png" alt="Tennis Web" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">🕸️ Tennis Web</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Connect tennis players through 6 degrees of separation</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
             </div>
         </div>
     </div>
@@ -857,7 +1077,11 @@
                 this.eligiblePlayers = []; // Filtered list of players for consistent ordering
                 this.correctGuesses = 0;
                 this.totalAttempts = 0;
+                this.gamesPlayedToday = 0;
+                this.lastGameTime = null;
+                this.countdownInterval = null;
                 this.loadScore();
+                this.loadGameLimit();
                 this.init();
             }
 
@@ -985,6 +1209,137 @@
                 }
             }
 
+            // Game limit management functions
+            loadGameLimit() {
+                try {
+                    const savedLimit = localStorage.getItem('tennisQuizGameLimit');
+                    if (savedLimit) {
+                        const limitData = JSON.parse(savedLimit);
+                        this.gamesPlayedToday = limitData.gamesPlayedToday || 0;
+                        this.lastGameTime = limitData.lastGameTime || null;
+                        
+                        // Check if 6 hours have passed since last game
+                        if (this.lastGameTime) {
+                            const sixHours = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+                            const timeSinceLastGame = Date.now() - this.lastGameTime;
+                            
+                            if (timeSinceLastGame >= sixHours) {
+                                // Reset game count and update last game time
+                                this.gamesPlayedToday = 0;
+                                this.lastGameTime = Date.now();
+                                this.saveGameLimit();
+                                console.log('6 hours passed, resetting game limit');
+                            }
+                        }
+                        
+                        console.log(`Loaded game limit: ${this.gamesPlayedToday}/3 games played today`);
+                    }
+                } catch (error) {
+                    console.error('Error loading game limit:', error);
+                    this.gamesPlayedToday = 0;
+                    this.lastGameTime = null;
+                }
+            }
+
+            saveGameLimit() {
+                try {
+                    const limitData = {
+                        gamesPlayedToday: this.gamesPlayedToday,
+                        lastGameTime: this.lastGameTime,
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem('tennisQuizGameLimit', JSON.stringify(limitData));
+                    console.log(`Saved game limit: ${this.gamesPlayedToday}/3 games played today`);
+                } catch (error) {
+                    console.error('Error saving game limit:', error);
+                }
+            }
+
+            incrementGameCount() {
+                this.gamesPlayedToday++;
+                this.lastGameTime = Date.now();
+                this.saveGameLimit();
+                console.log(`Game count incremented: ${this.gamesPlayedToday}/3`);
+            }
+
+            canPlayMore() {
+                return this.gamesPlayedToday < 3;
+            }
+
+            getTimeUntilReset() {
+                if (!this.lastGameTime) return 0;
+                
+                const sixHours = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+                const timeSinceLastGame = Date.now() - this.lastGameTime;
+                const timeRemaining = sixHours - timeSinceLastGame;
+                
+                return Math.max(0, timeRemaining);
+            }
+
+            formatCountdown(milliseconds) {
+                const hours = Math.floor(milliseconds / (1000 * 60 * 60));
+                const minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
+                
+                return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+
+            startCountdown() {
+                if (this.countdownInterval) {
+                    clearInterval(this.countdownInterval);
+                }
+                
+                this.countdownInterval = setInterval(() => {
+                    const timeRemaining = this.getTimeUntilReset();
+                    
+                    if (timeRemaining <= 0) {
+                        // Reset game limit
+                        this.gamesPlayedToday = 0;
+                        this.saveGameLimit();
+                        this.stopCountdown();
+                        this.closeCooldownModal();
+                        console.log('Countdown finished, game limit reset');
+                        return;
+                    }
+                    
+                    // Update countdown display
+                    const countdownElement = document.getElementById('countdownTimer');
+                    if (countdownElement) {
+                        countdownElement.textContent = this.formatCountdown(timeRemaining);
+                    }
+                }, 1000);
+            }
+
+            stopCountdown() {
+                if (this.countdownInterval) {
+                    clearInterval(this.countdownInterval);
+                    this.countdownInterval = null;
+                }
+            }
+
+            showCooldownModal() {
+                // Update score in cooldown modal
+                const percentage = this.totalAttempts > 0 ? Math.round((this.correctGuesses / this.totalAttempts) * 100) : 0;
+                document.getElementById('cooldownScore').textContent = `${this.correctGuesses}/${this.totalAttempts} (${percentage}%)`;
+                
+                // Update countdown display with current time remaining
+                const timeRemaining = this.getTimeUntilReset();
+                document.getElementById('countdownTimer').textContent = this.formatCountdown(timeRemaining);
+                
+                // Start countdown
+                this.startCountdown();
+                
+                // Show modal
+                document.getElementById('cooldownModal').style.display = 'flex';
+                
+                console.log(`Showing cooldown modal. Games played: ${this.gamesPlayedToday}/3, Time until reset: ${this.formatCountdown(timeRemaining)}`);
+            }
+
+            closeCooldownModal() {
+                this.stopCountdown();
+                document.getElementById('cooldownModal').style.display = 'none';
+            }
+
             updateScore(wasCorrect) {
                 this.totalAttempts++;
                 if (wasCorrect) {
@@ -1024,17 +1379,48 @@
                 // Populate eligible players list
                 this.populateEligiblePlayers();
                 
-                // First, try to load from localStorage to continue where user left off
-                if (this.loadPlayerFromStorage()) {
-                    console.log(`Continuing with saved player: ${this.currentPlayer.name} (${this.currentPlayer.id})`);
+                // Check if user can play more games
+                if (!this.canPlayMore()) {
+                    console.log('User has reached daily limit, showing cooldown modal');
+                    this.showCooldownModal();
                     return;
                 }
                 
-                // Start from the beginning of the deterministic order
-                this.currentPlayerIndex = 0;
-                this.currentPlayer = this.eligiblePlayers[this.currentPlayerIndex];
+                // Calculate player rotation based on 6-hour intervals
+                const sixHours = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+                const currentTime = Date.now();
+                const rotationInterval = Math.floor(currentTime / sixHours);
                 
-                console.log(`Selected starting player: ${this.currentPlayer.name} (${this.currentPlayer.id}) - index: ${this.currentPlayerIndex}`);
+                // Use rotation interval to determine starting player index
+                // This ensures new players every 6 hours
+                const playersPerRotation = 3; // 3 players per 6-hour period
+                const rotationStartIndex = (rotationInterval * playersPerRotation) % this.eligiblePlayers.length;
+                
+                // First, try to load from localStorage to continue where user left off
+                if (this.loadPlayerFromStorage()) {
+                    // Check if the loaded player is from the current rotation
+                    const currentRotationStart = rotationStartIndex;
+                    const currentRotationEnd = (rotationStartIndex + playersPerRotation - 1) % this.eligiblePlayers.length;
+                    
+                    // If player is not in current rotation, reset to current rotation
+                    if (this.currentPlayerIndex < currentRotationStart || 
+                        (currentRotationEnd < currentRotationStart && 
+                         (this.currentPlayerIndex < currentRotationStart || this.currentPlayerIndex > currentRotationEnd))) {
+                        console.log('Loaded player not in current rotation, resetting to current rotation');
+                        this.currentPlayerIndex = currentRotationStart;
+                        this.currentPlayer = this.eligiblePlayers[this.currentPlayerIndex];
+                        this.saveCurrentPlayerToStorage();
+                    } else {
+                        console.log(`Continuing with saved player: ${this.currentPlayer.name} (${this.currentPlayer.id})`);
+                        return;
+                    }
+                } else {
+                    // Start from the current rotation
+                    this.currentPlayerIndex = rotationStartIndex;
+                    this.currentPlayer = this.eligiblePlayers[this.currentPlayerIndex];
+                }
+                
+                console.log(`Selected player from rotation ${rotationInterval}: ${this.currentPlayer.name} (${this.currentPlayer.id}) - index: ${this.currentPlayerIndex}/${this.eligiblePlayers.length}`);
                 // Save the new player to localStorage
                 this.saveCurrentPlayerToStorage();
             }
@@ -1097,6 +1483,13 @@
 
 
             async displayGame() {
+                // Check if user can play more games
+                if (!this.canPlayMore()) {
+                    document.getElementById('loadingMessage').style.display = 'none';
+                    this.showCooldownModal();
+                    return;
+                }
+                
                 await this.buildPlayerTimeline();
                 
                 // Hide loading message
@@ -1423,6 +1816,16 @@
                 // Close modal
                 this.closeModal();
                 
+                // Increment game count
+                this.incrementGameCount();
+                
+                // Check if user can play more
+                if (!this.canPlayMore()) {
+                    console.log('User has reached daily limit after playing this player');
+                    this.showCooldownModal();
+                    return;
+                }
+                
                 // Reset game state
                 this.resetGameState();
                 
@@ -1439,11 +1842,33 @@
                     this.populateEligiblePlayers();
                 }
                 
-                // Move to next player in the deterministic order
+                // Calculate current rotation
+                const sixHours = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+                const currentTime = Date.now();
+                const rotationInterval = Math.floor(currentTime / sixHours);
+                const playersPerRotation = 3; // 3 players per 6-hour period
+                const rotationStartIndex = (rotationInterval * playersPerRotation) % this.eligiblePlayers.length;
+                const rotationEndIndex = (rotationStartIndex + playersPerRotation - 1) % this.eligiblePlayers.length;
+                
+                // Move to next player within the current rotation
                 this.currentPlayerIndex = (this.currentPlayerIndex + 1) % this.eligiblePlayers.length;
+                
+                // If we've moved outside the current rotation, wrap back to the start of the rotation
+                if (rotationEndIndex >= rotationStartIndex) {
+                    // Normal case: rotation doesn't wrap around array
+                    if (this.currentPlayerIndex < rotationStartIndex || this.currentPlayerIndex > rotationEndIndex) {
+                        this.currentPlayerIndex = rotationStartIndex;
+                    }
+                } else {
+                    // Wrapped case: rotation wraps around array
+                    if (this.currentPlayerIndex > rotationEndIndex && this.currentPlayerIndex < rotationStartIndex) {
+                        this.currentPlayerIndex = rotationStartIndex;
+                    }
+                }
+                
                 this.currentPlayer = this.eligiblePlayers[this.currentPlayerIndex];
                 
-                console.log(`Selected next player: ${this.currentPlayer.name} (${this.currentPlayer.id}) - index: ${this.currentPlayerIndex}/${this.eligiblePlayers.length}`);
+                console.log(`Selected next player in rotation ${rotationInterval}: ${this.currentPlayer.name} (${this.currentPlayer.id}) - index: ${this.currentPlayerIndex}/${this.eligiblePlayers.length}`);
                 // Save the new player to localStorage
                 this.saveCurrentPlayerToStorage();
             }
@@ -1546,10 +1971,50 @@
             }
         }
 
+        // Global function for closing cooldown modal
+        function closeCooldownModal() {
+            if (window.gameInstance) {
+                window.gameInstance.closeCooldownModal();
+            }
+        }
+
+
+
         // Initialize game when page loads
         document.addEventListener('DOMContentLoaded', () => {
             window.gameInstance = new GrandSlamTimelineGame();
         });
+
+        // Cleanup countdown when page is unloaded
+        window.addEventListener('beforeunload', () => {
+            if (window.gameInstance) {
+                window.gameInstance.stopCountdown();
+            }
+        });
+    </script>
+
+    <!-- Mailchimp JavaScript -->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array(); 
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';
+            ftypes[0]='email';
+            fnames[1]='FNAME';
+            ftypes[1]='text';
+            fnames[2]='LNAME';
+            ftypes[2]='text';
+            fnames[3]='ADDRESS';
+            ftypes[3]='address';
+            fnames[4]='PHONE';
+            ftypes[4]='phone';
+            fnames[5]='BIRTHDAY';
+            ftypes[5]='birthday';
+            fnames[6]='COMPANY';
+            ftypes[6]='text';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
     </script>
 
     <!-- Join Modal -->
@@ -1717,7 +2182,7 @@
                 Data sources: <a href="https://www.tennisabstract.com/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Tennis Abstract</a> and <a href="https://github.com/jeffsackmann" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Jeff Sackmann</a>
             </p>
             <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">
-                Would you like to give feedback? - <a href="mailto:feedback@tennis-quiz.com" style="color: white; text-decoration: underline;">send a comment here</a>
+                Would you like to give feedback? - <a href="mailto:hidalgodavid2010@gmail.com" style="color: white; text-decoration: underline;">send a comment here</a>
             </p>
         </div>
     </footer>
@@ -1729,8 +2194,8 @@
         "@type": "Game",
         "name": "Mystery Player Timeline",
         "description": "Guess the tennis player by their Grand Slam performance timeline! Test your tennis knowledge with this interactive quiz game. Challenge yourself to identify players from their career achievements.",
-        "url": "https://tennis-quiz.com/guess-player-performance-timeline.html",
-        "image": "https://tennis-quiz.com/images/mistery-player.png",
+        "url": "https://funtennis.games/guess-player-performance-timeline.html",
+        "image": "https://funtennis.games/images/mistery-player.png",
         "gameType": "Quiz",
         "genre": "Sports Trivia",
         "category": "Tennis",

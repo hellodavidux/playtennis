@@ -1,43 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://tennis-quiz.com/</loc>
+        <loc>https://funtennis.games/</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://tennis-quiz.com/grand-slam-winners.html</loc>
+        <loc>https://funtennis.games/grand-slam-winners.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tennis-quiz.com/guess-player-performance-timeline.html</loc>
+        <loc>https://funtennis.games/guess-player-performance-timeline.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tennis-quiz.com/guess-atp-rankings.html</loc>
+        <loc>https://funtennis.games/guess-atp-rankings.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tennis-quiz.com/guess-scores.html</loc>
+        <loc>https://funtennis.games/guess-scores.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tennis-quiz.com/tennis-tier-list.html</loc>
+        <loc>https://funtennis.games/tennis-tier-list.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://tennis-quiz.com/top10-game.html</loc>
+        <loc>https://funtennis.games/top10-game.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://funtennis.games/tennis-web.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://funtennis.games/head-to-head-masters.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

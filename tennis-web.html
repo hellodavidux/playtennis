@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Web - Six Degrees Connection Game | Tennis Quiz Games</title>
+    <meta name="description" content="Connect any two tennis players in 6 degrees or less! Discover hidden connections between players through matches, countries, attributes, and tournaments in this addictive tennis trivia game.">
+    <meta name="keywords" content="tennis connections, six degrees tennis, tennis web game, player connections, tennis trivia, tennis quiz game, ATP connections">
+    <meta name="author" content="David">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funtennis.games/tennis-web.html">
+    <meta property="og:title" content="Tennis Web - Six Degrees Connection Game">
+    <meta property="og:description" content="Connect any two tennis players in 6 degrees or less! Discover hidden connections between players through matches, countries, attributes, and tournaments.">
+    <meta property="og:image" content="https://funtennis.games/images/tennis-web.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://funtennis.games/tennis-web.html">
+    <meta property="twitter:title" content="Tennis Web - Six Degrees Connection Game">
+    <meta property="twitter:description" content="Connect any two tennis players in 6 degrees or less! Discover hidden connections between players through matches, countries, attributes, and tournaments.">
+    <meta property="twitter:image" content="https://funtennis.games/images/tennis-web.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://funtennis.games/tennis-web.html">
+    
+    <link rel="icon" type="image/png" href="images/logo-tennis-quiz.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7D5439VQZL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7D5439VQZL');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .nav-unified {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 1rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sign-up-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .sign-up-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .main-container {
+            padding-top: 5rem;
+        }
+
+        .header {
+            background: white;
+            color: #333;
+            padding: 6rem 2rem 3rem;
+            text-align: center;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .game-content {
+            padding: 2rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .game-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .game-setup {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .player-selector {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .player-input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .player-input-group label {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .player-search {
+            position: relative;
+            width: 250px;
+        }
+
+        .player-search input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .player-search input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .player-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .suggestion-item {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f8f9fa;
+            transition: background-color 0.2s ease;
+        }
+
+        .suggestion-item:hover {
+            background: #f8f9fa;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .player-info {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .player-details {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .selected-player {
+            background: #667eea;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #5a6fd8;
+        }
+
+        .vs-divider {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .find-path-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .find-path-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .find-path-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .random-pair-btn {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+
+        .random-pair-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .path-result {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .path-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .path-length {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .path-description {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .connection-path {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .connection-step {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-players {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-connection {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .connection-type {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+
+        .no-path {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+
+        .path-stats {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        .try-again-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .try-again-btn:hover {
+            background: #218838;
+            transform: translateY(-1px);
+        }
+
+        .game-info {
+            background: #e8f5e8;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .game-info h3 {
+            color: #2d5a2d;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .game-info ul {
+            color: #2d5a2d;
+            padding-left: 1.5rem;
+        }
+
+        .game-info li {
+            margin-bottom: 0.5rem;
+        }
+
+        .other-games {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .other-games h3 {
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .game-card-responsive {
+            display: block;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card-responsive:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-decoration: none;
+            color: white;
+        }
+
+        .game-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .game-card-desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header {
+                padding: 5rem 1rem 2rem;
+            }
+
+            .player-selector {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .vs-divider {
+                font-size: 1.5rem;
+            }
+
+            .random-pair-btn {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .player-search {
+                width: 280px;
+            }
+
+            .connection-step {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .step-number {
+                margin-right: 0;
+            }
+
+            .path-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .how-to-play {
+            background: #f5f5f5;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .how-to-play-header {
+            background: #e9ecef;
+            color: #666;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .how-to-play-header:hover {
+            background: #dee2e6;
+        }
+
+        .how-to-play-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .expand-icon {
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .expand-icon.expanded {
+            transform: rotate(180deg);
+        }
+
+        .how-to-play-content {
+            padding: 1.5rem;
+        }
+
+        .instructions ul {
+            margin: 0 0 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .instructions li {
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        .challenge-display {
+           
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .challenge-display h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .player-challenge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .challenge-player {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            min-width: 200px;
+            border: 2px solid #e9ecef;
+        }
+
+        .player-label {
+            font-size: 0.9rem;
+            color: #d7d7d7;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .player-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .player-details {
+            font-size: 0.9rem;
+            color: #d4d4d4;
+        }
+
+        .challenge-arrow {
+            font-size: 2rem;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .connection-chain {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .chain-step {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .chain-step.start-step {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .chain-step.target-step {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .chain-step.connection-step {
+            background: #f8f9fa;
+        }
+
+        .chain-node {
+            width: 100%;
+        }
+
+        .chain-node.fixed .player-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .chain-node.fixed .player-details {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .chain-node.input {
+            position: relative;
+        }
+
+        .connection-instruction {
+          
+        
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-left: 4px solid #667eea;
+            text-align: center;
+        }
+
+        .target-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+
+
+        .player-search-mini {
+            position: relative;
+            width: 100%;
+        }
+
+        .player-search-mini input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: white;
+            text-align: center;
+        }
+
+        .player-search-mini input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+        }
+
+        .suggestions-mini {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .suggestion-mini {
+            padding: 0.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .suggestion-mini:hover {
+            background: #f8f9fa;
+        }
+
+        .suggestion-mini:last-child {
+            border-bottom: none;
+        }
+
+        .selected-player-mini {
+            padding: 0.75rem;
+            background: #e3f2fd;
+            border-radius: 8px;
+            color: #1976d2;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 2px solid #bbdefb;
+        }
+
+        .selected-player-mini:hover {
+            background: #bbdefb;
+        }
+
+        .challenge-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .check-solution-btn {
+            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .check-solution-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .next-challenge-btn {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .next-challenge-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hint-btn {
+            background: transparent;
+            color: #ff9800;
+            border: 2px solid #ff9800;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hint-btn:hover {
+            background: #ff9800;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .floating-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .floating-hint .hint-btn {
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+        }
+
+        .solution-status {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .solution-status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+
+        .solution-status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+
+        .solution-status.partial {
+            background: #fff3cd;
+            color: #856404;
+            border: 2px solid #ffeaa7;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .modal-content {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .player-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .player-info h3 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .player-info p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .result-stats {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .result-message-modal {
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 1rem;
+        }
+
+        .result-message-modal.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .result-message-modal.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .result-message-modal.revealed {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .modal-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 0 2rem 2rem 2rem;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            margin-top: auto;
+        }
+
+        .next-player-button {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-weight: 600;
+        }
+
+        .next-player-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .connection-types-legend {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .connection-types-legend h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .legend-item {
+            margin: 0.25rem 0;
+            color: #666;
+        }
+
+        /* Responsive game cards - Desktop: horizontal, Mobile: column */
+        .game-card-responsive {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-button-responsive {
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .game-card-responsive {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .play-button-responsive {
+                text-align: center;
+                display: block;
+            }
+
+            .player-challenge {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .challenge-arrow {
+                transform: rotate(90deg);
+                font-size: 1.5rem;
+            }
+
+            .challenge-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .next-challenge-btn {
+                font-size: 1rem;
+                padding: 0.75rem 1.25rem;
+            }
+
+            .connection-chain {
+                gap: 1rem;
+                max-width: 100%;
+            }
+
+            .chain-step {
+                padding: 1rem;
+                margin: 0;
+            }
+
+            .chain-step.start-step {
+                order: -1;
+            }
+
+            .main-container {
+                padding-top: 5.5rem;
+            }
+
+            .hint-btn {
+                display: none;
+            }
+
+            .floating-hint {
+                display: block;
+            }
+
+            .connection-instruction {
+                font-size: 0.85rem;
+                padding: 0.6rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Unified Navigation -->
+    <nav class="nav-unified">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <img src="images/logo-tennis-quiz.png" alt="Tennis Quiz Logo" style="width: 20px; height: 20px; ">
+                TENNIS GAMES
+            </a>
+        </div>
+        <div class="nav-actions">
+            <button class="sign-up-btn" onclick="openJoinModal()">
+                Join for more
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🕸️ Tennis Web</h1>
+            <p>Build a connection chain between two tennis players! Find intermediate players that link them through specific connection types. Can you solve the puzzle by finding the right path?</p>
+        </div>
+
+        <!-- Game Content -->
+        <div class="game-content">
+            <div class="loading" id="loadingMessage">
+                <div class="loading-spinner"></div>
+                Loading tennis connection data...
+            </div>
+
+            <div class="error" id="errorMessage" style="display: none;"></div>
+
+            <div class="game-container" id="gameContainer" style="display: none;">
+                <!-- How to Play - Expandable -->
+                <div class="how-to-play">
+                    <div class="how-to-play-header" onclick="toggleInstructions()">
+                        <h3>🎯 How to Play</h3>
+                        <span class="expand-icon" id="expandIcon">▼</span>
+                    </div>
+                    <div class="how-to-play-content" id="instructionsContent" style="display: none;">
+                        <div class="instructions">
+                            <ul>
+                                <li><strong>Your challenge:</strong> Build a connection chain from the starting player to the target player</li>
+                                <li><strong>Find intermediate players:</strong> You need to find exactly 6 players that create a chain</li>
+                                <li><strong>Follow the connection rules:</strong> Each step must use a specific connection type in order</li>
+                                <li><strong>Search and add players:</strong> Use the search boxes to find and add players to your chain</li>
+                                <li><strong>Complete the puzzle:</strong> When your chain is valid, you'll see success!</li>
+                            </ul>
+                        </div>
+                        <div class="connection-types-legend">
+                            <h4>Connection Types:</h4>
+                            <div class="legend-item">🎾 <strong>Direct Opponents:</strong> Played against each other</div>
+                            <div class="legend-item">🌍 <strong>Same Country:</strong> Both from the same nation</div>
+                            <div class="legend-item">🤚 <strong>Same Hand:</strong> Both left-handed or right-handed</div>
+                            <div class="legend-item">📏 <strong>Similar Height:</strong> Within 5cm of each other</div>
+                            <div class="legend-item">📅 <strong>Same Birth Year:</strong> Born in the same year</div>
+                            <div class="legend-item">🏆 <strong>Same Tournament:</strong> Played in the same tournament</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge Display -->
+                <div class="challenge-display" id="challengeDisplay">
+                    <h2>Build the Connection Chain:</h2>
+                    
+                    <!-- Connection Chain -->
+                    <div class="connection-chain">
+                        <!-- Starting Player -->
+                        <div class="chain-step start-step">
+                            <div class="chain-node fixed">
+                                <div class="player-label">🎯 Start Player</div>
+                                <div class="player-name" id="startPlayerName">Loading...</div>
+                                <div class="player-details" id="startPlayerDetails">Country • Career Info</div>
+                                <div class="target-info">
+                                    🎯 Target: <span id="targetPlayerPreview">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Direct Opponents -->
+                        <div class="chain-step connection-step">
+                            <div class="connection-instruction">
+                                🎾 Find direct opponent to player above
+                            </div>
+                            <div class="chain-node input">
+                                <div class="player-search-mini">
+                                    <input type="text" id="player1Input" placeholder="Find player..." autocomplete="off">
+                                    <div class="suggestions-mini" id="player1Suggestions"></div>
+                                </div>
+                                <div class="selected-player-mini" id="player1Selected" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Same Country -->
+                        <div class="chain-step connection-step">
+                            <div class="connection-instruction">
+                                🌍 Find player from same country as player above
+                            </div>
+                            <div class="chain-node input">
+                                <div class="player-search-mini">
+                                    <input type="text" id="player2Input" placeholder="Find player..." autocomplete="off">
+                                    <div class="suggestions-mini" id="player2Suggestions"></div>
+                                </div>
+                                <div class="selected-player-mini" id="player2Selected" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Same Hand -->
+                        <div class="chain-step connection-step">
+                            <div class="connection-instruction">
+                                🤚 Find player with same hand as player above
+                            </div>
+                            <div class="chain-node input">
+                                <div class="player-search-mini">
+                                    <input type="text" id="player3Input" placeholder="Find player..." autocomplete="off">
+                                    <div class="suggestions-mini" id="player3Suggestions"></div>
+                                </div>
+                                <div class="selected-player-mini" id="player3Selected" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Similar Height -->
+                        <div class="chain-step connection-step">
+                            <div class="connection-instruction">
+                                📏 Find player with similar height to player above
+                            </div>
+                            <div class="chain-node input">
+                                <div class="player-search-mini">
+                                    <input type="text" id="player4Input" placeholder="Find player..." autocomplete="off">
+                                    <div class="suggestions-mini" id="player4Suggestions"></div>
+                                </div>
+                                <div class="selected-player-mini" id="player4Selected" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Same Birth Year -->
+                        <div class="chain-step connection-step">
+                            <div class="connection-instruction">
+                                📅 Find player born same year as player above
+                            </div>
+                            <div class="chain-node input">
+                                <div class="player-search-mini">
+                                    <input type="text" id="player5Input" placeholder="Find player..." autocomplete="off">
+                                    <div class="suggestions-mini" id="player5Suggestions"></div>
+                                </div>
+                                <div class="selected-player-mini" id="player5Selected" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 6: Same Tournament -->
+                        <div class="chain-step connection-step">
+                            <div class="connection-instruction">
+                                🏆 Find player who played same tournament as player above
+                            </div>
+                            <div class="chain-node input">
+                                <div class="player-search-mini">
+                                    <input type="text" id="player6Input" placeholder="Find player..." autocomplete="off">
+                                    <div class="suggestions-mini" id="player6Suggestions"></div>
+                                </div>
+                                <div class="selected-player-mini" id="player6Selected" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Final Connection -->
+                        <div class="chain-step connection-step">
+                            <div class="connection-instruction" id="finalStepInstruction">
+                                🎾 Find direct opponent that connects to target player
+                            </div>
+                            <div class="chain-node input">
+                                <div class="player-search-mini">
+                                    <input type="text" id="player7Input" placeholder="Find player..." autocomplete="off">
+                                    <div class="suggestions-mini" id="player7Suggestions"></div>
+                                </div>
+                                <div class="selected-player-mini" id="player7Selected" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Target Player -->
+                        <div class="chain-step target-step">
+                            <div class="chain-node fixed">
+                                <div class="player-label">🏁 Target Player</div>
+                                <div class="player-name" id="endPlayerName">Loading...</div>
+                                <div class="player-details" id="endPlayerDetails">Country • Career Info</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-actions">
+                        <button class="check-solution-btn" id="checkSolutionBtn">✅ Submit</button>
+                        <button class="next-challenge-btn" id="nextChallengeBtn">🔍 Reveal and Play Next</button>
+                        <button class="hint-btn" id="hintBtn">💡 Get Hint</button>
+                    </div>
+
+                    <!-- Floating Hint Button for Mobile -->
+                    <div class="floating-hint">
+                        <button class="hint-btn" id="floatingHintBtn">💡</button>
+                    </div>
+
+                    <!-- Solution Status -->
+                    <div class="solution-status" id="solutionStatus" style="display: none;">
+                        <!-- Status messages will appear here -->
+                    </div>
+                </div>
+
+                <!-- Path Result -->
+                <div class="path-result" id="pathResult" style="display: none;">
+                    <!-- Results will be populated here -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Result Modal -->
+        <div class="modal-overlay" id="resultModal" style="display: none;">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Result</h2>
+                </div>
+                <div class="modal-content">
+                    <div class="player-info">
+                        <h3 id="modalConnectionResult">Connection Result</h3>
+                        <p id="modalConnectionDetails">Path details</p>
+                    </div>
+                    <div class="result-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Start Player:</span>
+                            <span class="stat-value" id="modalStartPlayer">-</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Target Player:</span>
+                            <span class="stat-value" id="modalTargetPlayer">-</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Connection Steps:</span>
+                            <span class="stat-value" id="modalStepsCount">0/7</span>
+                        </div>
+                    </div>
+                    <div class="result-message-modal" id="modalResultMessage"></div>
+                </div>
+                <div class="modal-actions">
+                    <button class="next-player-button" id="nextPlayerButton">🎾 Play Next Challenge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Play More Games Section -->
+    <div style="margin-top: 3rem; padding: 2rem 0; background: rgba(255, 255, 255, 0.05); border-radius: 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+            <h2 style="text-align: center; color: white; font-size: 2rem; margin-bottom: 2rem; font-weight: bold;">🎾 Play More Games</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto;">
+                
+                <!-- Mystery Player Timeline -->
+                <a href="guess-player-performance-timeline.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #5f27cd, #341f97); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/mistery-player.png" alt="Mystery Player Timeline" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Mystery Player Timeline</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their Grand Slam performance timeline</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- ATP Ranking Riddle -->
+                <a href="guess-atp-rankings.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #3742fa, #2f3542); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/ranking-riddle.png" alt="ATP Ranking Riddle" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">ATP Ranking Riddle</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their highest ATP ranking each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- BIG3 Finals Scores -->
+                <a href="guess-scores.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff4757, #c44569); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/big3-scores.png" alt="BIG3 Finals Scores" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">BIG3 Finals Scores</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess set scores from Big 3 Grand Slam finals</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Random Legends Tier -->
+                <a href="tennis-tier-list.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ffd700, #ff9f43); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/random-tierlist.png" alt="Random Legends Tier" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Random Legends Tier</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Rank tennis legends by their ATP titles</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Top-10 Time Machine -->
+                <a href="top10-game.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff9f43, #ee5a24); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/top-10-tbt.png" alt="Top-10 Time Machine" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Top-10 Time Machine</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess ATP Year-End Top 10 Rankings for each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- GS Champions Ladder -->
+                <a href="grand-slam-winners.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #00d4aa, #00b894); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/champions-gs-history.png" alt="GS Champions Ladder" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">GS Champions Ladder</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Name Grand Slam champions from 2024 back to 2000</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Head-to-Head Masters -->
+                <a href="head-to-head-masters.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #e74c3c, #c0392b); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/h2h.png" alt="Head-to-Head Masters" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Head-to-Head Masters</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Test your knowledge of tennis's greatest rivalries</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 2rem; padding: 1.5rem 0;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; text-align: center;">
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">
+                Developed by David
+            </p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                Data sources: <a href="https://www.tennisabstract.com/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Tennis Abstract</a> and <a href="https://github.com/jeffsackmann" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Jeff Sackmann</a>
+            </p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">
+                Would you like to give feedback? - <a href="mailto:hidalgodavid2010@gmail.com" style="color: white; text-decoration: underline;">send a comment here</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Game JavaScript -->
+    <script>
+        class TennisWebGame {
+            constructor() {
+                this.data = null;
+                this.players = [];
+                this.connections = {};
+                this.startPlayer = null;
+                this.endPlayer = null;
+                this.chainPlayers = [null, null, null, null, null, null, null]; // 7 intermediate players (including final step)
+                this.challengeIndex = 0;
+                this.connectionTypes = [
+                    'direct_opponents',
+                    'same_country', 
+                    'same_hand',
+                    'similar_height',
+                    'same_birth_year',
+                    'same_tournament',
+                    'direct_opponents'
+                ];
+                
+                this.init();
+            }
+
+            async init() {
+                await this.loadData();
+                this.setupEventListeners();
+                this.generateChallenge();
+                this.hideLoading();
+            }
+
+            async loadData() {
+                try {
+                    const response = await fetch('tennis_web_connections.json');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    this.data = await response.json();
+                    this.players = this.data.players || [];
+                    this.connections = this.data.connections || {};
+                    
+                    console.log(`Loaded ${this.players.length} players with connections`);
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    this.showError('Failed to load tennis connection data. Please try refreshing the page.');
+                }
+            }
+
+            setupEventListeners() {
+                // Buttons
+                document.getElementById('checkSolutionBtn').addEventListener('click', () => this.checkSolution());
+                document.getElementById('nextChallengeBtn').addEventListener('click', () => this.revealAndPlayNext());
+                document.getElementById('hintBtn').addEventListener('click', () => this.getHint());
+                document.getElementById('floatingHintBtn').addEventListener('click', () => this.getHint());
+                document.getElementById('nextPlayerButton').addEventListener('click', () => this.closeModalAndPlayNext());
+
+                // Player search inputs
+                for (let i = 1; i <= 7; i++) {
+                    const input = document.getElementById(`player${i}Input`);
+                    const suggestions = document.getElementById(`player${i}Suggestions`);
+                    
+                    input.addEventListener('input', (e) => this.handlePlayerSearch(e, i));
+                    input.addEventListener('focus', () => this.clearPlayer(i));
+                }
+
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.player-search-mini')) {
+                        this.hideAllSuggestions();
+                    }
+                });
+            }
+
+            generateChallenge() {
+                if (this.players.length < 2) return;
+
+                // Use a combination of time and challenge index for better randomness
+                const randomSeed = Date.now() + this.challengeIndex * 1234567;
+                
+                // Select players with good connectivity
+                const availablePlayers = this.players.filter(p => p.connections >= 15);
+                
+                if (availablePlayers.length < 2) {
+                    // Fallback to any players
+                    this.startPlayer = this.players[Math.floor(Math.random() * this.players.length)];
+                    this.endPlayer = this.players[Math.floor(Math.random() * this.players.length)];
+                } else {
+                    // More random selection using time-based seed
+                    const index1 = Math.floor((randomSeed * 0.001) % availablePlayers.length);
+                    let index2 = Math.floor((randomSeed * 0.0013) % availablePlayers.length);
+                    
+                    // Ensure they're different players
+                    while (index1 === index2) {
+                        index2 = (index2 + 1) % availablePlayers.length;
+                    }
+                    
+                    this.startPlayer = availablePlayers[index1];
+                    this.endPlayer = availablePlayers[index2];
+                }
+
+                this.displayChallenge();
+            }
+
+            displayChallenge() {
+                // Update start player display
+                document.getElementById('startPlayerName').textContent = this.startPlayer.name;
+                document.getElementById('startPlayerDetails').textContent = 'Career Info';
+                document.getElementById('targetPlayerPreview').textContent = this.endPlayer.name;
+
+                // Update end player display
+                document.getElementById('endPlayerName').textContent = this.endPlayer.name;
+                document.getElementById('endPlayerDetails').textContent = 'Career Info';
+
+                // Reset any previous results
+                document.getElementById('pathResult').style.display = 'none';
+
+                // Update final step instruction
+                this.updateFinalStepInstruction();
+                
+                console.log(`Challenge ${this.challengeIndex + 1}: Connect ${this.startPlayer.name} → ${this.endPlayer.name}`);
+            }
+
+            nextChallenge() {
+                this.challengeIndex++;
+                this.resetChain();
+                this.generateChallenge();
+            }
+
+            resetChain() {
+                // Clear all selected players
+                this.chainPlayers = [null, null, null, null, null, null, null];
+                
+                // Clear all inputs and selections
+                for (let i = 1; i <= 7; i++) {
+                    document.getElementById(`player${i}Input`).value = '';
+                    document.getElementById(`player${i}Input`).style.display = 'block';
+                    document.getElementById(`player${i}Selected`).style.display = 'none';
+                    document.getElementById(`player${i}Suggestions`).style.display = 'none';
+                }
+                
+                // Hide solution status
+                document.getElementById('solutionStatus').style.display = 'none';
+            }
+
+            handlePlayerSearch(event, step) {
+                const query = event.target.value.toLowerCase().trim();
+                const suggestionsEl = document.getElementById(`player${step}Suggestions`);
+
+                if (query.length < 2) {
+                    suggestionsEl.style.display = 'none';
+                    return;
+                }
+
+                const matches = this.players.filter(player => 
+                    player.name.toLowerCase().includes(query)
+                ).slice(0, 6);
+
+                if (matches.length === 0) {
+                    suggestionsEl.style.display = 'none';
+                    return;
+                }
+
+                suggestionsEl.innerHTML = matches.map(player => `
+                    <div class="suggestion-mini" data-player-id="${player.id}" data-step="${step}">
+                        ${player.name}
+                    </div>
+                `).join('');
+
+                // Add click listeners to suggestions
+                suggestionsEl.querySelectorAll('.suggestion-mini').forEach(item => {
+                    item.addEventListener('click', () => this.selectPlayer(item.dataset.playerId, item.dataset.step));
+                });
+
+                suggestionsEl.style.display = 'block';
+            }
+
+            selectPlayer(playerId, step) {
+                const player = this.players.find(p => p.id == playerId);
+                if (!player) return;
+
+                const stepIndex = parseInt(step) - 1;
+                this.chainPlayers[stepIndex] = player;
+
+                // Update UI with confirmation styling
+                const inputEl = document.getElementById(`player${step}Input`);
+                const selectedEl = document.getElementById(`player${step}Selected`);
+                const suggestionsEl = document.getElementById(`player${step}Suggestions`);
+
+                inputEl.style.display = 'none';
+                
+                // Show confirmation with styling
+                selectedEl.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #e8f5e8; padding: 0.75rem; border-radius: 8px; border: 2px solid #4caf50;">
+                        <div>
+                            <div style="font-weight: bold; color: #2e7d32; font-size: 1rem;">${player.name}</div>
+                        </div>
+                        <button onclick="gameInstance.clearPlayer(${step})" style="background: none; color: #666; border: none; padding: 6px 8px; cursor: pointer; font-weight: bold; font-size: 1.2rem; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">×</button>
+                    </div>
+                `;
+                selectedEl.style.display = 'block';
+                suggestionsEl.style.display = 'none';
+
+                // Update final step instruction if this is step 6
+                if (step == 6) {
+                    this.updateFinalStepInstruction();
+                }
+
+                console.log(`✅ Selected ${player.name} for step ${step}`);
+            }
+
+            clearPlayer(step) {
+                const stepIndex = parseInt(step) - 1;
+                this.chainPlayers[stepIndex] = null;
+
+                // Update UI
+                document.getElementById(`player${step}Input`).style.display = 'block';
+                document.getElementById(`player${step}Input`).value = '';
+                document.getElementById(`player${step}Selected`).style.display = 'none';
+                document.getElementById(`player${step}Suggestions`).style.display = 'none';
+
+                // Reset final step instruction if step 6 is cleared
+                if (step == 6) {
+                    this.updateFinalStepInstruction();
+                }
+            }
+
+            updateFinalStepInstruction() {
+                const instructionEl = document.getElementById('finalStepInstruction');
+                const step6Player = this.chainPlayers[5]; // Step 6 is index 5
+                
+                if (step6Player) {
+                    instructionEl.innerHTML = `🎾 Find direct opponent to ${step6Player.name} AND ${this.endPlayer.name}`;
+                } else {
+                    instructionEl.innerHTML = `🎾 Find direct opponent that connects to target player`;
+                }
+            }
+
+            hideAllSuggestions() {
+                for (let i = 1; i <= 7; i++) {
+                    document.getElementById(`player${i}Suggestions`).style.display = 'none';
+                }
+            }
+
+            checkSolution() {
+                const errors = [];
+                let correct = 0;
+
+                // Build full chain: start -> player1 -> player2 -> ... -> player7 -> end
+                const fullChain = [
+                    this.startPlayer,
+                    ...this.chainPlayers,
+                    this.endPlayer
+                ];
+
+                // Check each connection
+                for (let i = 0; i < fullChain.length - 1; i++) {
+                    const currentPlayer = fullChain[i];
+                    const nextPlayer = fullChain[i + 1];
+                    const connectionType = this.connectionTypes[i % this.connectionTypes.length];
+
+                    if (!currentPlayer || !nextPlayer) {
+                        errors.push(`Step ${i + 1}: Missing player`);
+                        continue;
+                    }
+
+                    let isValidConnection = false;
+                    
+                    // Special validation for final step (step 7: player7 -> target)
+                    if (i === 6) { // This is the connection from player7 to target
+                        const player6 = fullChain[6]; // Step 6 player
+                        const player7 = fullChain[7]; // Step 7 player (final intermediate)
+                        const target = fullChain[8]; // Target player
+                        
+                        // Player 7 must be a direct opponent to BOTH player 6 AND target
+                        const connectsToPlayer6 = this.validateConnection(player6, player7, 'direct_opponents');
+                        const connectsToTarget = this.validateConnection(player7, target, 'direct_opponents');
+                        
+                        isValidConnection = connectsToPlayer6 && connectsToTarget;
+                        
+                        if (!isValidConnection) {
+                            if (!connectsToPlayer6 && !connectsToTarget) {
+                                errors.push(`Step ${i + 1}: ${player7.name} must be direct opponent to both ${player6.name} AND ${target.name}`);
+                            } else if (!connectsToPlayer6) {
+                                errors.push(`Step ${i + 1}: ${player7.name} is not a direct opponent to ${player6.name}`);
+                            } else if (!connectsToTarget) {
+                                errors.push(`Step ${i + 1}: ${player7.name} is not a direct opponent to ${target.name}`);
+                            }
+                        }
+                    } else {
+                        // Regular validation for other steps
+                        isValidConnection = this.validateConnection(currentPlayer, nextPlayer, connectionType);
+                        
+                        if (!isValidConnection) {
+                            const connectionName = this.getConnectionName(connectionType);
+                            errors.push(`Step ${i + 1}: ${currentPlayer.name} and ${nextPlayer.name} don't share ${connectionName}`);
+                        }
+                    }
+                    
+                    if (isValidConnection) {
+                        correct++;
+                    }
+                }
+
+                // Show modal with results
+                this.showModal(correct, fullChain.length - 1, errors);
+            }
+
+            showModal(correct, total, errors) {
+                const modal = document.getElementById('resultModal');
+                const modalTitle = document.getElementById('modalTitle');
+                const modalConnectionResult = document.getElementById('modalConnectionResult');
+                const modalConnectionDetails = document.getElementById('modalConnectionDetails');
+                const modalStartPlayer = document.getElementById('modalStartPlayer');
+                const modalTargetPlayer = document.getElementById('modalTargetPlayer');
+                const modalStepsCount = document.getElementById('modalStepsCount');
+                const modalResultMessage = document.getElementById('modalResultMessage');
+
+                modalStartPlayer.textContent = this.startPlayer.name;
+                modalTargetPlayer.textContent = this.endPlayer.name;
+                modalStepsCount.textContent = `${correct}/${total}`;
+
+                if (errors.length === 0) {
+                    modalTitle.textContent = '🎉 Perfect Solution!';
+                    modalConnectionResult.textContent = 'Congratulations! Perfect connection chain!';
+                    modalConnectionDetails.textContent = `You successfully connected ${this.startPlayer.name} to ${this.endPlayer.name} through all ${total} connection types!`;
+                    modalResultMessage.className = 'result-message-modal correct';
+                    modalResultMessage.textContent = 'Great puzzle-solving skills! 🧩';
+                } else if (correct > 0) {
+                    modalTitle.textContent = '⚡ Partial Solution';
+                    modalConnectionResult.textContent = `${correct} out of ${total} connections correct`;
+                    modalConnectionDetails.textContent = 'Some connections need to be fixed.';
+                    modalResultMessage.className = 'result-message-modal incorrect';
+                    modalResultMessage.innerHTML = `
+                        <strong>Issues found:</strong><br>
+                        ${errors.slice(0, 3).map(error => `• ${error}`).join('<br>')}
+                        ${errors.length > 3 ? `<br>• ... and ${errors.length - 3} more` : ''}
+                    `;
+                } else {
+                    modalTitle.textContent = '❌ Try Again';
+                    modalConnectionResult.textContent = 'No valid connections found';
+                    modalConnectionDetails.textContent = 'Check the connection requirements and try again.';
+                    modalResultMessage.className = 'result-message-modal incorrect';
+                    modalResultMessage.innerHTML = `
+                        <strong>Issues found:</strong><br>
+                        ${errors.slice(0, 3).map(error => `• ${error}`).join('<br>')}
+                        ${errors.length > 3 ? `<br>• ... and ${errors.length - 3} more` : ''}
+                    `;
+                }
+
+                modal.style.display = 'flex';
+            }
+
+            closeModalAndPlayNext() {
+                document.getElementById('resultModal').style.display = 'none';
+                this.nextChallenge();
+            }
+
+            revealAndPlayNext() {
+                // Show reveal modal
+                const modal = document.getElementById('resultModal');
+                document.getElementById('modalTitle').textContent = '🔍 Solution Revealed';
+                document.getElementById('modalConnectionResult').textContent = 'Solution revealed';
+                document.getElementById('modalConnectionDetails').textContent = `The connection from ${this.startPlayer.name} to ${this.endPlayer.name} has been revealed.`;
+                document.getElementById('modalStartPlayer').textContent = this.startPlayer.name;
+                document.getElementById('modalTargetPlayer').textContent = this.endPlayer.name;
+                document.getElementById('modalStepsCount').textContent = 'Revealed';
+                document.getElementById('modalResultMessage').className = 'result-message-modal revealed';
+                document.getElementById('modalResultMessage').textContent = 'Try the next challenge to test your skills!';
+                modal.style.display = 'flex';
+            }
+
+            validateConnection(player1, player2, connectionType) {
+                const connections = this.connections[player1.id.toString()];
+                if (!connections || !connections[connectionType]) return false;
+
+                return connections[connectionType].includes(player2.id);
+            }
+
+            getConnectionName(connectionType) {
+                const names = {
+                    'direct_opponents': 'direct opponent history',
+                    'same_country': 'same country',
+                    'same_hand': 'same playing hand',
+                    'similar_height': 'similar height',
+                    'same_birth_year': 'same birth year',
+                    'same_tournament': 'same tournament history'
+                };
+                return names[connectionType] || connectionType;
+            }
+
+            getHint() {
+                const statusEl = document.getElementById('solutionStatus');
+                
+                // Find the first missing or incorrect connection
+                const fullChain = [this.startPlayer, ...this.chainPlayers, this.endPlayer];
+                
+                for (let i = 0; i < fullChain.length - 1; i++) {
+                    const currentPlayer = fullChain[i];
+                    const nextPlayer = fullChain[i + 1];
+                    const connectionType = this.connectionTypes[i % this.connectionTypes.length];
+
+                    if (!currentPlayer) {
+                        // This shouldn't happen since we always have start player
+                        statusEl.style.display = 'block';
+                        statusEl.className = 'solution-status partial';
+                        statusEl.innerHTML = `
+                            <h3>💡 Hint</h3>
+                            <p>Start by filling in the first step! You need a player who is a direct opponent of ${this.startPlayer.name}.</p>
+                        `;
+                        return;
+                    }
+
+                    if (!nextPlayer) {
+                        // Fill in a valid player for this step
+                        const validPlayer = this.findValidPlayer(currentPlayer, connectionType);
+                        if (validPlayer) {
+                            const stepNumber = i + 1; // Convert to 1-based step number
+                            this.selectPlayer(validPlayer.id, stepNumber);
+                            
+                            statusEl.style.display = 'block';
+                            statusEl.className = 'solution-status success';
+                            statusEl.innerHTML = `
+                                <h3>💡 Hint Applied!</h3>
+                                <p>Added <strong>${validPlayer.name}</strong> for step ${stepNumber}.</p>
+                                <p>This player shares <strong>${this.getConnectionName(connectionType)}</strong> with ${currentPlayer.name}.</p>
+                            `;
+                        } else {
+                            statusEl.style.display = 'block';
+                            statusEl.className = 'solution-status error';
+                            statusEl.innerHTML = `
+                                <h3>💡 No Hint Available</h3>
+                                <p>Could not find a valid player for step ${i + 1}. Try a different approach!</p>
+                            `;
+                        }
+                        return;
+                    }
+
+                    const isValid = this.validateConnection(currentPlayer, nextPlayer, connectionType);
+                    if (!isValid) {
+                        // Clear the invalid player and suggest a valid one
+                        this.clearPlayer(i + 1);
+                        const validPlayer = this.findValidPlayer(currentPlayer, connectionType);
+                        if (validPlayer) {
+                            this.selectPlayer(validPlayer.id, i + 1);
+                            
+                            statusEl.style.display = 'block';
+                            statusEl.className = 'solution-status success';
+                            statusEl.innerHTML = `
+                                <h3>💡 Hint Applied!</h3>
+                                <p>Replaced with <strong>${validPlayer.name}</strong> for step ${i + 1}.</p>
+                                <p>This player shares <strong>${this.getConnectionName(connectionType)}</strong> with ${currentPlayer.name}.</p>
+                            `;
+                        } else {
+                            statusEl.style.display = 'block';
+                            statusEl.className = 'solution-status error';
+                            statusEl.innerHTML = `
+                                <h3>💡 No Valid Replacement</h3>
+                                <p>Could not find a valid replacement for step ${i + 1}.</p>
+                            `;
+                        }
+                        return;
+                    }
+                }
+
+                // All connections are valid
+                statusEl.style.display = 'block';
+                statusEl.className = 'solution-status success';
+                statusEl.innerHTML = `
+                    <h3>💡 Hint</h3>
+                    <p>Your solution looks perfect! Click "Check Solution" to confirm.</p>
+                `;
+            }
+
+            findValidPlayer(currentPlayer, connectionType) {
+                const connections = this.connections[currentPlayer.id.toString()];
+                if (!connections || !connections[connectionType]) return null;
+
+                const validPlayerIds = connections[connectionType];
+                if (validPlayerIds.length === 0) return null;
+
+                // Find the first valid player that we have in our players list
+                for (const playerId of validPlayerIds) {
+                    const player = this.players.find(p => p.id == playerId);
+                    if (player) {
+                        return player;
+                    }
+                }
+
+                return null;
+            }
+
+            getSpecificHint(player, connectionType) {
+                const playerConnections = this.connections[player.id.toString()];
+                if (!playerConnections || !playerConnections[connectionType]) {
+                    return '<p><em>This player has no connections of this type.</em></p>';
+                }
+
+                const connectedIds = playerConnections[connectionType].slice(0, 3); // Show first 3
+                const connectedNames = connectedIds.map(id => {
+                    const p = this.players.find(player => player.id == id);
+                    return p ? p.name : `Player ${id}`;
+                });
+
+                return `
+                    <p><em>Some examples: ${connectedNames.join(', ')}${connectedIds.length >= 3 ? '...' : ''}</em></p>
+                `;
+            }
+
+
+
+
+
+            showError(message) {
+                const errorEl = document.getElementById('errorMessage');
+                errorEl.textContent = message;
+                errorEl.style.display = 'block';
+            }
+
+            hideLoading() {
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('gameContainer').style.display = 'block';
+            }
+        }
+
+        // Toggle instructions function
+        function toggleInstructions() {
+            const content = document.getElementById('instructionsContent');
+            const icon = document.getElementById('expandIcon');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.classList.add('expanded');
+            } else {
+                content.style.display = 'none';
+                icon.classList.remove('expanded');
+            }
+        }
+
+        // Initialize game when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            window.gameInstance = new TennisWebGame();
+        });
+
+        // Modal functions
+        function openJoinModal() {
+            // For now, just redirect to index page
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Tennis Web - Six Degrees Connection Game",
+        "description": "Connect any two tennis players through their shared connections! Find the shortest path using matches they've played, shared attributes, and tournaments.",
+        "url": "https://funtennis.games/tennis-web.html",
+        "image": "https://funtennis.games/images/tennis-web.png",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tennis Quiz Games"
+        },
+        "genre": "Tennis Trivia Game",
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Tennis fans, sports trivia enthusiasts"
+        }
+    }
+    </script>
+</body>
+</html>
+</html>
