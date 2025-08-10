@@ -782,13 +782,15 @@
 
         @media (max-width: 768px) {
             .game-card-responsive {
-                flex-direction: row;
-                align-items: stretch;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
             }
             
             .play-button-responsive {
                 text-align: center;
-                display: block;
+                display: inline-block;
+                align-self: flex-start;
             }
         }
     </style>
