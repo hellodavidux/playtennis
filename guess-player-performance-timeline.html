@@ -1099,7 +1099,7 @@
 
             async loadData() {
                 // Load pre-processed Grand Slam timeline data
-                const response = await fetch('/grand_slam_timelines.json');
+                const response = await fetch('grand_slam_timelines.json');
                 this.grandSlamData = await response.json();
                 
                 // Extract players list for search functionality
