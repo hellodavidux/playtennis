@@ -860,7 +860,7 @@
 
             async loadData() {
                 // Load pre-processed ATP ranking timeline data
-                const response = await fetch('/atp_ranking_timelines.json');
+                const response = await fetch('atp_ranking_timelines.json');
                 this.rankingData = await response.json();
                 
                 // Extract players list for search functionality
