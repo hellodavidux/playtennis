@@ -1,0 +1,139 @@
+{
+  "game_variations": {
+    "big3_era": {
+      "name": "Big 3 Era",
+      "description": "Focus on the Big 3 era (2004-2024)",
+      "rows": [
+        "Defeated Djokovic at Australian Open",
+        "Defeated Nadal at Roland Garros",
+        "Defeated Federer at Wimbledon"
+      ],
+      "cols": [
+        "Reached #1 ATP ranking",
+        "Won Olympic singles gold",
+        "Won Paris-Bercy Masters"
+      ],
+      "answers": {
+        "0,0": "Andy Murray",
+        "0,1": "Andy Murray",
+        "0,2": "Andy Murray",
+        "1,0": "Robin Soderling",
+        "1,1": "Rafael Nadal",
+        "1,2": "Jo-Wilfried Tsonga",
+        "2,0": "Tomas Berdych",
+        "2,1": "Roger Federer",
+        "2,2": "Novak Djokovic"
+      }
+    },
+    "classic_era": {
+      "name": "Classic Era",
+      "description": "Focus on the 80s-90s era",
+      "rows": [
+        "Defeated Sampras at Wimbledon",
+        "Defeated Agassi at Australian Open",
+        "Defeated Lendl at US Open"
+      ],
+      "cols": [
+        "Reached #1 ATP ranking",
+        "Won Davis Cup",
+        "Won ATP Finals"
+      ],
+      "answers": {
+        "0,0": "Richard Krajicek",
+        "0,1": "Richard Krajicek",
+        "0,2": "Richard Krajicek",
+        "1,0": "Andre Agassi",
+        "1,1": "Andre Agassi",
+        "1,2": "Andre Agassi",
+        "2,0": "Stefan Edberg",
+        "2,1": "Stefan Edberg",
+        "2,2": "Stefan Edberg"
+      }
+    },
+    "modern_era": {
+      "name": "Modern Era",
+      "description": "Focus on current players (2015-2024)",
+      "rows": [
+        "Defeated Medvedev at US Open",
+        "Defeated Zverev at Australian Open",
+        "Defeated Tsitsipas at French Open"
+      ],
+      "cols": [
+        "Reached top 5 ranking",
+        "Won ATP 1000 title",
+        "Won Next Gen Finals"
+      ],
+      "answers": {
+        "0,0": "Daniil Medvedev",
+        "0,1": "Daniil Medvedev",
+        "0,2": "Daniil Medvedev",
+        "1,0": "Alexander Zverev",
+        "1,1": "Alexander Zverev",
+        "1,2": "Alexander Zverev",
+        "2,0": "Stefanos Tsitsipas",
+        "2,1": "Stefanos Tsitsipas",
+        "2,2": "Stefanos Tsitsipas"
+      }
+    },
+    "mixed_eras": {
+      "name": "Mixed Eras",
+      "description": "Mix of different tennis eras",
+      "rows": [
+        "Defeated a Big 3 member at Grand Slam",
+        "Won multiple Grand Slams",
+        "Reached #1 ranking"
+      ],
+      "cols": [
+        "Won Olympic medal",
+        "Won ATP Finals",
+        "Won Davis Cup"
+      ],
+      "answers": {
+        "0,0": "Andy Murray",
+        "0,1": "Andy Murray",
+        "0,2": "Andy Murray",
+        "1,0": "Roger Federer",
+        "1,1": "Roger Federer",
+        "1,2": "Roger Federer",
+        "2,0": "Novak Djokovic",
+        "2,1": "Novak Djokovic",
+        "2,2": "Novak Djokovic"
+      }
+    },
+    "realistic_big3": {
+      "name": "Big 3 Era (Realistic)",
+      "description": "Based on actual match results",
+      "rows": [
+        "Defeated Djokovic at Australian Open",
+        "Defeated Nadal at Roland Garros",
+        "Defeated Federer at Wimbledon"
+      ],
+      "cols": [
+        "Reached #1 ATP ranking",
+        "Won Olympic singles gold",
+        "Won Paris-Bercy Masters"
+      ],
+      "answers": {
+        "0,0": "Andy Murray",
+        "0,1": "Andy Murray",
+        "0,2": "Andy Murray",
+        "1,0": "Robin Soderling",
+        "1,1": "Rafael Nadal",
+        "1,2": "Jo-Wilfried Tsonga",
+        "2,0": "Tomas Berdych",
+        "2,1": "Roger Federer",
+        "2,2": "Novak Djokovic"
+      }
+    }
+  },
+  "metadata": {
+    "description": "Tennis trivia grid game variations based on actual tennis data",
+    "generated_date": "2025-08-10T15:55:24.574875",
+    "data_sources": [
+      "grand_slam_finals.json",
+      "atp_ranking_timelines.json",
+      "year_end_top10.json",
+      "h2h_rivalries.json"
+    ]
+  }
+}

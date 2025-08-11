@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Trivia Grid - Tennis Quiz Game | Tennis Quiz Games</title>
+    <meta name="description" content="Test your tennis knowledge with our Tennis Trivia Grid game! Fill in the 3x3 grid with players who match both row and column criteria. Challenge yourself with this interactive tennis quiz.">
+    <meta name="keywords" content="tennis trivia grid, tennis quiz game, tennis player trivia, tennis knowledge test, tennis grid game, tennis quiz">
+    <meta name="author" content="David">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funtennis.games/tennis-trivia-grid.html">
+    <meta property="og:title" content="Tennis Trivia Grid - Tennis Quiz Game">
+    <meta property="og:description" content="Test your tennis knowledge with our Tennis Trivia Grid game! Fill in the 3x3 grid with players who match both row and column criteria. Challenge yourself with this interactive tennis quiz.">
+    <meta property="og:image" content="https://funtennis.games/images/logo-tennis-quiz.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://funtennis.games/tennis-trivia-grid.html">
+    <meta property="twitter:title" content="Tennis Trivia Grid - Tennis Quiz Game">
+    <meta property="twitter:description" content="Test your tennis knowledge with our Tennis Trivia Grid game! Fill in the 3x3 grid with players who match both row and column criteria. Challenge yourself with this interactive tennis quiz.">
+    <meta property="twitter:image" content="https://funtennis.games/images/logo-tennis-quiz.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://funtennis.games/tennis-trivia-grid.html">
+    
+    <link rel="icon" type="image/png" href="images/logo-tennis-quiz.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7D5439VQZL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7D5439VQZL');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #3742fa 0%, #2f3542 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .nav-unified {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 1rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sign-up-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .sign-up-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .main-container {
+            padding-top: 5rem;
+        }
+
+        .header {
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .game-content {
+            padding: 1rem;
+        }
+
+        .game-controls {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .game-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .game-variant {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .game-variant:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .game-variant.active {
+            background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+        }
+
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .trivia-grid {
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-width: 600px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .trivia-grid th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            min-width: 120px;
+        }
+
+        .trivia-grid th:first-child {
+            background: #2c3e50;
+            min-width: 150px;
+        }
+
+        .trivia-grid td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #ddd;
+            background: #f8f9fa;
+            min-height: 80px;
+            vertical-align: middle;
+        }
+
+        .grid-cell {
+            position: relative;
+            min-height: 60px;
+        }
+
+        .grid-input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .grid-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .autocomplete-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 0 0 8px 8px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .autocomplete-suggestion {
+            padding: 0.75rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s ease;
+        }
+
+        .autocomplete-suggestion:hover {
+            background: #f8f9fa;
+        }
+
+        .autocomplete-suggestion.selected {
+            background: #667eea;
+            color: white;
+        }
+
+        .grid-cell {
+            position: relative;
+        }
+
+        .grid-input.correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+
+        .grid-input.incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+
+        .grid-input.revealed {
+            border-color: #17a2b8;
+            background-color: #d1ecf1;
+        }
+
+        .game-buttons {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .check-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-right: 1rem;
+            font-weight: 600;
+        }
+
+        .check-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .reveal-button {
+            background: transparent;
+            color: #f5576c;
+            border: 2px solid #f5576c;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+            font-weight: 600;
+        }
+
+        .reveal-button:hover {
+            transform: translateY(-2px);
+            background: #f5576c;
+            color: white;
+        }
+
+
+
+        .how-to-play {
+            background: #f5f5f5;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .how-to-play-header {
+            background: #e9ecef;
+            color: #666;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .how-to-play-header:hover {
+            background: #dee2e6;
+        }
+
+        .how-to-play-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .expand-icon {
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .expand-icon.expanded {
+            transform: rotate(180deg);
+        }
+
+        .how-to-play-content {
+            padding: 1.5rem;
+        }
+
+        .instructions ul {
+            margin: 0 0 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .instructions li {
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .modal-content {
+            padding: 2rem;
+        }
+
+        .player-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .player-info h3 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .player-info p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .result-stats {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .result-message-modal {
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 1rem;
+        }
+
+        .result-message-modal.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .result-message-modal.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .result-message-modal.revealed {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .modal-actions {
+            flex-direction: column;
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding: 1rem 2rem;
+            border-top: 1px solid #e0e0e0;
+            margin: 0;
+        }
+
+        .next-player-button {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-weight: 600;
+        }
+
+        .next-player-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive game cards - Desktop: horizontal, Mobile: column */
+        .game-card-responsive {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-button-responsive {
+            display: inline-block;
+        }
+
+        @media (max-width: 640px) {
+            .nav-unified {
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+            
+            .main-container {
+                padding-top: 5.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                justify-content: start;
+            }
+            
+            .game-card-responsive {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .play-button-responsive {
+                text-align: center;
+                display: block;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .trivia-grid {
+                font-size: 0.8rem;
+            }
+
+            .trivia-grid th,
+            .trivia-grid td {
+                padding: 0.5rem;
+            }
+
+            .game-variant {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .check-button,
+            .reveal-button,
+            .new-game-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .modal {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .modal-content {
+                padding: 1.5rem;
+            }
+
+            .modal-actions {
+                padding: 1rem 1.5rem;
+            }
+
+            .player-info h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .game-section {
+                padding: 1rem;
+            }
+
+            .trivia-grid th,
+            .trivia-grid td {
+                padding: 0.3rem;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Unified Navigation -->
+    <nav class="nav-unified">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <img src="images/logo-tennis-quiz.png" alt="Tennis Quiz Logo" style="width: 20px; height: 20px; ">
+                TENNIS GAMES
+            </a>
+        </div>
+        <div class="nav-actions">
+            <button class="sign-up-btn" onclick="openJoinModal()">
+                Join for more
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="container">
+        
+        <div class="header bg-gray-50 p-8 mb-8">
+            <h1 style="color: #2c3e50; margin-bottom: 1rem;">🎲 Tennis Trivia Grid</h1>
+            <p style="color: #34495e; margin-bottom: 0.5rem;">Fill in the 3x3 grid with players who match both row and column criteria!</p>
+            <p style="font-size: 0.9em; color: #7f8c8d; margin-top: 0.5rem;">Each player can only be used once in the entire grid</p>
+        </div>
+
+        <div class="game-content">
+            <div class="loading" id="loadingMessage">
+                Loading tennis trivia data...
+            </div>
+
+            <div class="error" id="errorMessage" style="display: none;">
+                Failed to load data. Please refresh the page.
+            </div>
+
+            <div id="gameContent" style="display: none;">
+                <!-- How to Play - Expandable -->
+                <div class="how-to-play">
+                    <div class="how-to-play-header" onclick="toggleInstructions()">
+                        <h3>🎯 How to Play</h3>
+                        <span class="expand-icon" id="expandIcon">▼</span>
+                    </div>
+                    <div class="how-to-play-content" id="instructionsContent" style="display: none;">
+                        <div class="instructions">
+                            <ul>
+                                <li><strong>Objective:</strong> Fill in each cell with a tennis player who satisfies BOTH the row and column criteria</li>
+                                <li><strong>Rules:</strong> Each player can only be used once in the entire grid!</li>
+                                <li><strong>Example:</strong> If a cell requires "Defeated Djokovic at Australian Open" AND "Reached #1 ranking", you need a player who did both</li>
+                                <li><strong>Scoring:</strong> Get points for each correct answer. Try to complete the entire grid!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="grid-container">
+                    <table class="trivia-grid" id="triviaGrid">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th id="col1">Loading...</th>
+                                <th id="col2">Loading...</th>
+                                <th id="col3">Loading...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th id="row1">Loading...</th>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="0" data-col="0" placeholder="Enter player name"></div></td>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="0" data-col="1" placeholder="Enter player name"></div></td>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="0" data-col="2" placeholder="Enter player name"></div></td>
+                            </tr>
+                            <tr>
+                                <th id="row2">Loading...</th>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="1" data-col="0" placeholder="Enter player name"></div></td>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="1" data-col="1" placeholder="Enter player name"></div></td>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="1" data-col="2" placeholder="Enter player name"></div></td>
+                            </tr>
+                            <tr>
+                                <th id="row3">Loading...</th>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="2" data-col="0" placeholder="Enter player name"></div></td>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="2" data-col="1" placeholder="Enter player name"></div></td>
+                                <td><div class="grid-cell"><input type="text" class="grid-input" data-row="2" data-col="2" placeholder="Enter player name"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="game-buttons">
+                    <div id="scoreDisplay" style="text-align: center; font-size: 1.2em; font-weight: bold; color: #667eea; margin-bottom: 1rem;">Score: 0/9</div>
+                    <button class="check-button" onclick="submitAnswers()">✅ Submit Answers</button>
+                    <button class="reveal-button" onclick="revealAndNext()">🔍 Reveal & Next Game</button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Result Modal -->
+        <div class="modal-overlay" id="resultModal" style="display: none;">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Result</h2>
+                </div>
+                <div class="modal-content">
+                    <div class="player-info">
+                        <h3 id="modalResultTitle">Grid Result</h3>
+                        <p id="modalResultDetails">Your performance details</p>
+                    </div>
+                    <div class="result-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Correct Answers:</span>
+                            <span class="stat-value" id="modalCorrectAnswers">0/9</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Game Variant:</span>
+                            <span class="stat-value" id="modalGameVariant">Big 3 Era</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Completion Rate:</span>
+                            <span class="stat-value" id="modalCompletionRate">0%</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Revealed Grid in Modal -->
+                    <div class="modal-grid-container" style="margin: 1.5rem 0; overflow-x: auto;">
+                        <table class="trivia-grid" style="font-size: 0.9em; min-width: 500px;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th id="modalCol1">Loading...</th>
+                                    <th id="modalCol2">Loading...</th>
+                                    <th id="modalCol3">Loading...</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th id="modalRow1">Loading...</th>
+                                    <td id="modalCell0-0" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                    <td id="modalCell0-1" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                    <td id="modalCell0-2" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                </tr>
+                                <tr>
+                                    <th id="modalRow2">Loading...</th>
+                                    <td id="modalCell1-0" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                    <td id="modalCell1-1" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                    <td id="modalCell1-2" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                </tr>
+                                <tr>
+                                    <th id="modalRow3">Loading...</th>
+                                    <td id="modalCell2-0" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                    <td id="modalCell2-1" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                    <td id="modalCell2-2" style="background: #f8f9fa; padding: 0.5rem; text-align: center; border: 1px solid #ddd;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="result-message-modal" id="modalResultMessage"></div>
+                </div>
+                <div class="modal-actions">
+                    <button class="next-player-button" id="nextPlayerButton" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Play More Games Section -->
+    <div style="margin-top: 3rem; padding: 2rem 0; background: rgba(255, 255, 255, 0.05); border-radius: 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+            <h2 style="text-align: center; color: white; font-size: 2rem; margin-bottom: 2rem; font-weight: bold;">🎾 Play More Games</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto;">
+                
+                <!-- Mystery Player Timeline -->
+                <a href="guess-player-performance-timeline.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #5f27cd, #341f97); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/mistery-player.png" alt="Mystery Player Timeline" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Mystery Player Timeline</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess the player by their Grand Slam performance timeline</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- BIG3 Finals Scores -->
+                <a href="guess-scores.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff4757, #c44569); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/big3-scores.png" alt="BIG3 Finals Scores" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">BIG3 Finals Scores</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess set scores from Big 3 Grand Slam finals</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Random Legends Tier -->
+                <a href="tennis-tier-list.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ffd700, #ff9f43); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/random-tierlist.png" alt="Random Legends Tier" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Random Legends Tier</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Rank tennis legends by their ATP titles</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Top-10 Time Machine -->
+                <a href="top10-game.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #ff9f43, #ee5a24); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/top-10-tbt.png" alt="Top-10 Time Machine" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Top-10 Time Machine</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Guess ATP Year-End Top 10 Rankings for each year</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- GS Champions Ladder -->
+                <a href="grand-slam-winners.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #00d4aa, #00b894); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/champions-gs-history.png" alt="GS Champions Ladder" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">GS Champions Ladder</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Name Grand Slam champions from 2024 back to 2000</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Head-to-Head Masters -->
+                <a href="head-to-head-masters.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #e74c3c, #c0392b); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="images/h2h.png" alt="Head-to-Head Masters" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">Head-to-Head Masters</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Test your knowledge of tennis's greatest rivalries</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
+                </a>
+
+                <!-- Tennis Web -->
+                <div class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #667eea, #764ba2); border-radius: 12px; opacity: 0.7;">
+                    <img src="images/6-deg.png" alt="Tennis Web" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">🕸️ Tennis Web</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Connect tennis players through 6 degrees of separation</p>
+                    </div>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Game data and state
+        let currentGame = null;
+        let gameData = {};
+        let currentAnswers = {};
+        let score = 0;
+        let allPlayers = [];
+        let gameVariants = ['big3', 'realistic', 'varied', 'champions', 'classic', 'modern', 'mixed'];
+
+        // Game variations based on actual tennis data
+        const gameVariations = {
+            big3: {
+                name: "Big 3 Era",
+                rows: [
+                    "Defeated Djokovic at Australian Open",
+                    "Defeated Nadal at Roland Garros", 
+                    "Defeated Federer at Wimbledon"
+                ],
+                cols: [
+                    "Reached #1 ATP ranking",
+                    "Won Olympic singles gold",
+                    "Won Paris-Bercy Masters"
+                ],
+                answers: {
+                    "0,0": "Andy Murray",
+                    "0,1": "Andy Murray", 
+                    "0,2": "Andy Murray",
+                    "1,0": "Robin Soderling",
+                    "1,1": "Rafael Nadal",
+                    "1,2": "Jo-Wilfried Tsonga",
+                    "2,0": "Tomas Berdych",
+                    "2,1": "Roger Federer",
+                    "2,2": "Novak Djokovic"
+                }
+            },
+            classic: {
+                name: "Classic Era",
+                rows: [
+                    "Defeated Sampras at Wimbledon",
+                    "Defeated Agassi at Australian Open",
+                    "Defeated Lendl at US Open"
+                ],
+                cols: [
+                    "Reached #1 ATP ranking",
+                    "Won Davis Cup",
+                    "Won ATP Finals"
+                ],
+                answers: {
+                    "0,0": "Richard Krajicek",
+                    "0,1": "Richard Krajicek",
+                    "0,2": "Richard Krajicek", 
+                    "1,0": "Andre Agassi",
+                    "1,1": "Andre Agassi",
+                    "1,2": "Andre Agassi",
+                    "2,0": "Stefan Edberg",
+                    "2,1": "Stefan Edberg",
+                    "2,2": "Stefan Edberg"
+                }
+            },
+            modern: {
+                name: "Modern Era",
+                rows: [
+                    "Defeated Medvedev at US Open",
+                    "Defeated Zverev at Australian Open", 
+                    "Defeated Tsitsipas at French Open"
+                ],
+                cols: [
+                    "Reached top 5 ranking",
+                    "Won ATP 1000 title",
+                    "Won Next Gen Finals"
+                ],
+                answers: {
+                    "0,0": "Daniil Medvedev",
+                    "0,1": "Daniil Medvedev",
+                    "0,2": "Daniil Medvedev",
+                    "1,0": "Alexander Zverev",
+                    "1,1": "Alexander Zverev", 
+                    "1,2": "Alexander Zverev",
+                    "2,0": "Stefanos Tsitsipas",
+                    "2,1": "Stefanos Tsitsipas",
+                    "2,2": "Stefanos Tsitsipas"
+                }
+            },
+            mixed: {
+                name: "Mixed Eras",
+                rows: [
+                    "Defeated a Big 3 member at Grand Slam",
+                    "Won multiple Grand Slams",
+                    "Reached #1 ranking"
+                ],
+                cols: [
+                    "Won Olympic medal",
+                    "Won ATP Finals",
+                    "Won Davis Cup"
+                ],
+                answers: {
+                    "0,0": "Andy Murray",
+                    "0,1": "Andy Murray",
+                    "0,2": "Andy Murray",
+                    "1,0": "Roger Federer",
+                    "1,1": "Roger Federer",
+                    "1,2": "Roger Federer", 
+                    "2,0": "Novak Djokovic",
+                    "2,1": "Novak Djokovic",
+                    "2,2": "Novak Djokovic"
+                }
+            },
+            realistic: {
+                name: "Realistic Big 3",
+                rows: [
+                    "Defeated Djokovic at US Open",
+                    "Defeated Nadal at Wimbledon", 
+                    "Defeated Federer at French Open"
+                ],
+                cols: [
+                    "Reached #1 ATP ranking",
+                    "Won Olympic medal",
+                    "Won multiple Grand Slams"
+                ],
+                answers: {
+                    "0,0": "Andy Murray",
+                    "0,1": "Andy Murray", 
+                    "0,2": "Andy Murray",
+                    "1,0": "Roger Federer",
+                    "1,1": "Roger Federer",
+                    "1,2": "Roger Federer",
+                    "2,0": "Rafael Nadal",
+                    "2,1": "Rafael Nadal",
+                    "2,2": "Rafael Nadal"
+                }
+            },
+            varied: {
+                name: "Varied Players",
+                rows: [
+                    "Won Australian Open",
+                    "Won French Open", 
+                    "Won Wimbledon"
+                ],
+                cols: [
+                    "Reached #1 ranking",
+                    "Won Olympic medal",
+                    "Won ATP Finals"
+                ],
+                answers: {
+                    "0,0": "Novak Djokovic",
+                    "0,1": "Andy Murray", 
+                    "0,2": "Novak Djokovic",
+                    "1,0": "Rafael Nadal",
+                    "1,1": "Rafael Nadal",
+                    "1,2": "Rafael Nadal",
+                    "2,0": "Roger Federer",
+                    "2,1": "Roger Federer",
+                    "2,2": "Roger Federer"
+                }
+            },
+            champions: {
+                name: "Grand Slam Champions",
+                rows: [
+                    "Won Australian Open",
+                    "Won French Open", 
+                    "Won Wimbledon"
+                ],
+                cols: [
+                    "Reached #1 ranking",
+                    "Won Olympic medal",
+                    "Won ATP Finals"
+                ],
+                answers: {
+                    "0,0": "Novak Djokovic",
+                    "0,1": "Andy Murray", 
+                    "0,2": "Novak Djokovic",
+                    "1,0": "Rafael Nadal",
+                    "1,1": "Rafael Nadal",
+                    "1,2": "Rafael Nadal",
+                    "2,0": "Roger Federer",
+                    "2,1": "Roger Federer",
+                    "2,2": "Roger Federer"
+                }
+            }
+        };
+
+        // Initialize the game
+        async function initGame() {
+            try {
+                await loadPlayers();
+                loadGame('big3');
+                setupEventListeners();
+                
+                // Hide loading message and show game content
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('gameContent').style.display = 'block';
+            } catch (error) {
+                console.error('Error initializing game:', error);
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        }
+
+        // Load player names for autocomplete
+        async function loadPlayers() {
+            try {
+                // Load players from CSV files
+                const response = await fetch('tennis_players_data.json');
+                const playersData = await response.json();
+                
+                const playerSet = new Set();
+                
+                // Add players from the JSON data
+                if (playersData && playersData.players) {
+                    playersData.players.forEach(player => {
+                        if (player.name) {
+                            playerSet.add(player.name);
+                        }
+                    });
+                }
+                
+                // Also add players from game variations as fallback
+                Object.values(gameVariations).forEach(variant => {
+                    Object.values(variant.answers).forEach(player => {
+                        playerSet.add(player);
+                    });
+                });
+                
+                // Add some additional famous players for variety
+                const additionalPlayers = [
+                    'Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Andy Murray',
+                    'Pete Sampras', 'Andre Agassi', 'Stefan Edberg', 'Boris Becker',
+                    'Ivan Lendl', 'John McEnroe', 'Jimmy Connors', 'Bjorn Borg',
+                    'Daniil Medvedev', 'Alexander Zverev', 'Stefanos Tsitsipas',
+                    'Carlos Alcaraz', 'Jannik Sinner', 'Holger Rune', 'Casper Ruud',
+                    'Felix Auger-Aliassime', 'Hubert Hurkacz', 'Andrey Rublev',
+                    'Denis Shapovalov', 'Taylor Fritz', 'Frances Tiafoe',
+                    'Nick Kyrgios', 'Grigor Dimitrov', 'Marin Cilic', 'Kei Nishikori',
+                    'Milos Raonic', 'Juan Martin del Potro', 'Stan Wawrinka',
+                    'Tomas Berdych', 'Jo-Wilfried Tsonga', 'Gael Monfils',
+                    'Richard Gasquet', 'David Ferrer', 'Robin Soderling',
+                    'Fernando Verdasco', 'Nicolas Almagro', 'Gilles Simon'
+                ];
+                
+                additionalPlayers.forEach(player => playerSet.add(player));
+                allPlayers = Array.from(playerSet).sort();
+                
+                console.log(`Loaded ${allPlayers.length} players for autocomplete`);
+            } catch (error) {
+                console.error('Error loading players:', error);
+                // Fallback to basic players if CSV loading fails
+                loadBasicPlayers();
+            }
+        }
+
+        // Fallback function for basic players
+        function loadBasicPlayers() {
+            const playerSet = new Set();
+            
+            Object.values(gameVariations).forEach(variant => {
+                Object.values(variant.answers).forEach(player => {
+                    playerSet.add(player);
+                });
+            });
+            
+            const additionalPlayers = [
+                'Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Andy Murray',
+                'Pete Sampras', 'Andre Agassi', 'Stefan Edberg', 'Boris Becker',
+                'Ivan Lendl', 'John McEnroe', 'Jimmy Connors', 'Bjorn Borg',
+                'Daniil Medvedev', 'Alexander Zverev', 'Stefanos Tsitsipas',
+                'Carlos Alcaraz', 'Jannik Sinner', 'Holger Rune', 'Casper Ruud',
+                'Felix Auger-Aliassime', 'Hubert Hurkacz', 'Andrey Rublev',
+                'Denis Shapovalov', 'Taylor Fritz', 'Frances Tiafoe',
+                'Nick Kyrgios', 'Grigor Dimitrov', 'Marin Cilic', 'Kei Nishikori',
+                'Milos Raonic', 'Juan Martin del Potro', 'Stan Wawrinka',
+                'Tomas Berdych', 'Jo-Wilfried Tsonga', 'Gael Monfils',
+                'Richard Gasquet', 'David Ferrer', 'Robin Soderling',
+                'Fernando Verdasco', 'Nicolas Almagro', 'Gilles Simon'
+            ];
+            
+            additionalPlayers.forEach(player => playerSet.add(player));
+            allPlayers = Array.from(playerSet).sort();
+        }
+
+        // Load a specific game variation
+        function loadGame(variant) {
+            currentGame = variant;
+            gameData = gameVariations[variant];
+            currentAnswers = {};
+
+            // Update grid headers
+            document.getElementById('row1').textContent = gameData.rows[0];
+            document.getElementById('row2').textContent = gameData.rows[1];
+            document.getElementById('row3').textContent = gameData.rows[2];
+            document.getElementById('col1').textContent = gameData.cols[0];
+            document.getElementById('col2').textContent = gameData.cols[1];
+            document.getElementById('col3').textContent = gameData.cols[2];
+
+            // Clear all inputs
+            document.querySelectorAll('.grid-input').forEach(input => {
+                input.value = '';
+                input.className = 'grid-input';
+                input.disabled = false;
+            });
+
+            // Reset score
+            score = 0;
+            updateScore();
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Add input event listeners for real-time validation and autocomplete
+            document.querySelectorAll('.grid-input').forEach(input => {
+                input.addEventListener('input', function() {
+                    const key = `${this.dataset.row},${this.dataset.col}`;
+                    currentAnswers[key] = this.value.trim();
+                    showAutocomplete(this);
+                });
+                
+                input.addEventListener('focus', function() {
+                    showAutocomplete(this);
+                });
+                
+                input.addEventListener('blur', function() {
+                    // Delay hiding to allow for clicks on suggestions
+                    setTimeout(() => {
+                        hideAutocomplete(this);
+                    }, 200);
+                });
+            });
+        }
+
+        // Show autocomplete suggestions
+        function showAutocomplete(input) {
+            const query = input.value.toLowerCase();
+            if (query.length < 1) {
+                hideAutocomplete(input);
+                return;
+            }
+
+            const suggestions = allPlayers.filter(player => 
+                player.toLowerCase().includes(query)
+            ).slice(0, 10);
+
+            if (suggestions.length === 0) {
+                hideAutocomplete(input);
+                return;
+            }
+
+            // Create or update autocomplete dropdown
+            let dropdown = input.parentNode.querySelector('.autocomplete-suggestions');
+            if (!dropdown) {
+                dropdown = document.createElement('div');
+                dropdown.className = 'autocomplete-suggestions';
+                input.parentNode.appendChild(dropdown);
+            }
+
+            dropdown.innerHTML = suggestions.map(player => 
+                `<div class="autocomplete-suggestion" data-player="${player}">${player}</div>`
+            ).join('');
+
+            dropdown.style.display = 'block';
+
+            // Add click listeners to suggestions
+            dropdown.querySelectorAll('.autocomplete-suggestion').forEach(suggestion => {
+                suggestion.addEventListener('click', function() {
+                    input.value = this.dataset.player;
+                    currentAnswers[`${input.dataset.row},${input.dataset.col}`] = this.dataset.player;
+                    hideAutocomplete(input);
+                    input.focus();
+                });
+            });
+        }
+
+        // Hide autocomplete suggestions
+        function hideAutocomplete(input) {
+            const dropdown = input.parentNode.querySelector('.autocomplete-suggestions');
+            if (dropdown) {
+                dropdown.style.display = 'none';
+            }
+        }
+
+        // Submit answers
+        function submitAnswers() {
+            let correctCount = 0;
+            const totalCells = 9;
+
+            document.querySelectorAll('.grid-input').forEach(input => {
+                const key = `${input.dataset.row},${input.dataset.col}`;
+                const userAnswer = input.value.trim().toLowerCase();
+                const correctAnswer = gameData.answers[key].toLowerCase();
+
+                input.className = 'grid-input';
+
+                if (userAnswer === correctAnswer) {
+                    input.classList.add('correct');
+                    correctCount++;
+                } else if (userAnswer !== '') {
+                    input.classList.add('incorrect');
+                }
+            });
+
+            score = correctCount;
+            updateScore();
+
+            // Show result modal
+            showResultModal(correctCount, totalCells);
+        }
+
+        // Reveal all answers
+        function revealAnswers() {
+            document.querySelectorAll('.grid-input').forEach(input => {
+                const key = `${input.dataset.row},${input.dataset.col}`;
+                input.value = gameData.answers[key];
+                input.className = 'grid-input revealed';
+                input.disabled = true;
+            });
+
+            score = 9;
+            updateScore();
+        }
+
+        // Start a new game with random variant
+        function newGame() {
+            const randomVariant = gameVariants[Math.floor(Math.random() * gameVariants.length)];
+            loadGame(randomVariant);
+        }
+
+        // Reveal answers and prepare for next game
+        function revealAndNext() {
+            // Reveal all answers first
+            document.querySelectorAll('.grid-input').forEach(input => {
+                const key = `${input.dataset.row},${input.dataset.col}`;
+                input.value = gameData.answers[key];
+                input.className = 'grid-input revealed';
+                input.disabled = true;
+            });
+
+            score = 9;
+            updateScore();
+
+            // Show result modal
+            showResultModal(9, 9, true);
+        }
+
+        // Show result modal
+        function showResultModal(correctCount, totalCells, revealed = false) {
+            const percentage = Math.round((correctCount / totalCells) * 100);
+            
+            document.getElementById('modalTitle').textContent = revealed ? '🔍 Answers Revealed' : '📊 Results';
+            document.getElementById('modalResultTitle').textContent = revealed ? 'Grid Completed' : 'Grid Results';
+            document.getElementById('modalResultDetails').textContent = revealed ? 
+                'All answers have been revealed' : 
+                `You completed the ${gameData.name} grid`;
+            
+            document.getElementById('modalCorrectAnswers').textContent = `${correctCount}/${totalCells}`;
+            document.getElementById('modalGameVariant').textContent = gameData.name;
+            document.getElementById('modalCompletionRate').textContent = `${percentage}%`;
+            
+            // Populate the revealed grid in modal
+            populateModalGrid();
+            
+            const modalMessage = document.getElementById('modalResultMessage');
+            if (correctCount === totalCells) {
+                modalMessage.textContent = '🎉 Perfect! All answers are correct!';
+                modalMessage.className = 'result-message-modal correct';
+            } else if (revealed) {
+                modalMessage.textContent = 'All answers have been revealed. Ready for the next challenge?';
+                modalMessage.className = 'result-message-modal revealed';
+            } else {
+                modalMessage.textContent = `You got ${correctCount} out of ${totalCells} correct. Keep trying!`;
+                modalMessage.className = 'result-message-modal incorrect';
+            }
+            modalMessage.style.display = 'block';
+            
+            document.getElementById('resultModal').style.display = 'flex';
+        }
+
+        // Populate the modal grid with revealed answers
+        function populateModalGrid() {
+            // Update headers
+            document.getElementById('modalRow1').textContent = gameData.rows[0];
+            document.getElementById('modalRow2').textContent = gameData.rows[1];
+            document.getElementById('modalRow3').textContent = gameData.rows[2];
+            document.getElementById('modalCol1').textContent = gameData.cols[0];
+            document.getElementById('modalCol2').textContent = gameData.cols[1];
+            document.getElementById('modalCol3').textContent = gameData.cols[2];
+            
+            // Update cells with answers
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    const key = `${row},${col}`;
+                    const cellId = `modalCell${row}-${col}`;
+                    const cell = document.getElementById(cellId);
+                    const answer = gameData.answers[key];
+                    
+                    if (cell && answer) {
+                        cell.textContent = answer;
+                        cell.style.background = '#d4edda';
+                        cell.style.color = '#155724';
+                        cell.style.fontWeight = 'bold';
+                    }
+                }
+            }
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('resultModal').style.display = 'none';
+        }
+
+        // Update score display
+        function updateScore() {
+            document.getElementById('scoreDisplay').textContent = `Score: ${score}/9`;
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initGame);
+
+        // Toggle instructions visibility
+        function toggleInstructions() {
+            const content = document.getElementById('instructionsContent');
+            const icon = document.getElementById('expandIcon');
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.classList.add('expanded');
+            } else {
+                content.style.display = 'none';
+                icon.classList.remove('expanded');
+            }
+        }
+
+        // Join modal functions
+        function openJoinModal() {
+            document.getElementById('joinModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeJoinModal() {
+            document.getElementById('joinModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('joinModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeJoinModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && document.getElementById('joinModal').style.display === 'flex') {
+                    closeJoinModal();
+                }
+            });
+        });
+    </script>
+
+    <!-- Join Modal -->
+    <div id="joinModal" class="join-modal-overlay" style="display: none;">
+        <div class="join-modal">
+            <div class="join-modal-header">
+                <h2>Join Tennis Quiz Community</h2>
+                <button class="join-modal-close" onclick="closeJoinModal()">&times;</button>
+            </div>
+            <div class="join-modal-content">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-vUaKLdZVDtMyI64qCU_nPamziods5VaTm2P5Gw5jejkimA/viewform?embedded=true" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .join-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .join-modal {
+            background: white;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .join-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e5e7eb;
+            background: linear-gradient(135deg, #00d4aa 0%, #ffd700 100%);
+            color: white;
+        }
+
+        .join-modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .join-modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .join-modal-close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .join-modal-content {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .join-modal-content iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .join-modal {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .join-modal-header {
+                padding: 16px 20px;
+            }
+
+            .join-modal-header h2 {
+                font-size: 1.25rem;
+            }
+
+            .join-modal-content iframe {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .join-modal-overlay {
+                padding: 10px;
+            }
+
+            .join-modal {
+                max-width: 100vw;
+                max-height: 100vh;
+                border-radius: 8px;
+            }
+
+            .join-modal-content iframe {
+                height: 450px;
+            }
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer style="margin-top: 2rem; padding: 1.5rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; text-align: center;">
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">
+                Developed by David
+            </p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                Data sources: <a href="https://www.tennisabstract.com/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Tennis Abstract</a> and <a href="https://github.com/jeffsackmann" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">Jeff Sackmann</a>
+            </p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">
+                Would you like to give feedback? - <a href="mailto:hidalgodavid2010@gmail.com" style="color: white; text-decoration: underline;">send a comment here</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Tennis Trivia Grid",
+        "description": "Test your tennis knowledge with our Tennis Trivia Grid game! Fill in the 3x3 grid with players who match both row and column criteria. Challenge yourself with this interactive tennis quiz.",
+        "url": "https://funtennis.games/tennis-trivia-grid.html",
+        "image": "https://funtennis.games/images/logo-tennis-quiz.png",
+        "gameType": "Quiz",
+        "genre": "Sports Trivia",
+        "category": "Tennis",
+        "author": {
+            "@type": "Person",
+            "name": "David"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tennis Quiz Games"
+        },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+</body>
+</html> 
