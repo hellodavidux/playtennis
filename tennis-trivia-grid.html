@@ -261,11 +261,12 @@
             background: white;
             border: 1px solid #ddd;
             border-radius: 0 0 8px 8px;
-            max-height: 200px;
+            max-height: 300px;
             overflow-y: auto;
             z-index: 1000;
             display: none;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
         }
 
         .autocomplete-suggestion {
@@ -343,6 +344,8 @@
             background: #f5576c;
             color: white;
         }
+
+
 
 
 
@@ -447,6 +450,28 @@
             to {
                 transform: translateY(0);
                 opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
             }
         }
 
@@ -760,6 +785,7 @@
 
                 <div class="game-buttons">
                     <div id="scoreDisplay" style="text-align: center; font-size: 1.2em; font-weight: bold; color: #667eea; margin-bottom: 1rem;">Score: 0/9</div>
+                    <div id="gamesPlayedDisplay" style="text-align: center; font-size: 1em; color: #666; margin-bottom: 1rem;">Games Played: 0</div>
                     <button class="check-button" onclick="submitAnswers()">✅ Submit Answers</button>
                     <button class="reveal-button" onclick="revealAndNext()">🔍 Reveal & Next Game</button>
                 </div>
@@ -831,7 +857,7 @@
                     <div class="result-message-modal" id="modalResultMessage"></div>
                 </div>
                 <div class="modal-actions">
-                    <button class="next-player-button" id="nextPlayerButton" onclick="closeModal()">Close</button>
+                    <button class="next-player-button" id="nextPlayerButton" onclick="playNextGame()">Play Next Game</button>
                 </div>
             </div>
         </div>
@@ -925,6 +951,112 @@
         let score = 0;
         let allPlayers = [];
         let gameVariants = ['big3', 'realistic', 'varied', 'champions', 'classic', 'modern', 'mixed'];
+        let gamesPlayed = 0; // Track total games played
+
+        // Local storage keys
+        const STORAGE_KEYS = {
+            CURRENT_GAME: 'tennis_trivia_current_game',
+            CURRENT_ANSWERS: 'tennis_trivia_current_answers',
+            SCORE: 'tennis_trivia_score',
+            GAMES_PLAYED: 'tennis_trivia_games_played',
+            LAST_PLAYED_DATE: 'tennis_trivia_last_played_date'
+        };
+
+        // Save game state to local storage
+        function saveGameState() {
+            try {
+                const gameState = {
+                    currentGame: currentGame,
+                    currentAnswers: currentAnswers,
+                    score: score,
+                    gamesPlayed: gamesPlayed,
+                    lastPlayedDate: new Date().toISOString()
+                };
+                localStorage.setItem(STORAGE_KEYS.CURRENT_GAME, JSON.stringify(gameState));
+            } catch (error) {
+                console.error('Error saving game state:', error);
+            }
+        }
+
+        // Load game state from local storage
+        function loadGameState() {
+            try {
+                const savedState = localStorage.getItem(STORAGE_KEYS.CURRENT_GAME);
+                if (savedState) {
+                    const gameState = JSON.parse(savedState);
+                    
+                    // Check if saved state is from today (to avoid loading old games)
+                    const savedDate = new Date(gameState.lastPlayedDate);
+                    const today = new Date();
+                    const isToday = savedDate.toDateString() === today.toDateString();
+                    
+                    if (isToday && gameState.currentGame) {
+                        currentGame = gameState.currentGame;
+                        currentAnswers = gameState.currentAnswers || {};
+                        score = gameState.score || 0;
+                        gamesPlayed = gameState.gamesPlayed || 0;
+                        return true;
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading game state:', error);
+            }
+            return false;
+        }
+
+        // Clear saved game state
+        function clearGameState() {
+            try {
+                localStorage.removeItem(STORAGE_KEYS.CURRENT_GAME);
+            } catch (error) {
+                console.error('Error clearing game state:', error);
+            }
+        }
+
+        // Update games played counter
+        function updateGamesPlayed() {
+            gamesPlayed++;
+            saveGameState();
+            updateGamesPlayedDisplay();
+        }
+
+        // Update games played display
+        function updateGamesPlayedDisplay() {
+            const display = document.getElementById('gamesPlayedDisplay');
+            if (display) {
+                display.textContent = `Games Played: ${gamesPlayed}`;
+            }
+        }
+
+        // Show welcome back message when loading saved game
+        function showWelcomeBackMessage() {
+            const welcomeDiv = document.createElement('div');
+            welcomeDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+                z-index: 1000;
+                font-weight: 600;
+                animation: slideInRight 0.5s ease-out;
+            `;
+            welcomeDiv.innerHTML = '👋 Welcome back! Your game has been restored.';
+            document.body.appendChild(welcomeDiv);
+            
+            // Remove message after 3 seconds
+            setTimeout(() => {
+                welcomeDiv.style.animation = 'slideOutRight 0.5s ease-in';
+                setTimeout(() => {
+                    if (welcomeDiv.parentNode) {
+                        welcomeDiv.parentNode.removeChild(welcomeDiv);
+                    }
+                }, 500);
+            }, 3000);
+        }
 
         // Game variations based on actual tennis data
         const gameVariations = {
@@ -942,14 +1074,14 @@
                 ],
                 answers: {
                     "0,0": "Andy Murray",
-                    "0,1": "Andy Murray", 
-                    "0,2": "Andy Murray",
+                    "0,1": "Roger Federer", 
+                    "0,2": "Novak Djokovic",
                     "1,0": "Robin Soderling",
                     "1,1": "Rafael Nadal",
                     "1,2": "Jo-Wilfried Tsonga",
                     "2,0": "Tomas Berdych",
-                    "2,1": "Roger Federer",
-                    "2,2": "Novak Djokovic"
+                    "2,1": "Stan Wawrinka",
+                    "2,2": "Marin Cilic"
                 }
             },
             classic: {
@@ -966,14 +1098,14 @@
                 ],
                 answers: {
                     "0,0": "Richard Krajicek",
-                    "0,1": "Richard Krajicek",
-                    "0,2": "Richard Krajicek", 
+                    "0,1": "Boris Becker",
+                    "0,2": "Stefan Edberg", 
                     "1,0": "Andre Agassi",
-                    "1,1": "Andre Agassi",
-                    "1,2": "Andre Agassi",
+                    "1,1": "Jim Courier",
+                    "1,2": "Pete Sampras",
                     "2,0": "Stefan Edberg",
-                    "2,1": "Stefan Edberg",
-                    "2,2": "Stefan Edberg"
+                    "2,1": "Ivan Lendl",
+                    "2,2": "John McEnroe"
                 }
             },
             modern: {
@@ -990,14 +1122,14 @@
                 ],
                 answers: {
                     "0,0": "Daniil Medvedev",
-                    "0,1": "Daniil Medvedev",
-                    "0,2": "Daniil Medvedev",
+                    "0,1": "Carlos Alcaraz",
+                    "0,2": "Jannik Sinner",
                     "1,0": "Alexander Zverev",
-                    "1,1": "Alexander Zverev", 
-                    "1,2": "Alexander Zverev",
+                    "1,1": "Casper Ruud", 
+                    "1,2": "Felix Auger-Aliassime",
                     "2,0": "Stefanos Tsitsipas",
-                    "2,1": "Stefanos Tsitsipas",
-                    "2,2": "Stefanos Tsitsipas"
+                    "2,1": "Holger Rune",
+                    "2,2": "Hubert Hurkacz"
                 }
             },
             mixed: {
@@ -1014,14 +1146,14 @@
                 ],
                 answers: {
                     "0,0": "Andy Murray",
-                    "0,1": "Andy Murray",
-                    "0,2": "Andy Murray",
-                    "1,0": "Roger Federer",
-                    "1,1": "Roger Federer",
-                    "1,2": "Roger Federer", 
-                    "2,0": "Novak Djokovic",
-                    "2,1": "Novak Djokovic",
-                    "2,2": "Novak Djokovic"
+                    "0,1": "Roger Federer",
+                    "0,2": "Rafael Nadal",
+                    "1,0": "Stan Wawrinka",
+                    "1,1": "Novak Djokovic",
+                    "1,2": "Pete Sampras", 
+                    "2,0": "Juan Martin del Potro",
+                    "2,1": "Boris Becker",
+                    "2,2": "Ivan Lendl"
                 }
             },
             realistic: {
@@ -1038,14 +1170,14 @@
                 ],
                 answers: {
                     "0,0": "Andy Murray",
-                    "0,1": "Andy Murray", 
-                    "0,2": "Andy Murray",
-                    "1,0": "Roger Federer",
-                    "1,1": "Roger Federer",
-                    "1,2": "Roger Federer",
-                    "2,0": "Rafael Nadal",
-                    "2,1": "Rafael Nadal",
-                    "2,2": "Rafael Nadal"
+                    "0,1": "Roger Federer", 
+                    "0,2": "Rafael Nadal",
+                    "1,0": "Stan Wawrinka",
+                    "1,1": "Novak Djokovic",
+                    "1,2": "Pete Sampras",
+                    "2,0": "Robin Soderling",
+                    "2,1": "Juan Martin del Potro",
+                    "2,2": "Boris Becker"
                 }
             },
             varied: {
@@ -1063,13 +1195,13 @@
                 answers: {
                     "0,0": "Novak Djokovic",
                     "0,1": "Andy Murray", 
-                    "0,2": "Novak Djokovic",
+                    "0,2": "Roger Federer",
                     "1,0": "Rafael Nadal",
-                    "1,1": "Rafael Nadal",
-                    "1,2": "Rafael Nadal",
-                    "2,0": "Roger Federer",
-                    "2,1": "Roger Federer",
-                    "2,2": "Roger Federer"
+                    "1,1": "Juan Martin del Potro",
+                    "1,2": "Boris Becker",
+                    "2,0": "Pete Sampras",
+                    "2,1": "Stefan Edberg",
+                    "2,2": "Ivan Lendl"
                 }
             },
             champions: {
@@ -1087,13 +1219,13 @@
                 answers: {
                     "0,0": "Novak Djokovic",
                     "0,1": "Andy Murray", 
-                    "0,2": "Novak Djokovic",
+                    "0,2": "Roger Federer",
                     "1,0": "Rafael Nadal",
-                    "1,1": "Rafael Nadal",
-                    "1,2": "Rafael Nadal",
-                    "2,0": "Roger Federer",
-                    "2,1": "Roger Federer",
-                    "2,2": "Roger Federer"
+                    "1,1": "Juan Martin del Potro",
+                    "1,2": "Boris Becker",
+                    "2,0": "Pete Sampras",
+                    "2,1": "Stefan Edberg",
+                    "2,2": "Ivan Lendl"
                 }
             }
         };
@@ -1101,13 +1233,37 @@
         // Initialize the game
         async function initGame() {
             try {
+                // Update loading message to show progress
+                document.getElementById('loadingMessage').textContent = 'Loading tennis trivia data and top 100 players database...';
+                
                 await loadPlayers();
-                loadGame('big3');
+                
+                // Try to load saved game state
+                const hasSavedState = loadGameState();
+                
+                if (hasSavedState) {
+                    // Load the saved game
+                    loadGame(currentGame);
+                    // Restore user answers
+                    restoreUserAnswers();
+                    console.log('Loaded saved game state');
+                    
+                    // Show welcome back message
+                    showWelcomeBackMessage();
+                } else {
+                    // Start with default game
+                    loadGame('big3');
+                }
+                
                 setupEventListeners();
                 
                 // Hide loading message and show game content
                 document.getElementById('loadingMessage').style.display = 'none';
                 document.getElementById('gameContent').style.display = 'block';
+                
+                // Update displays
+                updateScore();
+                updateGamesPlayedDisplay();
             } catch (error) {
                 console.error('Error initializing game:', error);
                 document.getElementById('loadingMessage').style.display = 'none';
@@ -1118,52 +1274,35 @@
         // Load player names for autocomplete
         async function loadPlayers() {
             try {
-                // Load players from CSV files
-                const response = await fetch('tennis_players_data.json');
+                // Load top 100 players list for cleaner autocomplete
+                const response = await fetch('top100_tennis_players.json');
                 const playersData = await response.json();
                 
-                const playerSet = new Set();
-                
-                // Add players from the JSON data
                 if (playersData && playersData.players) {
-                    playersData.players.forEach(player => {
-                        if (player.name) {
-                            playerSet.add(player.name);
-                        }
-                    });
+                    allPlayers = playersData.players;
+                    console.log(`Loaded ${allPlayers.length} top 100 players for autocomplete`);
+                } else {
+                    throw new Error('Invalid player data format');
                 }
-                
-                // Also add players from game variations as fallback
-                Object.values(gameVariations).forEach(variant => {
-                    Object.values(variant.answers).forEach(player => {
-                        playerSet.add(player);
-                    });
-                });
-                
-                // Add some additional famous players for variety
-                const additionalPlayers = [
-                    'Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Andy Murray',
-                    'Pete Sampras', 'Andre Agassi', 'Stefan Edberg', 'Boris Becker',
-                    'Ivan Lendl', 'John McEnroe', 'Jimmy Connors', 'Bjorn Borg',
-                    'Daniil Medvedev', 'Alexander Zverev', 'Stefanos Tsitsipas',
-                    'Carlos Alcaraz', 'Jannik Sinner', 'Holger Rune', 'Casper Ruud',
-                    'Felix Auger-Aliassime', 'Hubert Hurkacz', 'Andrey Rublev',
-                    'Denis Shapovalov', 'Taylor Fritz', 'Frances Tiafoe',
-                    'Nick Kyrgios', 'Grigor Dimitrov', 'Marin Cilic', 'Kei Nishikori',
-                    'Milos Raonic', 'Juan Martin del Potro', 'Stan Wawrinka',
-                    'Tomas Berdych', 'Jo-Wilfried Tsonga', 'Gael Monfils',
-                    'Richard Gasquet', 'David Ferrer', 'Robin Soderling',
-                    'Fernando Verdasco', 'Nicolas Almagro', 'Gilles Simon'
-                ];
-                
-                additionalPlayers.forEach(player => playerSet.add(player));
-                allPlayers = Array.from(playerSet).sort();
-                
-                console.log(`Loaded ${allPlayers.length} players for autocomplete`);
             } catch (error) {
-                console.error('Error loading players:', error);
-                // Fallback to basic players if CSV loading fails
-                loadBasicPlayers();
+                console.error('Error loading top 100 player data:', error);
+                console.log('Falling back to comprehensive player list...');
+                // Fallback to comprehensive list if top 100 loading fails
+                try {
+                    const response = await fetch('all_tennis_players.json');
+                    const playersData = await response.json();
+                    
+                    if (playersData && playersData.players) {
+                        allPlayers = playersData.players;
+                        console.log(`Loaded ${allPlayers.length} players for autocomplete from comprehensive ATP database`);
+                    } else {
+                        throw new Error('Invalid comprehensive player data format');
+                    }
+                } catch (fallbackError) {
+                    console.error('Error loading comprehensive player data:', fallbackError);
+                    console.log('Falling back to basic player list...');
+                    loadBasicPlayers();
+                }
             }
         }
 
@@ -1200,7 +1339,11 @@
         function loadGame(variant) {
             currentGame = variant;
             gameData = gameVariations[variant];
-            currentAnswers = {};
+            
+            // Only reset answers if not loading from saved state
+            if (Object.keys(currentAnswers).length === 0) {
+                currentAnswers = {};
+            }
 
             // Update grid headers
             document.getElementById('row1').textContent = gameData.rows[0];
@@ -1217,9 +1360,24 @@
                 input.disabled = false;
             });
 
-            // Reset score
-            score = 0;
+            // Reset score if not loading from saved state
+            if (Object.keys(currentAnswers).length === 0) {
+                score = 0;
+            }
             updateScore();
+            
+            // Save game state
+            saveGameState();
+        }
+
+        // Restore user answers from saved state
+        function restoreUserAnswers() {
+            document.querySelectorAll('.grid-input').forEach(input => {
+                const key = `${input.dataset.row},${input.dataset.col}`;
+                if (currentAnswers[key]) {
+                    input.value = currentAnswers[key];
+                }
+            });
         }
 
         // Setup event listeners
@@ -1230,6 +1388,8 @@
                     const key = `${this.dataset.row},${this.dataset.col}`;
                     currentAnswers[key] = this.value.trim();
                     showAutocomplete(this);
+                    // Save state after each input
+                    saveGameState();
                 });
                 
                 input.addEventListener('focus', function() {
@@ -1242,6 +1402,43 @@
                         hideAutocomplete(this);
                     }, 200);
                 });
+                
+                // Add keyboard navigation
+                input.addEventListener('keydown', function(e) {
+                    const dropdown = this.parentNode.querySelector('.autocomplete-suggestions');
+                    if (!dropdown || dropdown.style.display === 'none') return;
+                    
+                    const suggestions = dropdown.querySelectorAll('.autocomplete-suggestion');
+                    const currentSelected = dropdown.querySelector('.autocomplete-suggestion.selected');
+                    let currentIndex = -1;
+                    
+                    if (currentSelected) {
+                        currentIndex = Array.from(suggestions).indexOf(currentSelected);
+                    }
+                    
+                    if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        if (currentIndex < suggestions.length - 1) {
+                            if (currentSelected) currentSelected.classList.remove('selected');
+                            suggestions[currentIndex + 1].classList.add('selected');
+                        }
+                    } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        if (currentIndex > 0) {
+                            if (currentSelected) currentSelected.classList.remove('selected');
+                            suggestions[currentIndex - 1].classList.add('selected');
+                        }
+                    } else if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (currentSelected) {
+                            this.value = currentSelected.dataset.player;
+                            currentAnswers[`${this.dataset.row},${this.dataset.col}`] = currentSelected.dataset.player;
+                            hideAutocomplete(this);
+                        }
+                    } else if (e.key === 'Escape') {
+                        hideAutocomplete(this);
+                    }
+                });
             });
         }
 
@@ -1253,9 +1450,26 @@
                 return;
             }
 
-            const suggestions = allPlayers.filter(player => 
-                player.toLowerCase().includes(query)
-            ).slice(0, 10);
+            // Enhanced search algorithm with better prioritization
+            const suggestions = allPlayers.filter(player => {
+                const playerLower = player.toLowerCase();
+                return playerLower.includes(query);
+            }).sort((a, b) => {
+                const aLower = a.toLowerCase();
+                const bLower = b.toLowerCase();
+                
+                // Score each player based on match quality
+                const scoreA = getMatchScore(aLower, query);
+                const scoreB = getMatchScore(bLower, query);
+                
+                // Higher score first
+                if (scoreA !== scoreB) {
+                    return scoreB - scoreA;
+                }
+                
+                // If scores are equal, sort alphabetically
+                return aLower.localeCompare(bLower);
+            }).slice(0, 20); // Show more suggestions
 
             if (suggestions.length === 0) {
                 hideAutocomplete(input);
@@ -1285,6 +1499,75 @@
                     input.focus();
                 });
             });
+        }
+
+        // Enhanced scoring function for better search prioritization
+        function getMatchScore(playerName, query) {
+            let score = 0;
+            
+            // Exact match gets highest score
+            if (playerName === query) {
+                score += 1000;
+            }
+            
+            // Starts with query gets high score
+            if (playerName.startsWith(query)) {
+                score += 500;
+            }
+            
+            // Check if query matches word boundaries (better for partial names)
+            const words = playerName.split(' ');
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].startsWith(query)) {
+                    score += 300;
+                    break;
+                }
+            }
+            
+            // Check if query appears at word boundaries (e.g., "juan carl" in "juan carlos ferrero")
+            const wordBoundaryPattern = new RegExp(`\\b${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i');
+            if (wordBoundaryPattern.test(playerName)) {
+                score += 200;
+            }
+            
+            // Partial match gets lower score
+            if (playerName.includes(query)) {
+                score += 100;
+            }
+            
+            // Bonus for shorter names (more likely to be famous players)
+            if (playerName.length < 20) {
+                score += 50;
+            }
+            
+            // Bonus for names with fewer words (more likely to be well-known)
+            const wordCount = playerName.split(' ').length;
+            if (wordCount <= 3) {
+                score += 25;
+            }
+            
+            // Bonus for famous players (prioritize well-known names)
+            const famousPlayers = [
+                'Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Andy Murray',
+                'Pete Sampras', 'Andre Agassi', 'Stefan Edberg', 'Boris Becker',
+                'Ivan Lendl', 'John McEnroe', 'Jimmy Connors', 'Bjorn Borg',
+                'Juan Carlos Ferrero', 'Carlos Moya', 'Gustavo Kuerten',
+                'Daniil Medvedev', 'Alexander Zverev', 'Stefanos Tsitsipas',
+                'Carlos Alcaraz', 'Jannik Sinner', 'Holger Rune', 'Casper Ruud',
+                'Felix Auger-Aliassime', 'Hubert Hurkacz', 'Andrey Rublev',
+                'Denis Shapovalov', 'Taylor Fritz', 'Frances Tiafoe',
+                'Nick Kyrgios', 'Grigor Dimitrov', 'Marin Cilic', 'Kei Nishikori',
+                'Milos Raonic', 'Juan Martin del Potro', 'Stan Wawrinka',
+                'Tomas Berdych', 'Jo-Wilfried Tsonga', 'Gael Monfils',
+                'Richard Gasquet', 'David Ferrer', 'Robin Soderling',
+                'Fernando Verdasco', 'Nicolas Almagro', 'Gilles Simon'
+            ];
+            
+            if (famousPlayers.includes(playerName)) {
+                score += 1000; // Big bonus for famous players
+            }
+            
+            return score;
         }
 
         // Hide autocomplete suggestions
@@ -1318,6 +1601,9 @@
             score = correctCount;
             updateScore();
 
+            // Increment games played and save state
+            updateGamesPlayed();
+
             // Show result modal
             showResultModal(correctCount, totalCells);
         }
@@ -1337,6 +1623,8 @@
 
         // Start a new game with random variant
         function newGame() {
+            // Clear current answers to start fresh
+            currentAnswers = {};
             const randomVariant = gameVariants[Math.floor(Math.random() * gameVariants.length)];
             loadGame(randomVariant);
         }
@@ -1353,6 +1641,9 @@
 
             score = 9;
             updateScore();
+
+            // Increment games played and save state
+            updateGamesPlayed();
 
             // Show result modal
             showResultModal(9, 9, true);
@@ -1422,6 +1713,12 @@
         // Close modal
         function closeModal() {
             document.getElementById('resultModal').style.display = 'none';
+        }
+
+        // Play next game
+        function playNextGame() {
+            document.getElementById('resultModal').style.display = 'none';
+            newGame();
         }
 
         // Update score display
