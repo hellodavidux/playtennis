@@ -951,14 +951,14 @@
                 </a>
 
                 <!-- Tennis Web -->
-                <a href="tennis-web.html" class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #667eea, #764ba2); border-radius: 12px; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div class="game-card-responsive" style="padding: 1rem; background: linear-gradient(145deg, #667eea, #764ba2); border-radius: 12px; opacity: 0.7;">
                     <img src="images/6-deg.png" alt="Tennis Web" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;">
                     <div style="flex: 1;">
                         <h3 style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">🕸️ Tennis Web</h3>
                         <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Connect tennis players through 6 degrees of separation</p>
                     </div>
-                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Play</span>
-                </a>
+                    <span class="play-button-responsive" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Coming Soon</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1180,10 +1180,59 @@
                             </select>
                         </div>`;
                     }).join('');
+                    
+                    // Add event listeners for automatic score filling
+                    this.setupScoreInputListeners();
                 } else {
                     // Show actual scores after guess/reveal
                     player1Scores.innerHTML = sets.map(set => `<div class="set-score revealed">${set.winner}</div>`).join('');
                     player2Scores.innerHTML = sets.map(set => `<div class="set-score revealed">${set.loser}</div>`).join('');
+                }
+            }
+
+            setupScoreInputListeners() {
+                const scoreInputs = document.querySelectorAll('.score-input');
+                scoreInputs.forEach(input => {
+                    input.addEventListener('change', (e) => {
+                        this.handleScoreChange(e.target);
+                    });
+                });
+            }
+
+            handleScoreChange(changedInput) {
+                const player = changedInput.dataset.player;
+                const setIndex = parseInt(changedInput.dataset.set);
+                const selectedValue = changedInput.value;
+                
+                if (!selectedValue || selectedValue === '') return;
+                
+                const selectedScore = parseInt(selectedValue);
+                const opponentPlayer = player === '1' ? '2' : '1';
+                const opponentInput = document.querySelector(`[data-player="${opponentPlayer}"][data-set="${setIndex}"]`);
+                
+                if (!opponentInput) return;
+                
+                // Auto-fill opponent score based on tennis rules
+                let opponentScore = null;
+                
+                if (selectedScore >= 0 && selectedScore <= 4) {
+                    // If player scores 0-4, opponent gets 6
+                    opponentScore = 6;
+                } else if (selectedScore === 5) {
+                    // If player scores 5, opponent gets 7
+                    opponentScore = 7;
+                } else if (selectedScore === 7) {
+                    // If player scores 7, opponent gets 6 (unless opponent already has a score)
+                    if (!opponentInput.value || opponentInput.value === '') {
+                        opponentScore = 6;
+                    }
+                }
+                
+                // Set opponent score if determined
+                if (opponentScore !== null) {
+                    opponentInput.value = opponentScore;
+                    // Trigger change event to update any dependent logic
+                    opponentInput.dispatchEvent(new Event('change'));
                 }
             }
 
@@ -1245,8 +1294,8 @@
                 const userSets = [];
                 
                 for (let i = 0; i < player1Scores.length; i++) {
-                    const score1 = player1Scores[i].dataset.value;
-                    const score2 = player2Scores[i].dataset.value;
+                    const score1 = player1Scores[i].value;
+                    const score2 = player2Scores[i].value;
                     
                     if (!score1 && score1 !== '0' || !score2 && score2 !== '0') {
                         return null; // Incomplete guess
